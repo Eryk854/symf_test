@@ -18,8 +18,9 @@
         "symfony/intl": "*",
         "symfony/mailer": "*",
         "symfony/monolog-bundle": "^3.1",
-        "symfony/orm-pack": "*",
+        "symfony/orm-pack": "^1.0",
         "symfony/process": "*",
+        "symfony/profiler-pack": "^1.0",
         "symfony/security-bundle": "*",
         "symfony/serializer-pack": "*",
         "symfony/translation": "*",
@@ -30,8 +31,7 @@
     },
     "require-dev": {
         "symfony/debug-pack": "*",
-        "symfony/maker-bundle": "^1.0",
-        "symfony/profiler-pack": "*",
+        "symfony/maker-bundle": "^1.17",
         "symfony/test-pack": "*"
     },
     "config": {
