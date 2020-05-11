@@ -25,7 +25,7 @@ class Kierunek
     private $informacje;
 
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Program", mappedBy="kierunek")
+     * @ORM\OneToMany(targetEntity=Program::class, mappedBy="kierunekDobry")
      */
     private $program;
 
@@ -51,13 +51,6 @@ class Kierunek
         return $this;
     }
 
-    /**
-     * @return Collection|Program[]
-     */
-    public function getProgram(): Collection
-    {
-        return $this->program;
-    }
 
     public function addProgram(Program $program): self
     {
@@ -80,5 +73,13 @@ class Kierunek
         }
 
         return $this;
+    }
+
+    /**
+     * @return Collection|Program[]
+     */
+    public function getProgram(): Collection
+    {
+        return $this->program;
     }
 }

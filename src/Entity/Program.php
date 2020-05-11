@@ -51,9 +51,9 @@ class Program
      */
     private $semestr;
 
+
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\Kierunek", inversedBy="program")
-     * @ORM\JoinColumn(nullable=false)
+     * @ORM\ManyToOne(targetEntity=Kierunek::class, inversedBy="program")
      */
     private $kierunek;
 
@@ -61,7 +61,6 @@ class Program
 
     public function __construct()
     {
-        $this->kierunek = new ArrayCollection();
         $this->sylabusy = new ArrayCollection();
     }
 
