@@ -25,7 +25,7 @@ class Kierunek
     private $informacje;
 
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Program", mappedBy="program")
+     * @ORM\OneToMany(targetEntity="App\Entity\Program", mappedBy="kierunek")
      */
     private $program;
 
@@ -63,7 +63,7 @@ class Kierunek
     {
         if (!$this->program->contains($program)) {
             $this->program[] = $program;
-            $program->setProgram($this);
+            $program->setKierunek($this);
         }
 
         return $this;
@@ -74,8 +74,8 @@ class Kierunek
         if ($this->program->contains($program)) {
             $this->program->removeElement($program);
             // set the owning side to null (unless already changed)
-            if ($program->getProgram() === $this) {
-                $program->setProgram(null);
+            if ($program->getKierunek() === $this) {
+                $program->setKierunek(null);
             }
         }
 

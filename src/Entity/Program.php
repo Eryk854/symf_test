@@ -39,11 +39,6 @@ class Program
      */
     private $poziom_studiow;
 
-    /**
-     * @ORM\OneToMany(targetEntity=Kierunek::class, mappedBy="program")
-     */
-    private $kierunek;
-
 
     /**
      * @ORM\OneToMany(targetEntity=Sylabus::class, mappedBy="program")
@@ -60,7 +55,8 @@ class Program
      * @ORM\ManyToOne(targetEntity="App\Entity\Kierunek", inversedBy="program")
      * @ORM\JoinColumn(nullable=false)
      */
-    private $program;
+    private $kierunek;
+
 
 
     public function __construct()
@@ -123,37 +119,6 @@ class Program
     }
 
     /**
-     * @return Collection|Kierunek[]
-     */
-    public function getKierunek(): Collection
-    {
-        return $this->kierunek;
-    }
-
-    public function addKierunek(Kierunek $kierunek): self
-    {
-        if (!$this->kierunek->contains($kierunek)) {
-            $this->kierunek[] = $kierunek;
-            $kierunek->setProgram($this);
-        }
-
-        return $this;
-    }
-
-    public function removeKierunek(Kierunek $kierunek): self
-    {
-        if ($this->kierunek->contains($kierunek)) {
-            $this->kierunek->removeElement($kierunek);
-            // set the owning side to null (unless already changed)
-            if ($kierunek->getProgram() === $this) {
-                $kierunek->setProgram(null);
-            }
-        }
-
-        return $this;
-    }
-
-    /**
      * @return Collection|Sylabus[]
      */
     public function getSylabusy(): Collection
@@ -196,14 +161,14 @@ class Program
         return $this;
     }
 
-    public function getProgram(): ?Kierunek
+    public function getKierunek(): ?Kierunek
     {
-        return $this->program;
+        return $this->kierunek;
     }
 
-    public function setProgram(?Kierunek $program): self
+    public function setKierunek(?Kierunek $kierunek): self
     {
-        $this->program = $program;
+        $this->kierunek = $kierunek;
 
         return $this;
     }
