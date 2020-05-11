@@ -49,15 +49,16 @@ class Program
      */
     private $kierunek;
 
+
     /**
-     * @ORM\ManyToOne(targetEntity=Sylabus::class, inversedBy="program")
-     * @ORM\JoinColumn(nullable=false)
+     * @ORM\OneToMany(targetEntity=Sylabus::class, mappedBy="program")
      */
-    private $sylabus;
+    private $sylabusy;
 
     public function __construct()
     {
         $this->kierunek = new ArrayCollection();
+        $this->sylabusy = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -156,14 +157,33 @@ class Program
         return $this;
     }
 
-    public function getSylabus(): ?Sylabus
+    /**
+     * @return Collection|Sylabus[]
+     */
+    public function getSylabusy(): Collection
     {
-        return $this->sylabus;
+        return $this->sylabusy;
     }
 
-    public function setSylabus(?Sylabus $sylabus): self
+    public function addSylabusy(Sylabus $sylabusy): self
     {
-        $this->sylabus = $sylabus;
+        if (!$this->sylabusy->contains($sylabusy)) {
+            $this->sylabusy[] = $sylabusy;
+            $sylabusy->setProgram($this);
+        }
+
+        return $this;
+    }
+
+    public function removeSylabusy(Sylabus $sylabusy): self
+    {
+        if ($this->sylabusy->contains($sylabusy)) {
+            $this->sylabusy->removeElement($sylabusy);
+            // set the owning side to null (unless already changed)
+            if ($sylabusy->getProgram() === $this) {
+                $sylabusy->setProgram(null);
+            }
+        }
 
         return $this;
     }

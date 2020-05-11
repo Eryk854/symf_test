@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\LiteraturaRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -36,6 +38,16 @@ class Literatura
      * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $wydawnictwo;
+
+    /**
+     * @ORM\ManyToMany(targetEntity=Zajecia::class, mappedBy="literatura")
+     */
+    private $zajecia;
+
+    public function __construct()
+    {
+        $this->zajecia = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -86,6 +98,34 @@ class Literatura
     public function setWydawnictwo(?string $wydawnictwo): self
     {
         $this->wydawnictwo = $wydawnictwo;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Zajecia[]
+     */
+    public function getZajecia(): Collection
+    {
+        return $this->zajecia;
+    }
+
+    public function addZajecium(Zajecia $zajecium): self
+    {
+        if (!$this->zajecia->contains($zajecium)) {
+            $this->zajecia[] = $zajecium;
+            $zajecium->addLiteratura($this);
+        }
+
+        return $this;
+    }
+
+    public function removeZajecium(Zajecia $zajecium): self
+    {
+        if ($this->zajecia->contains($zajecium)) {
+            $this->zajecia->removeElement($zajecium);
+            $zajecium->removeLiteratura($this);
+        }
 
         return $this;
     }

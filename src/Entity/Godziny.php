@@ -3,38 +3,17 @@
 namespace App\Entity;
 
 use App\Repository\GodzinyRepository;
-use Doctrine\ORM\Mapping as ORM;
 
-/**
- * @ORM\Entity(repositoryClass=GodzinyRepository::class)
- */
 class Godziny
 {
-    /**
-     * @ORM\Id()
-     * @ORM\GeneratedValue()
-     * @ORM\Column(type="integer")
-     */
     private $id;
 
-    /**
-     * @ORM\Column(type="integer", nullable=true)
-     */
     private $godziny_wykladowe;
 
-    /**
-     * @ORM\Column(type="integer", nullable=true)
-     */
     private $godziny_cwiczeniowe;
 
-    /**
-     * @ORM\Column(type="integer", nullable=true)
-     */
     private $czas_pracy_wlasnej;
 
-    /**
-     * @ORM\Column(type="integer", nullable=true)
-     */
     private $ECTS;
 
     public function getId(): ?int

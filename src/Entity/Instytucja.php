@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\InstytucjaRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -36,6 +38,22 @@ class Instytucja
      * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $adres;
+
+    /**
+     * @ORM\OneToMany(targetEntity=Sylabus::class, mappedBy="jednostkaRealizujaca")
+     */
+    private $realizowaneSylabusy;
+
+    /**
+     * @ORM\OneToMany(targetEntity=Sylabus::class, mappedBy="jednostkaZlecajaca")
+     */
+    private $zleconeSylabusy;
+
+    public function __construct()
+    {
+        $this->realizowaneSylabusy = new ArrayCollection();
+        $this->zleconeSylabusy = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -86,6 +104,68 @@ class Instytucja
     public function setAdres(?string $adres): self
     {
         $this->adres = $adres;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Sylabus[]
+     */
+    public function getRealizowaneSylabusy(): Collection
+    {
+        return $this->realizowaneSylabusy;
+    }
+
+    public function addRealizowanySylabus(Sylabus $sylabus): self
+    {
+        if (!$this->realizowaneSylabusy->contains($sylabus)) {
+            $this->realizowaneSylabusy[] = $sylabus;
+            $sylabus->setJednostkaRealizujaca($this);
+        }
+
+        return $this;
+    }
+
+    public function removeRealizowanySylabus(Sylabus $sylabus): self
+    {
+        if ($this->realizowaneSylabusy->contains($sylabus)) {
+            $this->realizowaneSylabusy->removeElement($sylabus);
+            // set the owning side to null (unless already changed)
+            if ($sylabus->getJednostkaRealizujaca() === $this) {
+                $sylabus->setJednostkaRealizujaca(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Sylabus[]
+     */
+    public function getZleconeSylabusy(): Collection
+    {
+        return $this->zleconeSylabusy;
+    }
+
+    public function addZleconeSylabusy(Sylabus $zleconeSylabusy): self
+    {
+        if (!$this->zleconeSylabusy->contains($zleconeSylabusy)) {
+            $this->zleconeSylabusy[] = $zleconeSylabusy;
+            $zleconeSylabusy->setJednostkaZlecajaca($this);
+        }
+
+        return $this;
+    }
+
+    public function removeZleconeSylabusy(Sylabus $zleconeSylabusy): self
+    {
+        if ($this->zleconeSylabusy->contains($zleconeSylabusy)) {
+            $this->zleconeSylabusy->removeElement($zleconeSylabusy);
+            // set the owning side to null (unless already changed)
+            if ($zleconeSylabusy->getJednostkaZlecajaca() === $this) {
+                $zleconeSylabusy->setJednostkaZlecajaca(null);
+            }
+        }
 
         return $this;
     }

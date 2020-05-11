@@ -3,7 +3,11 @@
 namespace App\Entity;
 
 use App\Repository\ZajeciaRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\ORM\Mapping\JoinColumn;
+use Doctrine\ORM\Mapping\JoinTable;
 
 /**
  * @ORM\Entity(repositoryClass=ZajeciaRepository::class)
@@ -106,6 +110,25 @@ class Zajecia
      * @ORM\Column(type="object", nullable=true)
      */
     private $miejsceRealizacji;
+
+    /**
+     * @ORM\Column(type="object", nullable=true)
+     */
+    private $godziny;
+
+    /**
+     * @ORM\ManyToMany(targetEntity=Literatura::class, inversedBy="zajecia")
+     * @JoinTable(name="zajecia_literatura",
+     *      joinColumns={@JoinColumn(name="zajecia_id", referencedColumnName="id")},
+     *      inverseJoinColumns={@JoinColumn(name="literatura_id", referencedColumnName="id")}
+     *      )
+     */
+    private $literatura;
+
+    public function __construct()
+    {
+        $this->literatura = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -324,6 +347,44 @@ class Zajecia
     public function setMiejsceRealizacji(?MiejsceRealizacji $miejsceRealizacji): self
     {
         $this->miejsceRealizacji = $miejsceRealizacji;
+
+        return $this;
+    }
+
+    public function getGodziny()
+    {
+        return $this->godziny;
+    }
+
+    public function setGodziny($godziny): self
+    {
+        $this->godziny = $godziny;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Literatura[]
+     */
+    public function getLiteratura(): Collection
+    {
+        return $this->literatura;
+    }
+
+    public function addLiteratura(Literatura $literatura): self
+    {
+        if (!$this->literatura->contains($literatura)) {
+            $this->literatura[] = $literatura;
+        }
+
+        return $this;
+    }
+
+    public function removeLiteratura(Literatura $literatura): self
+    {
+        if ($this->literatura->contains($literatura)) {
+            $this->literatura->removeElement($literatura);
+        }
 
         return $this;
     }

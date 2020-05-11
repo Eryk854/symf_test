@@ -32,7 +32,7 @@ class Sylabus
     private $numerKatalogowy;
 
     /**
-     * @ORM\ManyToOne(targetEntity=Uzytkownik::class, inversedBy="$koordynowaneSylabusy")
+     * @ORM\ManyToOne(targetEntity=Uzytkownik::class, inversedBy="koordynowaneSylabusy")
      * @JoinColumn(name="koordynator_id", referencedColumnName="id")
      */
     private $koordynatorZajec;
@@ -45,6 +45,23 @@ class Sylabus
      *      )
      */
     private $prowadzacyZajecia;
+
+    /**
+     * @ORM\ManyToOne(targetEntity=Instytucja::class, inversedBy="realizowaneSylabusy")
+     * @JoinColumn(name="jednostkaRealizujaca_id", referencedColumnName="id")
+     */
+    private $jednostkaRealizujaca;
+
+    /**
+     * @ORM\ManyToOne(targetEntity=Instytucja::class, inversedBy="zleconeSylabusy")
+     * @JoinColumn(name="jednostkaZlecajaca_id", referencedColumnName="id")
+     */
+    private $jednostkaZlecajaca;
+
+    /**
+     * @ORM\ManyToOne(targetEntity=Program::class, inversedBy="sylabusy")
+     */
+    private $program;
 
     public function __construct()
     {
@@ -114,6 +131,42 @@ class Sylabus
         if ($this->prowadzacyZajecia->contains($prowadzacyZajecium)) {
             $this->prowadzacyZajecia->removeElement($prowadzacyZajecium);
         }
+
+        return $this;
+    }
+
+    public function getJednostkaRealizujaca(): ?Instytucja
+    {
+        return $this->jednostkaRealizujaca;
+    }
+
+    public function setJednostkaRealizujaca(?Instytucja $jednostkaRealizujaca): self
+    {
+        $this->jednostkaRealizujaca = $jednostkaRealizujaca;
+
+        return $this;
+    }
+
+    public function getJednostkaZlecajaca(): ?Instytucja
+    {
+        return $this->jednostkaZlecajaca;
+    }
+
+    public function setJednostkaZlecajaca(?Instytucja $jednostkaZlecajaca): self
+    {
+        $this->jednostkaZlecajaca = $jednostkaZlecajaca;
+
+        return $this;
+    }
+
+    public function getProgram(): ?Program
+    {
+        return $this->program;
+    }
+
+    public function setProgram(?Program $program): self
+    {
+        $this->program = $program;
 
         return $this;
     }
