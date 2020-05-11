@@ -173,6 +173,6 @@ class Program
 
     public function __toString()
     {
-        return $this->id;
+        return strval($this->id);
     }
 }
