@@ -47,7 +47,6 @@ class Program
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Semestr", inversedBy="program")
-     * @ORM\JoinColumn(nullable=false)
      */
     private $semestr;
 
