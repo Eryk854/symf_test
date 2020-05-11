@@ -169,4 +169,9 @@ class Instytucja
 
         return $this;
     }
+
+    public function __toString()
+    {
+        return $this->nazwa_skrocona;
+    }
 }

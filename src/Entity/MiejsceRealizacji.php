@@ -27,4 +27,6 @@ class MiejsceRealizacji
     {
         $this->cwiczenia = $cwiczenia;
     }
+
+
 }

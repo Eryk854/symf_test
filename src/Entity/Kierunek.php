@@ -82,4 +82,9 @@ class Kierunek
     {
         return $this->program;
     }
+
+    public function __toString()
+    {
+        return $this->informacje;
+    }
 }
