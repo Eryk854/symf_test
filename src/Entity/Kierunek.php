@@ -25,7 +25,7 @@ class Kierunek
     private $informacje;
 
     /**
-     * @ORM\OneToMany(targetEntity=Program::class, mappedBy="kierunekDobry")
+     * @ORM\OneToMany(targetEntity=Program::class, mappedBy="kierunek")
      */
     private $program;
 
