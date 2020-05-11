@@ -27,11 +27,6 @@ class Program
     /**
      * @ORM\Column(type="integer")
      */
-    private $semestr;
-
-    /**
-     * @ORM\Column(type="integer")
-     */
     private $rok_akademicki;
 
     /**
@@ -55,6 +50,19 @@ class Program
      */
     private $sylabusy;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Semestr", inversedBy="program")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $semestr;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Kierunek", inversedBy="program")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $program;
+
+
     public function __construct()
     {
         $this->kierunek = new ArrayCollection();
@@ -74,18 +82,6 @@ class Program
     public function setOpis(string $opis): self
     {
         $this->opis = $opis;
-
-        return $this;
-    }
-
-    public function getSemestr(): ?int
-    {
-        return $this->semestr;
-    }
-
-    public function setSemestr(int $semestr): self
-    {
-        $this->semestr = $semestr;
 
         return $this;
     }
@@ -184,6 +180,30 @@ class Program
                 $sylabusy->setProgram(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getSemestr(): ?Semestr
+    {
+        return $this->semestr;
+    }
+
+    public function setSemestr(?Semestr $semestr): self
+    {
+        $this->semestr = $semestr;
+
+        return $this;
+    }
+
+    public function getProgram(): ?Kierunek
+    {
+        return $this->program;
+    }
+
+    public function setProgram(?Kierunek $program): self
+    {
+        $this->program = $program;
 
         return $this;
     }
