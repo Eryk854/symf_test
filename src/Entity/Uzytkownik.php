@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use App\Repository\UserRepository;
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
@@ -59,6 +60,12 @@ class Uzytkownik implements UserInterface
      * @ORM\Column(type="string", length=50, nullable=true)
      */
     private $login;
+
+    public function __construct()
+    {
+        $this->koordynowaneSylabusy = new ArrayCollection();
+        $this->prowadzoneSylabusy = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {

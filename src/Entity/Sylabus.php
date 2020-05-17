@@ -117,7 +117,7 @@ class Sylabus
         return $this->prowadzacyZajecia;
     }
 
-    public function addProwadzacyZajecium(Uzytkownik $prowadzacyZajecium): self
+    public function addProwadzacyZajecium(?Uzytkownik $prowadzacyZajecium): self
     {
         if (!$this->prowadzacyZajecia->contains($prowadzacyZajecium)) {
             $this->prowadzacyZajecia[] = $prowadzacyZajecium;

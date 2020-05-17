@@ -4,10 +4,11 @@ namespace App\DataFixtures;
 
 use App\Entity\Uzytkownik;
 use Doctrine\Bundle\FixturesBundle\Fixture;
+use Doctrine\Common\DataFixtures\DependentFixtureInterface;
 use Doctrine\Persistence\ObjectManager;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
-class UzytkownikFixtures extends Fixture
+class UzytkownikFixtures extends Fixture implements DependentFixtureInterface
 {
     private $passwordEncoder;
 
@@ -18,7 +19,75 @@ class UzytkownikFixtures extends Fixture
 
     public function load(ObjectManager $manager)
     {
+        $this->loadUzytkownicy($manager);
+        $this->loadAdmin($manager);
+        $this->loadKoordynatorzy($manager);
+        $this->loadProwadzacy($manager);
+        $manager->flush();
+    }
 
+    /**
+     * @param ObjectManager $manager
+     */
+    private function loadKoordynatorzy(ObjectManager $manager)
+    {
+        for ($x = 1; $x <= 2; $x++) {
+            $user = new Uzytkownik();
+            $user->setLogin('manager' . $x);
+            $user->setImie('manager' . $x);
+            $user->setEmail('manager' . $x . '@sggw.edu.pl');
+            $user->setRoles(array('ROLE_USER'));
+            $user->addKoordynowaneSylabusy($this->getReference('sylabus' . $x));
+            $user->setPassword($this->passwordEncoder->encodePassword(
+                $user,
+                'manager' . $x
+            ));
+            $manager->persist($user);
+        }
+    }
+
+    /**
+     * @param ObjectManager $manager
+     */
+    private function loadProwadzacy(ObjectManager $manager)
+    {
+        for ($x = 1; $x <= 2; $x++) {
+            $user = new Uzytkownik();
+            $user->setLogin('user' . $x);
+            $user->setImie('user' . $x);
+            $user->setEmail('user' . $x . '@sggw.edu.pl');
+            $user->setRoles(array('ROLE_USER'));
+            $user->addProwadzoneSylabusy($this->getReference('sylabus' . $x));
+            $user->setPassword($this->passwordEncoder->encodePassword(
+                $user,
+                'user' . $x
+            ));
+            $manager->persist($user);
+        }
+    }
+
+    /**
+     * @param ObjectManager $manager
+     */
+    private function loadAdmin(ObjectManager $manager)
+    {
+        $user = new Uzytkownik();
+        $user->setLogin('admin');
+        $user->setImie('admin');
+        $user->setEmail('admin@admin');
+        $user->setRoles(array('ROLE_ADMIN'));
+        $user->setPassword($this->passwordEncoder->encodePassword(
+            $user,
+            'admin'
+        ));
+        $manager->persist($user);
+    }
+
+    /**
+     * @param ObjectManager $manager
+     */
+    private function loadUzytkownicy(ObjectManager $manager)
+    {
         $password = 'zaq12wsx';
 
         $listaImion = array(
@@ -49,46 +118,12 @@ class UzytkownikFixtures extends Fixture
             ));
             $manager->persist($user);
         }
+    }
 
-
-        $user = new Uzytkownik();
-        $user->setLogin('admin');
-        $user->setImie('admin');
-        $user->setEmail('admin@admin');
-        $user->setRoles(array('ROLE_ADMIN'));
-        $user->setPassword($this->passwordEncoder->encodePassword(
-            $user,
-            'admin'
-        ));
-        $manager->persist($user);
-
-        for ($x = 1; $x <= 2; $x++) {
-            $user = new Uzytkownik();
-            $user->setLogin('manager' . $x);
-            $user->setImie('manager' . $x);
-            $user->setEmail('manager' . $x . '@sggw.edu.pl');
-            $user->setRoles(array('ROLE_USER'));
-            $user->setPassword($this->passwordEncoder->encodePassword(
-                $user,
-                'manager' . $x
-            ));
-            $manager->persist($user);
-        }
-        for ($x = 1; $x <= 2; $x++) {
-            $user = new Uzytkownik();
-            $user->setLogin('user' . $x);
-            $user->setImie('user' . $x);
-            $user->setEmail('user' . $x . '@sggw.edu.pl');
-            $user->setRoles(array('ROLE_USER'));
-            $user->setPassword($this->passwordEncoder->encodePassword(
-                $user,
-                'user' . $x
-            ));
-            $manager->persist($user);
-        }
-
-        $manager->persist($user);
-
-        $manager->flush();
+    public function getDependencies()
+    {
+        return array(
+            SylabusFixture::class,
+        );
     }
 }
