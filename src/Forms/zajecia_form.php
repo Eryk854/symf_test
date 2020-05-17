@@ -9,6 +9,7 @@ use App\Entity\Zajecia;
 use Doctrine\DBAL\Types\IntegerType;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\CollectionType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\Extension\Core\Type\NumberType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
@@ -52,9 +53,11 @@ class ZajeciaType extends AbstractType
                 'label'=>'Opis przedmiotu'
             ])
             ->add('zakres_tematow', TextareaType::class, [
-                'required'=>false,
                 'attr'=>['class' => 'form-control','rows'=>4],
+                'required'=>false,
+                'label'=>'Podaj zakres tematów przedmiotu.'
             ])
+
             ->add('metody_dydaktyczne', ChoiceType::class, [
                 'choices' => [
                     'dyskusja' => 'dyskusja',

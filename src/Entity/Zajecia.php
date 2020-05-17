@@ -52,9 +52,9 @@ class Zajecia
     private $opis;
 
     /**
-     * @ORM\Column(type="array", nullable=true)
+     * @ORM\Column(type="text", nullable=true)
      */
-    private $zakresTematow = [];
+    private $zakresTematow ;
 
     /**
      * @ORM\Column(type="array", nullable=true)
@@ -207,12 +207,12 @@ class Zajecia
         return $this;
     }
 
-    public function getZakresTematow(): ?array
+    public function getZakresTematow(): ?string
     {
         return $this->zakresTematow;
     }
 
-    public function setZakresTematow(?array $zakresTematow): self
+    public function setZakresTematow(?string $zakresTematow): self
     {
         $this->zakresTematow = $zakresTematow;
 
@@ -233,8 +233,7 @@ class Zajecia
 
     public function getWymaganiaFormalne(): ?string
     {
-        dump($this->wymaganiaFormalne);
-        dump(gettype($this->wymaganiaFormalne));
+
         return $this->wymaganiaFormalne;
     }
 

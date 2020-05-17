@@ -1,11 +1,76 @@
 easy_admin:
-    entities:
-        # List the entity class name you want to manage
-        - App\Entity\Instytucja
-        - App\Entity\Kierunek
-        - App\Entity\Literatura
-        - App\Entity\Program
-        - App\Entity\Semestr
-        - App\Entity\Sylabus
-        - App\Entity\Uzytkownik
-        - App\Entity\Zajecia
+  entities:
+    Instytucja:
+      class: App\Entity\Instytucja
+    Kierunek:
+      class: App\Entity\Kierunek
+    Literatura:
+      class: App\Entity\Literatura
+    Program:
+      class: App\Entity\Program
+    Semestr:
+      class: App\Entity\Semestr
+    Sylabus:
+      class: App\Entity\Sylabus
+    Uzytkownik:
+      class: App\Entity\Uzytkownik
+    Zajecia:
+      class: App\Entity\Zajecia
+      form:
+        fields:
+          - 'nazwa_polska'
+          - 'nazwa_angielska'
+          - property: 'jezyk_wykladowy'
+            type: 'choice'
+            type_options:
+              choices: {'polski': 'polski',
+                        'angielski': 'angielski',}
+
+          - 'zalozenia'
+          - 'cele'
+          - 'opis'
+          - 'zakres_tematow'
+          - property: 'weryfikacja_efektow_uczenia'
+            type: 'choice'
+            type_options:
+              multiple: true
+              choices: {'egzamin pisemny': 'egzamin pisemny',
+                        'egzamin ustny': 'egzamin ustny',
+                        'kolokwium': 'kolokwium',
+                        'zadania podczas zajec': 'zadania podczas zajec',
+                        'prezentacja': 'prezentacja',}
+          - property: 'metody_dydaktyczne'
+            type: 'choice'
+            type_options:
+              multiple: true
+              choices: {'dyskusja': 'dyskusja',
+                        'wyklad': 'wyklad',
+                        'rowiazywanie problemow': 'rozwiazywanie problemow',
+                        'konsultacje': 'konsultacje',
+                        'laboratoria': 'laboratoria',
+                        'tworzenie programow komputerowych': 'tworzenie programow komputerowych',}
+          - property: 'weryfikacja_efektow_uczenia'
+            type: 'choice'
+            type_options:
+              multiple: true
+              choices: {'egzamin pisemny': 'egzamin pisemny',
+                        'egzamin ustny': 'egzamin ustny',
+                        'kolokwium': 'kolokwium',
+                        'zadania podczas zajec': 'zadania podczas zajec',
+                        'prezentacja': 'prezentacja'}
+          - property: 'dokumentacja_efektow_uczenia'
+            type: 'choice'
+            type_options:
+              multiple: true
+              choices: {'praca pisemna': 'praca pisemna',
+                        'programy komputerowe': 'programy komputerowe',
+                        'prezentacja': 'prezentacja'}
+          - 'kryteria_oceniania'
+          - 'status_obowiazkowe'
+          - 'status_podstawowe'
+          - 'uwagi'
+          - 'literatura'
+
+      Instytucja:
+        class: App\Entity\Instytucja
+
