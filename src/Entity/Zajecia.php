@@ -233,11 +233,15 @@ class Zajecia
 
     public function getWymaganiaFormalne(): ?string
     {
+        dump($this->wymaganiaFormalne);
+        dump(gettype($this->wymaganiaFormalne));
         return $this->wymaganiaFormalne;
     }
 
     public function setWymaganiaFormalne(?string $wymaganiaFormalne): self
     {
+        dump('tutaj');
+        dump($wymaganiaFormalne);
         $this->wymaganiaFormalne = $wymaganiaFormalne;
 
         return $this;
@@ -267,26 +271,31 @@ class Zajecia
         return $this;
     }
 
-    public function getWeryfikacjaEfektowUczenia(): ?string
+    public function getWeryfikacjaEfektowUczenia(): ?array
     {
-        return $this->weryfikacjaEfektowUczenia;
+        # w bazie danych przechowujemy stringa odzielonego ; Należy go przekonwertować na array aby bez problemu korzystał
+        # z pola choices w formularzu
+        return explode(';', $this->weryfikacjaEfektowUczenia);
     }
 
-    public function setWeryfikacjaEfektowUczenia(?string $weryfikacjaEfektowUczenia): self
+    public function setWeryfikacjaEfektowUczenia(?array $weryfikacjaEfektowUczenia): self
     {
-        $this->weryfikacjaEfektowUczenia = $weryfikacjaEfektowUczenia;
+
+        $this->weryfikacjaEfektowUczenia = implode("; ", $weryfikacjaEfektowUczenia);
 
         return $this;
     }
 
-    public function getDokumentacjaEfektowUczenia(): ?string
+    public function getDokumentacjaEfektowUczenia(): ?array
     {
-        return $this->dokumentacjaEfektowUczenia;
+        # w bazie danych przechowujemy stringa odzielonego ; Należy go przekonwertować na array aby bez problemu korzystał
+        # z pola choices w formularzu
+        return explode(';', $this->dokumentacjaEfektowUczenia);
     }
 
-    public function setDokumentacjaEfektowUczenia(?string $dokumentacjaEfektowUczenia): self
+    public function setDokumentacjaEfektowUczenia(?array $dokumentacjaEfektowUczenia): self
     {
-        $this->dokumentacjaEfektowUczenia = $dokumentacjaEfektowUczenia;
+        $this->dokumentacjaEfektowUczenia = implode("; ", $dokumentacjaEfektowUczenia);
 
         return $this;
     }
