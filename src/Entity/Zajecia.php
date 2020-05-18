@@ -27,12 +27,12 @@ class Zajecia
     private $nazwaPolska;
 
     /**
-     * @ORM\Column(type="string", length=100)
+     * @ORM\Column(type="string", length=100, nullable=true)
      */
     private $nazwaAngielska;
 
     /**
-     * @ORM\Column(type="string", length=100)
+     * @ORM\Column(type="string", length=100, nullable=true)
      */
     private $jezykWykladowy;
 
@@ -239,6 +239,8 @@ class Zajecia
 
     public function setWymaganiaFormalne(?string $wymaganiaFormalne): self
     {
+        dump('tutaj');
+        dump($wymaganiaFormalne);
         $this->wymaganiaFormalne = $wymaganiaFormalne;
 
         return $this;
@@ -397,5 +399,9 @@ class Zajecia
 
     public function __toString(){
         return $this->nazwaPolska;
+    }
+
+    public function __clone() {
+        $this->id = null;
     }
 }

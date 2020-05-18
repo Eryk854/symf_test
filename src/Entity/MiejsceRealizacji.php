@@ -5,16 +5,11 @@ namespace App\Entity;
 class MiejsceRealizacji
 {
 
-    private $id;
-
     private $wyklad;
 
     private $cwiczenia;
 
-    public function getId(): ?int
-    {
-        return $this->id;
-    }
+
 
     public function getWyklad(): ?string
     {

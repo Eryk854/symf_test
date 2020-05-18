@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Register{% endblock %}
+
+
+{% block body %}
+    <h3>Chcesz utworzyć nowy przedmiot dla programu z opisem: {{ opis_programu }} </h3>
+    <h4>Rok akademicki: {{ rok_akademicki }}Poziom studiów: {{ poziom_studiow }}, forma studiow {{ forma_studiow }}</h4>
+    {{ form(form) }}
+    {% if przedmioty is defined and przedmioty|length > 0 and nazwa is defined and program_id is defined %}
+        {% for przedmiot in przedmioty %}
+            <form action="{{url('make_sylabus')}}" method="post">
+                {{ przedmiot.nazwaPolska }} dla rocznika: {{ dane[loop.index-1].rok_akademicki  }}, formy studiów: {{ dane[loop.index-1].forma_studiow  }} poziom: {{ dane[loop.index-1].poziom_studiow  }}
+                <input type="hidden" value={{ przedmiot.id }} name="przedmiot_id">
+                <input type="hidden" value={{ program_id }} name="program_id">
+                <button type=submit">Utworz ten przedmiot duplikujac dane z programu. </button>
+            </form>
+        {% endfor %}
+        <form action="{{url('make_sylabus')}}" method="post">
+            <input type="hidden" value="{{ nazwa }}" name="nazwa">
+            <input type="hidden" value={{ program_id }} name="program_id">
+            <button type="submit" class="btn btn-outline-success">Utwórz sylabus o tej nazwie bez duplikacji żadnych danych</button>
+        </form>
+    {% elseif nazwa is defined and program_id is defined %}
+        <form action="{{url('make_sylabus')}}" method="post">
+            <input type="hidden" value="{{ nazwa }}" name="nazwa">
+            <input type="hidden" value={{ program_id }} name="program_id">
+            <button type="submit" class="btn btn-outline-success">Nie znaleziono żadnych sylabusów o podobnej nazwie. Utwórz nowy.</button>
+        </form>
+    {% endif %}
+{% endblock %}

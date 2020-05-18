@@ -22,19 +22,16 @@ class ZajeciaRepository extends ServiceEntityRepository
     // /**
     //  * @return Zajecia[] Returns an array of Zajecia objects
     //  */
-    /*
     public function findByExampleField($value)
     {
+
         return $this->createQueryBuilder('z')
-            ->andWhere('z.exampleField = :val')
-            ->setParameter('val', $value)
-            ->orderBy('z.id', 'ASC')
-            ->setMaxResults(10)
+            ->where('z.nazwaPolska LIKE :val')
+            ->setParameter('val', '%'.$value.'%')
+            ->setMaxResults(5)
             ->getQuery()
-            ->getResult()
-        ;
+            ->getResult();
     }
-    */
 
     /*
     public function findOneBySomeField($value): ?Zajecia
