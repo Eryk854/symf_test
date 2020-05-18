@@ -24,6 +24,9 @@
 
 <div class="example-wrapper">
     <h1>Sylabus {{ numer_katalogowy }}</h1>
+    {% if is_granted('ROLE_TUTOR') %}
+        <a href="{{ path('sylabusForm', {'id': id }) }}">Edytuj</a>
+    {% endif %}
 
     <!--This friendly message is coming from:
     <ul>
@@ -122,7 +125,9 @@
 
         <tr>
             <td>Metody dokumentacji efektów uczenia:</td>
-            <td>{{ metody_dokumentacji_efektow_uczenia }}</td>
+            <td>{% for value in metody_dokumentacji_efektow_uczenia %}
+                    <li>{{ value }}</li>
+                {% endfor %}</td>
         </tr>
 
         <tr>

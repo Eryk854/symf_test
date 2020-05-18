@@ -3,31 +3,25 @@
 namespace App\Controller;
 
 #use http\Env\Request;
-use App\Entity\Godziny;
+use App\Entity\Instytucja;
 use App\Entity\Program;
 use App\Entity\Sylabus;
 use App\Entity\Zajecia;
-use App\Forms\Type\HourType;
 use App\Forms\Type\NowySylabusType;
+use App\Forms\Type\SylabusType;
+use App\Repository\SylabusRepository;
+use App\Security\Voter\EditSylabusVoter;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-use App\Forms\Type\SylabusType;
-use Symfony\Component\HttpFoundation\Request;
-use Symfony\Component\Serializer\Serializer;
-use Symfony\Component\Serializer\Encoder\JsonEncoder;
-use Symfony\Component\Serializer\Encoder\XmlEncoder;
-use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
-use App\Entity\Instytucja;
-use App\Entity\Uzytkownik;
-use App\Repository\SylabusRepository;
 
 class SylabusController extends AbstractController
 {
     /**
      * @Route("/sylabus/{query}", name="sylabus", methods={"GET"})
      */
-    public function index($query, SylabusRepository $sylabus_repository) : Response
+    public function index($query, SylabusRepository $sylabus_repository): Response
     {
         $instytucja_repository = $this->getDoctrine()->getRepository(Instytucja::class);
         $zajecia_repository = $this->getDoctrine()->getRepository(Zajecia::class);
@@ -88,6 +82,7 @@ class SylabusController extends AbstractController
 
         return $this->render('sylabus/index.html.twig', [
             'controller_name' => 'SylabusController',
+            'id' => $sylabus->getId(),
             'numer_katalogowy' => $numer_katalogowy,
             'jednostka_realizujaca' => $jednostka_realizujaca,
             'jednostka_zlecajaca' => $jednostka_zlecajaca,
@@ -115,15 +110,18 @@ class SylabusController extends AbstractController
     }
 
     /**
-     * @Route("sylabus/form/{id}", name="sylabus")
+     * @Route("sylabus/form/{id}", name="sylabusForm")
      */
     public function number(Request $request, $id)
     {
         $entityManager = $this->getDoctrine()->getManager(); # polaczenie do bazy
 
         $sylabus = $this->getDoctrine()->getRepository(Sylabus::class)->find($id); #bierzemy z bazy sylabus po id względem url
+
+        $this->denyAccessUnlessGranted(EditSylabusVoter::SYLABUS_EDIT, $sylabus);
+
         $nazwa_zajec_polska = $this->getDoctrine()->getRepository(Zajecia::class)->find($sylabus->getZajecia()->getId())->getNazwaPolska();
-        $program_id=$sylabus->getProgram()->getId();
+        $program_id = $sylabus->getProgram()->getId();
 
         $rok_akademicki = $this->getDoctrine()->getRepository(Program::class)->find($program_id)->getRokAkademicki();
         $forma_studiow = $this->getDoctrine()->getRepository(Program::class)->find($program_id)->getFormaStudiow();
@@ -132,18 +130,17 @@ class SylabusController extends AbstractController
         $form = $this->createForm(SylabusType::class, $sylabus);
         $form->handleRequest($request);
 
-        if ($form->isSubmitted() && $form->isValid())
-        {
+        if ($form->isSubmitted() && $form->isValid()) {
             $sylabus = $form->getData();
             $entityManager->persist($sylabus);
             $entityManager->flush();
         }
         return $this->render('sylabus/sylabus.html.twig', [
             'form' => $form->createView(),
-            'nazwa'=>$nazwa_zajec_polska,
-            'rok_akademicki'=>$rok_akademicki,
-            'poziom_studiow'=>$poziom_studiow,
-            'forma_studiow'=>$forma_studiow,
+            'nazwa' => $nazwa_zajec_polska,
+            'rok_akademicki' => $rok_akademicki,
+            'poziom_studiow' => $poziom_studiow,
+            'forma_studiow' => $forma_studiow,
         ]);
     }
 
@@ -160,42 +157,41 @@ class SylabusController extends AbstractController
 
         $form = $this->createForm(NowySylabusType::class);
         $form->handleRequest($request);
-        if ($form->isSubmitted() && $form->isValid())
-        {
+        if ($form->isSubmitted() && $form->isValid()) {
             $sylabus = $form->getData();
             $podobne_przedmioty = $this->getDoctrine()->getRepository(Zajecia::class)->findByExampleField($sylabus['nazwa']);
             // na podstawie id kazdego przedmiotu pobieram z jego sylabusa program a z programu rok stopień i formę studiów
             $dane = array();
-            for($i=0;$i<count($podobne_przedmioty);$i++)
-            {
+            for ($i = 0; $i < count($podobne_przedmioty); $i++) {
                 $program_przedmiotu = $this->getDoctrine()->getRepository(Sylabus::class)->findOneBySomeField($podobne_przedmioty[$i])->getProgram();
-                array_push($dane,array(
-                    'forma_studiow'=>$program_przedmiotu->getFormaStudiow(),
-                    'rok_akademicki'=>$program_przedmiotu->getRokAkademicki(),
-                    'poziom_studiow'=>$program_przedmiotu->getPoziomStudiow(),
+                array_push($dane, array(
+                    'forma_studiow' => $program_przedmiotu->getFormaStudiow(),
+                    'rok_akademicki' => $program_przedmiotu->getRokAkademicki(),
+                    'poziom_studiow' => $program_przedmiotu->getPoziomStudiow(),
                 ));
             }
             return $this->render('sylabus/nowy_sylabus.html.twig', [
                 'form' => $form->createView(),
-                'rok_akademicki'=>$rok_akademicki,
-                'poziom_studiow'=>$poziom_studiow,
-                'forma_studiow'=>$forma_studiow,
-                'przedmioty'=>$podobne_przedmioty,
-                'program_id'=>$program_id,
-                'opis_programu'=>$opis_programu,
-                'dane'=>$dane,
-                'nazwa'=>$sylabus['nazwa']
+                'rok_akademicki' => $rok_akademicki,
+                'poziom_studiow' => $poziom_studiow,
+                'forma_studiow' => $forma_studiow,
+                'przedmioty' => $podobne_przedmioty,
+                'program_id' => $program_id,
+                'opis_programu' => $opis_programu,
+                'dane' => $dane,
+                'nazwa' => $sylabus['nazwa']
             ]);
         }
 
         return $this->render('sylabus/nowy_sylabus.html.twig', [
             'form' => $form->createView(),
-            'rok_akademicki'=>$rok_akademicki,
-            'opis_programu'=>$opis_programu,
-            'poziom_studiow'=>$poziom_studiow,
-            'forma_studiow'=>$forma_studiow,
+            'rok_akademicki' => $rok_akademicki,
+            'opis_programu' => $opis_programu,
+            'poziom_studiow' => $poziom_studiow,
+            'forma_studiow' => $forma_studiow,
         ]);
     }
+
     /**
      * @Route("/sylabus/new/make", name="make_sylabus")
      */
@@ -242,7 +238,7 @@ class SylabusController extends AbstractController
             $entityManager->persist($sylabus);
             $entityManager->flush();
 
-            return $this->redirectToRoute('sylabus', ['id' => $sylabus->getId()]);
+            return $this->redirectToRoute('sylabusForm', ['id' => $sylabus->getId()]);
         }
     }
 }

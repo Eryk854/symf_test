@@ -239,8 +239,6 @@ class Zajecia
 
     public function setWymaganiaFormalne(?string $wymaganiaFormalne): self
     {
-        dump('tutaj');
-        dump($wymaganiaFormalne);
         $this->wymaganiaFormalne = $wymaganiaFormalne;
 
         return $this;

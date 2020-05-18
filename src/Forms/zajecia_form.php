@@ -107,11 +107,11 @@ class ZajeciaType extends AbstractType
                 'attr'=>['class' => 'form-control','rows'=>4],
                 ])
             ->add('status_obowiazkowe', CheckboxType::class, [
-                'label'    => 'Is this subject compulsory??',
+                'label'    => 'Zajęcia obowiązkowe',
                 'required' => false,
             ])
             ->add('status_podstawowe', CheckboxType::class, [
-                'label'    => 'Is this subject basic??',
+                'label'    => 'Zajęcia podstawowe',
                 'required' => false,
             ])
             ->add('miejsce_realizacji', MiejsceRealizacjiType::class)

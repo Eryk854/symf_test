@@ -36,7 +36,7 @@ class UzytkownikFixtures extends Fixture implements DependentFixtureInterface
             $user->setLogin('manager' . $x);
             $user->setImie('manager' . $x);
             $user->setEmail('manager' . $x . '@sggw.edu.pl');
-            $user->setRoles(array('ROLE_USER'));
+            $user->setRoles(array('ROLE_TUTOR'));
             $user->addKoordynowaneSylabusy($this->getReference('sylabus' . $x));
             $user->setPassword($this->passwordEncoder->encodePassword(
                 $user,
@@ -56,7 +56,7 @@ class UzytkownikFixtures extends Fixture implements DependentFixtureInterface
             $user->setLogin('user' . $x);
             $user->setImie('user' . $x);
             $user->setEmail('user' . $x . '@sggw.edu.pl');
-            $user->setRoles(array('ROLE_USER'));
+            $user->setRoles(array('ROLE_TUTOR'));
             $user->addProwadzoneSylabusy($this->getReference('sylabus' . $x));
             $user->setPassword($this->passwordEncoder->encodePassword(
                 $user,
