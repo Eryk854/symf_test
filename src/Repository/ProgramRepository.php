@@ -4,6 +4,7 @@ namespace App\Repository;
 
 use App\Entity\Program;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
+use Doctrine\ORM\Query\ResultSetMapping;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
@@ -19,32 +20,45 @@ class ProgramRepository extends ServiceEntityRepository
         parent::__construct($registry, Program::class);
     }
 
-    // /**
-    //  * @return Program[] Returns an array of Program objects
-    //  */
-    /*
-    public function findByExampleField($value)
+    public function findAllGroupedByRokAkademicki()
     {
-        return $this->createQueryBuilder('p')
-            ->andWhere('p.exampleField = :val')
-            ->setParameter('val', $value)
-            ->orderBy('p.id', 'ASC')
-            ->setMaxResults(10)
-            ->getQuery()
-            ->getResult()
-        ;
-    }
-    */
+        $sql = "SELECT `rok_akademicki` 
+                FROM `program` 
+                GROUP BY `rok_akademicki`";
 
-    /*
-    public function findOneBySomeField($value): ?Program
-    {
-        return $this->createQueryBuilder('p')
-            ->andWhere('p.exampleField = :val')
-            ->setParameter('val', $value)
-            ->getQuery()
-            ->getOneOrNullResult()
-        ;
+        $rsm = new ResultSetMapping();
+        $rsm->addScalarResult('rok_akademicki', 'rok_akademicki');
+
+        return $this->getEntityManager()
+            ->createNativeQuery($sql, $rsm)
+            ->getResult();
     }
-    */
+
+    public function findAllGroupedByFormaStudiow()
+    {
+        $sql = "SELECT `forma_studiow` 
+                FROM `program` 
+                GROUP BY `forma_studiow`";
+
+        $rsm = new ResultSetMapping();
+        $rsm->addScalarResult('forma_studiow', 'forma_studiow');
+
+        return $this->getEntityManager()
+            ->createNativeQuery($sql, $rsm)
+            ->getResult();
+    }
+
+    public function findAllGroupedByPoziomStudiow()
+    {
+        $sql = "SELECT `poziom_studiow` 
+                FROM `program` 
+                GROUP BY `poziom_studiow`";
+
+        $rsm = new ResultSetMapping();
+        $rsm->addScalarResult('poziom_studiow', 'poziom_studiow');
+
+        return $this->getEntityManager()
+            ->createNativeQuery($sql, $rsm)
+            ->getResult();
+    }
 }

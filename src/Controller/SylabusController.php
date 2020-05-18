@@ -17,12 +17,105 @@ use Symfony\Component\Serializer\Serializer;
 use Symfony\Component\Serializer\Encoder\JsonEncoder;
 use Symfony\Component\Serializer\Encoder\XmlEncoder;
 use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
+use App\Entity\Instytucja;
+use App\Entity\Uzytkownik;
+use App\Repository\SylabusRepository;
 
 /**
  * @Route("/sylabus")
  */
 class SylabusController extends AbstractController
 {
+    /**
+     * @Route("/sylabus/{query}", name="sylabus", methods={"GET"})
+     */
+    public function index($query, SylabusRepository $sylabus_repository) : Response
+    {
+        $instytucja_repository = $this->getDoctrine()->getRepository(Instytucja::class);
+        $zajecia_repository = $this->getDoctrine()->getRepository(Zajecia::class);
+
+        $sylabus = $sylabus_repository->find($query);
+        $instyctucja = $instytucja_repository->find($sylabus->getJednostkaRealizujaca());
+        $zajecia = $zajecia_repository->find($sylabus->getZajecia());
+
+        $numer_katalogowy = $sylabus->getNumerKatalogowy();
+
+        $jednostka_realizujaca = $instyctucja->getNazwaSkrocona();
+
+        $jednostka_zlecajaca = $instyctucja->getNazwaSkrocona();
+
+        $nazwa_zajec_pl = $zajecia->getNazwaPolska();
+
+        $nazwa_zajec_en = $zajecia->getNazwaAngielska();
+
+        $jezyk_wykladowy = $zajecia->getJezykWykladowy();
+
+        $zajecia_temp = new Zajecia();
+        $zajecia_temp->setGodziny($zajecia->getGodziny());
+        $godziny = $zajecia_temp->getGodziny();
+
+        $zalozenia = $zajecia->getZalozenia();
+
+        $cele = $zajecia->getCele();
+
+        $opis_zajec = $zajecia->getOpis();
+
+        $zakres_tematow = $zajecia->getZakresTematow();
+
+        $metody_dydaktyczne = $zajecia->getMetodyDydaktyczne();
+
+        $wymagania_formalne = $zajecia->getWymaganiaFormalne();
+
+        $zalozenia_wstepne = $zajecia->getZalozeniaWstepne();
+
+        $zajecia_temp->setEfektyUczenia($zajecia->getEfektyUczenia());
+        $efekty_uczenia = $zajecia_temp->getEfektyUczenia();
+
+        $weryfikacja_efektow_uczenia = $zajecia->getWeryfikacjaEfektowUczenia();
+
+        $metody_dokumentacji_efektow_uczenia = $zajecia->getDokumentacjaEfektowUczenia();
+
+        $kryteria_oceniania = $zajecia->getKryteriaOceniania();
+
+        $status_podstawowe = $zajecia->getStatusPodstawowe();
+
+        $status_obowiazkowe = $zajecia->getStatusObowiazkowe();
+
+        $uwagi = $zajecia->getUwagi();
+
+        $zajecia_temp->setMiejsceRealizacji($zajecia->getMiejsceRealizacji());
+        $miejsce_realizacji = $zajecia_temp->getMiejsceRealizacji();
+
+        $podstawowa_literatura = $zajecia->getLiteratura();
+
+        return $this->render('sylabus/index.html.twig', [
+            'controller_name' => 'SylabusController',
+            'numer_katalogowy' => $numer_katalogowy,
+            'jednostka_realizujaca' => $jednostka_realizujaca,
+            'jednostka_zlecajaca' => $jednostka_zlecajaca,
+            'nazwa_zajec_pl' => $nazwa_zajec_pl,
+            'nazwa_zajec_en' => $nazwa_zajec_en,
+            'jezyk_wykladowy' => $jezyk_wykladowy,
+            'godziny' => $godziny,
+            'zalozenia' => $zalozenia,
+            'cele' => $cele,
+            'opis_zajec' => $opis_zajec,
+            'zakres_tematow' => $zakres_tematow,
+            'metody_dydaktyczne' => $metody_dydaktyczne,
+            'wymagania_formalne' => $wymagania_formalne,
+            'zalozenia_wstepne' => $zalozenia_wstepne,
+            'efekty_uczenia' => $efekty_uczenia,
+            'weryfikacja_efektow_uczenia' => $weryfikacja_efektow_uczenia,
+            'metody_dokumentacji_efektow_uczenia' => $metody_dokumentacji_efektow_uczenia,
+            'kryteria_oceniania' => $kryteria_oceniania,
+            'status_podstawowe' => $status_podstawowe,
+            'status_obowiazkowe' => $status_obowiazkowe,
+            'uwagi' => $uwagi,
+            'miejsce_realizacji' => $miejsce_realizacji,
+            'podstawowa_literatura' => $podstawowa_literatura,
+        ]);
+    }
+
     /**
      * @Route("/form/{id}", name="app_lucky_number")
      */

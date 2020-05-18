@@ -1,0 +1,95 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Programy studiów{% endblock %}
+
+{% block body %}
+    <style>
+        .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+        .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+    </style>
+
+    <div class="example-wrapper">
+        <h1>Programy studiów</h1>
+
+        <!--This friendly message is coming from:
+    <ul>
+        <li>Your controller at <code><a href="{{ 'C:/xampp/htdocs/G4/src/Controller/ProgramController.php'|file_link(0) }}">src/Controller/ProgramController.php</a></code></li>
+        <li>Your template at <code><a href="{{ 'C:/xampp/htdocs/G4/templates/program/index.html.twig'|file_link(0) }}">templates/program/index.html.twig</a></code></li>
+    </ul>-->
+
+        Wybierz rok akademicki:
+        <select id="rok" style ="font-size: 15px; margin-bottom: 10px">
+            {% for rok in rok_akademicki %}
+                {% set selected = '' %}
+                <option value="{{rok.rok_akademicki}}" {{ selected }}> {{rok.rok_akademicki}}</option>
+            {% endfor %}
+        </select>
+
+        </br>Wybierz formę studiów:
+        <select id="forma" style ="font-size: 15px; margin-bottom: 10px">
+            {% for forma in forma_studiow %}
+                {% set selected = '' %}
+                <option value="{{forma.forma_studiow}}" {{ selected }}> {{forma.forma_studiow}}</option>
+            {% endfor %}
+        </select>
+
+        <br/>Wybierz poziom studiów:
+        <select id="poziom" style ="font-size: 15px; margin-bottom: 10px">
+            {% for poziom in poziom_studiow %}
+                {% set selected = '' %}
+                <option value="{{poziom.poziom_studiow}}" {{ selected }}> {{poziom.poziom_studiow}}</option>
+            {% endfor %}
+        </select>
+
+        <br/>
+
+        <button id="search_button" class="ajax">Szukaj sylabusów</button>
+        <div id="ajax-results"></div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $('#search_button').click();
+            });
+
+            $(document).on('click', 'button.ajax', function(){
+                that = $(this);
+                var selected_rok = $("#rok option:selected").text();
+                var selected_forma = $("#forma option:selected").text();
+                var selected_poziom = $("#poziom option:selected").text();
+                $.ajax({
+                    url: window.location.href,
+                    type: "POST",
+                    dataType: "json",
+                    data: {
+                        "selected_rok": selected_rok,
+                        "selected_forma" : selected_forma,
+                        "selected_poziom" : selected_poziom
+                    },
+                    async: true,
+                    success: function (data)
+                    {
+                        //console.log(data);
+                        //console.log(data.output2);
+                        $("#ajax-results").empty();
+                        var url = window.location.href;
+                        var new_url = url.replace('/program', '/sylabus/');
+
+                        for (i = 0; i < data.output.length; i++) {
+                            $('<a>', {
+                                text: 'Sylabus ' + data.output2[i],
+                                title: 'Sylabus ' + data.output2[i],
+                                href: new_url + data.output[i]
+                            }).appendTo('div#ajax-results');
+
+                            $('</br>').appendTo('div#ajax-results');
+                        }
+                    }
+                });
+                return false;
+
+            });
+        </script>
+
+    </div>
+{% endblock %}

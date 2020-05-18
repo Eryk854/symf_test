@@ -5,6 +5,7 @@ namespace App\Repository;
 use App\Entity\Sylabus;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
+use Doctrine\ORM\Query\ResultSetMapping;
 
 /**
  * @method Sylabus|null find($id, $lockMode = null, $lockVersion = null)
@@ -18,24 +19,6 @@ class SylabusRepository extends ServiceEntityRepository
     {
         parent::__construct($registry, Sylabus::class);
     }
-
-    // /**
-    //  * @return Sylabus[] Returns an array of Sylabus objects
-    //  */
-    /*
-    public function findByExampleField($value)
-    {
-        return $this->createQueryBuilder('s')
-            ->andWhere('s.exampleField = :val')
-            ->setParameter('val', $value)
-            ->orderBy('s.id', 'ASC')
-            ->setMaxResults(10)
-            ->getQuery()
-            ->getResult()
-        ;
-    }
-    */
-
 
     public function findOneByNumerKatalogowy($value): ?Sylabus
     {

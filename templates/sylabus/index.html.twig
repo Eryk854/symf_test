@@ -1,0 +1,172 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Sylabus{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+
+    table, td, tr {
+        border: 1px solid black;
+        border-collapse: collapse;
+        text-align: center;
+    }
+
+    .td_smallFontSize {
+        font-size: 15px;
+    }
+
+    table {
+        width: 100%;
+    }
+</style>
+
+<div class="example-wrapper">
+    <h1>Sylabus {{ numer_katalogowy }}</h1>
+
+    <!--This friendly message is coming from:
+    <ul>
+        <li>Your controller at <code><a href="{{ 'C:/xampp/htdocs/G4/src/Controller/SylabusController.php'|file_link(0) }}">src/Controller/SylabusController.php</a></code></li>
+        <li>Your template at <code><a href="{{ 'C:/xampp/htdocs/G4/templates/sylabus/index.html.twig'|file_link(0) }}">templates/sylabus/index.html.twig</a></code></li>
+    </ul>-->
+
+    <table>
+        <tr>
+            <td>Numer katalogowy:</td>
+            <td>{{ numer_katalogowy }}</td>
+        </tr>
+
+        <tr>
+            <td>Jednostka realizująca:</td>
+            <td>{{ jednostka_realizujaca }}</td>
+        </tr>
+
+        <tr>
+            <td>Jednostka zlecająca:</td>
+            <td>{{ jednostka_zlecajaca }}</td>
+        </tr>
+
+        <tr>
+            <td>Nazwa zajęć w j. polskim:</td>
+            <td>{{ nazwa_zajec_pl }}</td>
+        </tr>
+
+        <tr>
+            <td>Nazwa zajęć w j. angielskim:</td>
+            <td>{{ nazwa_zajec_en }}</td>
+        </tr>
+
+        <tr>
+            <td>Język wykładowy:</td>
+            <td>{{ jezyk_wykladowy }}</td>
+        </tr>
+
+        <tr>
+            <td>Godziny:</td>
+            <td>{{ godziny }}</td>
+        </tr>
+
+        <tr>
+            <td>Założenia:</td>
+            <td>{{ zalozenia }}</td>
+        </tr>
+
+        <tr>
+            <td>Cele:</td>
+            <td class="td_smallFontSize">{{ cele }}</td>
+        </tr>
+
+        <tr>
+            <td>Opis zajęć:</td>
+            <td>{{ opis_zajec }}</td>
+        </tr>
+
+        <tr>
+            <td>Zakres tematów:</td>
+            <td class="td_smallFontSize">{% for temat in zakres_tematow %}
+                    <li>{{ temat }}</li>
+                {% endfor %}</td>
+        </tr>
+
+        <tr>
+            <td>Metody dydaktyczne:</td>
+            <td>{% for metoda in metody_dydaktyczne %}
+                    <li>{{ metoda }}</li>
+                {% endfor %}</td>
+        </tr>
+
+        <tr>
+            <td>Wymagania formalne:</td>
+            <td>{{ wymagania_formalne }}</td>
+        </tr>
+
+        <tr>
+            <td>Założenia wstępne:</td>
+            <td>{{ zalozenia_wstepne }}</td>
+        </tr>
+
+        <tr>
+            <td>Efekry uczenia:</td>
+            <td>{% for val in efekty_uczenia %}
+                    <li>{{ val }}</li>
+                {% endfor %}</td>
+        </tr>
+
+        <tr>
+            <td>Weryfikacja efektów uczenia:</td>
+            <td>{{ weryfikacja_efektow_uczenia }}</td>
+        </tr>
+
+        <tr>
+            <td>Metody dokumentacji efektów uczenia:</td>
+            <td>{{ metody_dokumentacji_efektow_uczenia }}</td>
+        </tr>
+
+        <tr>
+            <td>Kryteria oceniania:</td>
+            <td>{{ kryteria_oceniania }}</td>
+        </tr>
+
+        <tr>
+            <td>Status podstawowe:</td>
+            <td>
+                <input type="checkbox" onclick="return false;" value="{{ status_podstawowe }}" {% if (status_podstawowe) %} checked="checked"{% endif %}/>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Status obowiązkowe:</td>
+            <td>
+                <input type="checkbox" onclick="return false;" value="{{ status_obowiazkowe }}" {% if (status_obowiazkowe) %} checked="checked"{% endif %}/>
+            </td>
+        </tr>
+
+        <tr>
+            <td>Uwagi:</td>
+            <td>{{ uwagi }}</td>
+        </tr>
+
+        <tr>
+            <td>Miejsce realizacji:</td>
+            <td>{% for value in miejsce_realizacji %}
+                    <li>{{ value }}</li>
+                {% endfor %}</td>
+        </tr>
+
+        <tr>
+            <td>Podstawowa literatura:</td>
+            <td class="td_smallFontSize">{% for value in podstawowa_literatura %}
+                    <li>
+                        Autor: {{ value.autor }}
+                        </br>Rodzaj: {{ value.rodzaj }}
+                        </br>Tytuł: {{ value.tytul }}
+                        </br>Wydawnictwo: {{ value.wydawnictwo }}
+                    </li>
+                {% endfor %}</td>
+
+    </table>
+
+
+</div>
+{% endblock %}
