@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Register{% endblock %}
+
+
+{% block body %}
+    <h2>Wypełniasz przedmiot o nazwie : {{ nazwa }} dla roku akademickiego: {{ rok_akademicki }} </h2>
+    <h4>Poziom studiów: {{ poziom_studiow }}, forma studiow {{ forma_studiow }}</h4>
+    {{ form(form) }}
+
+{% endblock %}
