@@ -115,7 +115,9 @@
 
         <tr>
             <td>Weryfikacja efektów uczenia:</td>
-            <td>{{ weryfikacja_efektow_uczenia }}</td>
+            <td>{% for value in weryfikacja_efektow_uczenia %}
+                    <li>{{ value }}</li>
+                {% endfor %}</td>
         </tr>
 
         <tr>
