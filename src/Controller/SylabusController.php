@@ -21,9 +21,6 @@ use App\Entity\Instytucja;
 use App\Entity\Uzytkownik;
 use App\Repository\SylabusRepository;
 
-/**
- * @Route("/sylabus")
- */
 class SylabusController extends AbstractController
 {
     /**
@@ -117,7 +114,7 @@ class SylabusController extends AbstractController
     }
 
     /**
-     * @Route("/form/{id}", name="app_lucky_number")
+     * @Route("sylabus/form/{id}", name="app_lucky_number")
      */
     public function number(Request $request, $id)
     {

@@ -68,4 +68,11 @@ class Godziny
 
         return $this;
     }
+
+    public function __toString()
+    {
+        return 'ECTS: '.$this->getECTS().' Godziny cwiczeniowy'.$this->getGodzinyCwiczeniowe().'Godziny wykladowe: '.$this->getGodzinyWykladowe();
+    }
+
+
 }
