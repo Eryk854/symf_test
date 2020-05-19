@@ -22,9 +22,9 @@ class ProgramRepository extends ServiceEntityRepository
 
     public function findAllGroupedByRokAkademicki()
     {
-        $sql = "SELECT `rok_akademicki` 
-                FROM `program` 
-                GROUP BY `rok_akademicki`";
+        $sql = "SELECT rok_akademicki 
+                FROM program 
+                GROUP BY rok_akademicki";
 
         $rsm = new ResultSetMapping();
         $rsm->addScalarResult('rok_akademicki', 'rok_akademicki');
@@ -36,9 +36,9 @@ class ProgramRepository extends ServiceEntityRepository
 
     public function findAllGroupedByFormaStudiow()
     {
-        $sql = "SELECT `forma_studiow` 
-                FROM `program` 
-                GROUP BY `forma_studiow`";
+        $sql = "SELECT forma_studiow 
+                FROM program 
+                GROUP BY forma_studiow";
 
         $rsm = new ResultSetMapping();
         $rsm->addScalarResult('forma_studiow', 'forma_studiow');
@@ -50,9 +50,9 @@ class ProgramRepository extends ServiceEntityRepository
 
     public function findAllGroupedByPoziomStudiow()
     {
-        $sql = "SELECT `poziom_studiow` 
-                FROM `program` 
-                GROUP BY `poziom_studiow`";
+        $sql = "SELECT poziom_studiow 
+                FROM program 
+                GROUP BY poziom_studiow";
 
         $rsm = new ResultSetMapping();
         $rsm->addScalarResult('poziom_studiow', 'poziom_studiow');
