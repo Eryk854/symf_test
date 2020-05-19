@@ -35,13 +35,13 @@ class LiteraturaFixtures extends Fixture
         $literatura4->setWydawnictwo("PWN");
 
         $literatura5 = new Literatura();
-        $literatura5->setAutor(" P.Horowitz, W.Hil");
+        $literatura5->setAutor("P.Horowitz, W.Hil");
         $literatura5->setRodzaj("Podstawowa");
         $literatura5->setTytul("Sztuka elektroniki");
         $literatura5->setWydawnictwo("WKŁ");
 
         $literatura6 = new Literatura();
-        $literatura6->setAutor(" Filipkowski A");
+        $literatura6->setAutor("Filipkowski A");
         $literatura6->setRodzaj("Uzupełniająca");
         $literatura6->setTytul("Elementy i układy elektroniczne. Projekt i laboratorium");
         $literatura6->setWydawnictwo("Oficyna Wydawnicza Politechniki Warszawskiej");
