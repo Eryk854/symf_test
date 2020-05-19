@@ -39,7 +39,6 @@
         <br/>
 
         <button id="search_button" class="ajax">Szukaj sylabusów</button>
-        {% set programId=0 %}
         {% if is_granted('ROLE_TUTOR') %}
             <a id="nowy_sylabus_button">Dodaj sylabus</a>
         {% endif %}
@@ -87,12 +86,14 @@
 
                                 $('</br>').appendTo('div#ajax-results');
                             }
-
+                            if(data.output.length==0) {
+                                $('<p>', {
+                                    text: 'Brak sylabusów dla podanego programu!'}).appendTo('div#ajax-results');
+                            }
                             $("#nowy_sylabus_button").attr("href",'/sylabus/new/'+data.programId.toString());
                         }
                     },
                     error: function () {
-                        console.log("Error function");
                         $("#ajax-results").empty();
                     },
                 });

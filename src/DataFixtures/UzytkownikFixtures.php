@@ -37,7 +37,11 @@ class UzytkownikFixtures extends Fixture implements DependentFixtureInterface
             $user->setImie('manager' . $x);
             $user->setEmail('manager' . $x . '@sggw.edu.pl');
             $user->setRoles(array('ROLE_TUTOR'));
-            $user->addKoordynowaneSylabusy($this->getReference('sylabus' . $x));
+            $user->addKoordynowaneSylabusy($this->getReference('sylabus1'));
+            $user->addKoordynowaneSylabusy($this->getReference('sylabus2'));
+            $user->addKoordynowaneSylabusy($this->getReference('sylabus3'));
+            $user->addKoordynowaneSylabusy($this->getReference('sylabus4'));
+            $user->addKoordynowaneSylabusy($this->getReference('sylabus5'));
             $user->setPassword($this->passwordEncoder->encodePassword(
                 $user,
                 'manager' . $x
@@ -57,7 +61,11 @@ class UzytkownikFixtures extends Fixture implements DependentFixtureInterface
             $user->setImie('user' . $x);
             $user->setEmail('user' . $x . '@sggw.edu.pl');
             $user->setRoles(array('ROLE_TUTOR'));
-            $user->addProwadzoneSylabusy($this->getReference('sylabus' . $x));
+            $user->addProwadzoneSylabusy($this->getReference('sylabus1'));
+            $user->addProwadzoneSylabusy($this->getReference('sylabus2'));
+            $user->addProwadzoneSylabusy($this->getReference('sylabus3'));
+            $user->addProwadzoneSylabusy($this->getReference('sylabus4'));
+            $user->addProwadzoneSylabusy($this->getReference('sylabus5'));
             $user->setPassword($this->passwordEncoder->encodePassword(
                 $user,
                 'user' . $x

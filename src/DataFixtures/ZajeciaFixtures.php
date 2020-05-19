@@ -7,9 +7,10 @@ use App\Entity\Godziny;
 use App\Entity\MiejsceRealizacji;
 use App\Entity\Zajecia;
 use Doctrine\Bundle\FixturesBundle\Fixture;
+use Doctrine\Common\DataFixtures\DependentFixtureInterface;
 use Doctrine\Persistence\ObjectManager;
 
-class ZajeciaFixtures extends Fixture
+class ZajeciaFixtures extends Fixture implements DependentFixtureInterface
 {
     public function load(ObjectManager $manager)
     {
@@ -81,6 +82,8 @@ Tematyka ćwiczeń laboratoryjnych:
         $zajecia1->setZalozeniaWstepne('');
         $zajecia1->setWymaganiaFormalne('Wstęp do Programowania, Matematyka Dyskretna. Konieczna podstawowa umiejętność programowania imperatywnego w językach strukturalnych oraz  umiejętność projektowania prostych struktur danych');
         $zajecia1->setMetodyDydaktyczne(array('Wykład', 'Dyskusja problemu', 'Studium przypadków', 'Pisanie programów', 'Prezentacja i analiza kodów źródłowych', 'Konsultacje'));
+        $zajecia1->addLiteratura($this->getReference('literatura1'));
+        $zajecia1->addLiteratura($this->getReference('literatura2'));
 
         $miejsceRealizacji = new MiejsceRealizacji();
         $miejsceRealizacji->setCwiczenia('Laboratorium komputerowe');
@@ -127,6 +130,8 @@ Ponowoczesność i globalizacja: ambiwalencja skutków industrializmu, krytyka s
         $zajecia2->setZalozeniaWstepne('');
         $zajecia2->setWymaganiaFormalne('');
         $zajecia2->setMetodyDydaktyczne(array('Wykład', 'Konsultacje'));
+        $zajecia2->addLiteratura($this->getReference('literatura3'));
+        $zajecia2->addLiteratura($this->getReference('literatura4'));
 
         $miejsceRealizacji2 = new MiejsceRealizacji();
         $miejsceRealizacji2->setCwiczenia('');
@@ -139,11 +144,83 @@ Ponowoczesność i globalizacja: ambiwalencja skutków industrializmu, krytyka s
         $zajecia2->setNazwaPolska('Socjologia');
         $zajecia2->setNazwaAngielska('Socjology');
 
+
+        $zajecia3 = new Zajecia();
+        $zajecia3->setCele('Celem przedmiotu jest zapoznanie studentów z podstawowymi pojęciami z dziedziny elektroniki, dotyczącymi obwodów i sygnałów. Podstawowe metody analizy układów elektronicznych pozwalają lepiej zrozumieć dobór parametrów układów i systemów informatycznych oraz są przydatne do oceny/wykorzystania sprzętu informatycznego w praktyce.');
+        $godziny3 = new Godziny();
+//        $godziny3->setCzasPracyWlasnej();
+        $godziny3->setECTS(5);
+        $godziny3->setGodzinyCwiczeniowe(30);
+        $godziny3->setGodzinyWykladowe(30);
+        $zajecia3->setGodziny($godziny3);
+        $zajecia3->setDokumentacjaEfektowUczenia(array('Kolokwium pisemne z ocenami.'));
+        $efektyUczenia = new EfektyUczenia();
+        $efektyUczenia->setKompetencje('1 -  rozumie szybkość procesu zachodzenia zmian w technikach komputerowych; jest przygotowany do nieustannego poszerzania swojej wiedzy i umiejętności w ramach pracy zawodowej');
+        $efektyUczenia->setWiedza('1 - ma elementarną wiedzę w zakresie elektrotechniki, pozwalającą zrozumieć elektronikę oraz dokonywać pomiarów wielkości elektrycznych
+2 – ma elementarną wiedzę w zakresie elektroniki, potrzebną do zrozumienia techniki analogowej i cyfrowej, układów logicznych oraz zasad funkcjonowania współczesnych komputerów
+');
+        $efektyUczenia->setUmiejetnosci('1 - potrafi pozyskiwać informacje z literatury, baz danych oraz innych źródeł, integrować je, dokonywać ich interpretacji oraz wyciągać wnioski i formułować opinie na temat problemów informatycznych oraz proponowanych rozwiązań
+2 -  potrafi planować i przeprowadzać eksperymenty symulacyjne i praktyczne oraz interpretować uzyskane wyniki i wyciągać wnioski
+3 -  wykazuje się umiejętnością logicznego myślenia i porządkowania informacji w postaci wiedzy ogólnej
+');
+        $zajecia3->setEfektyUczenia($efektyUczenia);
+        $zajecia3->setOpis('');
+        $zajecia3->setUwagi('Minimalna liczba punktów konieczna do zaliczenia: 50%');
+        $zajecia3->setZalozenia('');
+        $zajecia3->setJezykWykladowy('polski');
+        $zajecia3->setKryteriaOceniania('Kolokwium pisemne – 100%');
+        $zajecia3->setZakresTematow('1.	Postęp technologiczny w elektronice, krótki rys historyczny
+2.	Podstawowe wielkości związane z przepływem prądu elektrycznego
+- prąd, napięcie, 
+- rezystancja/impedancja, pojemność, indukcyjność
+3.	Elementy bierne i elementy czynne w elektronice
+4.	Obwody prądu stałego i przemiennego, zasady obliczania napięć i prądów, impedancji i impedancji zastępczej, wykresy wskazowe.
+5.	Elementy półprzewodnikowe – diody, tranzystory bipolarne i tranzystory polowe – charakterystyki, parametry, układy pracy, zastosowania.
+6.	Podstawowe układy tranzystorowe.
+7.	Sprzężenia zwrotne.
+8.	Wzmacniacze operacyjne – struktura, modele, obliczanie układów wzmacniaczy operacyjnych, zasady działania, parametry i zastosowania.
+');
+        $zajecia3->setZalozeniaWstepne('Wymagana jest wiedza z zakresu analizy matematycznej, fizyki.');
+        $zajecia3->setWymaganiaFormalne('');
+        $zajecia3->setMetodyDydaktyczne(array('Wykład', 'Dyskusja problemu', 'Rozwiązywanie problemu' , 'Konsultacje'));
+        $zajecia3->addLiteratura($this->getReference('literatura5'));
+        $zajecia3->addLiteratura($this->getReference('literatura6'));
+
+        $miejsceRealizacji = new MiejsceRealizacji();
+        $miejsceRealizacji->setCwiczenia('Laboratorium komputerowe');
+        $miejsceRealizacji->setWyklad('Sala audytoryjna');
+
+        $zajecia3->setMiejsceRealizacji($miejsceRealizacji);
+        $zajecia3->setWeryfikacjaEfektowUczenia(array('Kolokwium pisemne'));
+        $zajecia3->setStatusPodstawowe(true);
+        $zajecia3->setStatusObowiazkowe(true);
+        $zajecia3->setNazwaPolska('Podstawy Elektroniki');
+        $zajecia3->setNazwaAngielska('Fundamentals of Electronics');
+
+        $zajecia4=clone $zajecia1;
+        $zajecia5=clone $zajecia2;
+        $zajecia6=clone $zajecia3;
+
         $manager->persist($zajecia1);
         $manager->persist($zajecia2);
+        $manager->persist($zajecia3);
+        $manager->persist($zajecia4);
+        $manager->persist($zajecia5);
+        $manager->persist($zajecia6);
 
         $this->addReference('zajecia1', $zajecia1);
         $this->addReference('zajecia2', $zajecia2);
+        $this->addReference('zajecia3', $zajecia3);
+        $this->addReference('zajecia4', $zajecia4);
+        $this->addReference('zajecia5', $zajecia5);
+        $this->addReference('zajecia6', $zajecia6);
         $manager->flush();
+    }
+
+    public function getDependencies()
+    {
+        return array(
+            LiteraturaFixtures::class
+        );
     }
 }
