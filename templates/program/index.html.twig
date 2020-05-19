@@ -72,21 +72,29 @@
                         //console.log(data);
                         //console.log(data.output2);
                         $("#ajax-results").empty();
-                        var url = window.location.href;
-                        var new_url = url.replace('/program', '/sylabus/');
 
-                        for (i = 0; i < data.output.length; i++) {
-                            $('<a>', {
-                                text: 'Sylabus ' + data.output2[i],
-                                title: 'Sylabus ' + data.output2[i],
-                                href: new_url + data.output[i]
-                            }).appendTo('div#ajax-results');
+                        if ($.trim(data)){
+                            //alert("Data not empty");
+                            var url = window.location.href;
+                            var new_url = url.replace('/program', '/sylabus/');
 
-                            $('</br>').appendTo('div#ajax-results');
-                        };
+                            for (i = 0; i < data.output.length; i++) {
+                                $('<a>', {
+                                    text: 'Sylabus ' + data.output2[i],
+                                    title: 'Sylabus ' + data.output2[i],
+                                    href: new_url + data.output[i]
+                                }).appendTo('div#ajax-results');
 
-                        $("#nowy_sylabus_button").attr("href",'/sylabus/new/'+data.programId.toString());
+                                $('</br>').appendTo('div#ajax-results');
+                            }
+
+                            $("#nowy_sylabus_button").attr("href",'/sylabus/new/'+data.programId.toString());
+                        }
                     }
+                    error: function () {
+                        console.log("Error function");
+                        $("#ajax-results").empty();
+                    },
                 });
                 return false;
 
