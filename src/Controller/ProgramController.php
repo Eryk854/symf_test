@@ -65,7 +65,7 @@ class ProgramController extends AbstractController
                 }
             }
 
-            $arrData = ['output' => $output_sylabusyId, 'output2' => $output_sylabusyNumKat, 'programId' => $output_programyId[0]];
+            $arrData = ['output' => $output_sylabusyId, 'output2' => $output_sylabusyNumKat, 'programId' => $output_programyId];
 
             return new JsonResponse($arrData);
         }

@@ -90,7 +90,7 @@
                                 $('<p>', {
                                     text: 'Brak sylabusów dla podanego programu!'}).appendTo('div#ajax-results');
                             }
-                            $("#nowy_sylabus_button").attr("href",'/sylabus/new/'+data.programId.toString());
+                            $("#nowy_sylabus_button").attr("href",'/sylabus/new/'+data.programId[0].toString());
                         }
                     },
                     error: function () {
