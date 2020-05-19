@@ -31,23 +31,34 @@ class UzytkownikFixtures extends Fixture implements DependentFixtureInterface
      */
     private function loadKoordynatorzy(ObjectManager $manager)
     {
-        for ($x = 1; $x <= 2; $x++) {
-            $user = new Uzytkownik();
-            $user->setLogin('manager' . $x);
-            $user->setImie('manager' . $x);
-            $user->setEmail('manager' . $x . '@sggw.edu.pl');
-            $user->setRoles(array('ROLE_TUTOR'));
-            $user->addKoordynowaneSylabusy($this->getReference('sylabus1'));
-            $user->addKoordynowaneSylabusy($this->getReference('sylabus2'));
-            $user->addKoordynowaneSylabusy($this->getReference('sylabus3'));
-            $user->addKoordynowaneSylabusy($this->getReference('sylabus4'));
-            $user->addKoordynowaneSylabusy($this->getReference('sylabus5'));
-            $user->setPassword($this->passwordEncoder->encodePassword(
-                $user,
-                'manager' . $x
-            ));
-            $manager->persist($user);
-        }
+        $user = new Uzytkownik();
+        $user->setLogin('manager1');
+        $user->setImie('manager1');
+        $user->setEmail('manager1' . '@sggw.edu.pl');
+        $user->setRoles(array('ROLE_TUTOR'));
+        $user->addKoordynowaneSylabusy($this->getReference('sylabus1'));
+        $user->addKoordynowaneSylabusy($this->getReference('sylabus2'));
+        $user->addKoordynowaneSylabusy($this->getReference('sylabus3'));
+        $user->setPassword($this->passwordEncoder->encodePassword(
+            $user,
+            'manager1'
+        ));
+
+        $user2 = new Uzytkownik();
+        $user2->setLogin('manager2');
+        $user2->setImie('manager2');
+        $user2->setEmail('manager2' . '@sggw.edu.pl');
+        $user2->setRoles(array('ROLE_TUTOR'));
+        $user2->addKoordynowaneSylabusy($this->getReference('sylabus4'));
+        $user2->addKoordynowaneSylabusy($this->getReference('sylabus5'));
+        $user2->addKoordynowaneSylabusy($this->getReference('sylabus6'));
+        $user2->setPassword($this->passwordEncoder->encodePassword(
+            $user2,
+            'manager2'
+        ));
+
+        $manager->persist($user);
+        $manager->persist($user2);
     }
 
     /**

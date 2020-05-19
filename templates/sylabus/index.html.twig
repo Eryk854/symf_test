@@ -24,7 +24,7 @@
 
 <div class="example-wrapper">
     <h1>Sylabus {{ numer_katalogowy }}</h1>
-    {% if is_granted('ROLE_TUTOR') %}
+    {% if is_granted('SYLABUS_EDIT',sylabus) %}
         <a href="{{ path('sylabusForm', {'id': id }) }}">Edytuj</a>
     {% endif %}
 

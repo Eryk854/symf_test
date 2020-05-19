@@ -83,6 +83,7 @@ class SylabusController extends AbstractController
         return $this->render('sylabus/index.html.twig', [
             'controller_name' => 'SylabusController',
             'id' => $sylabus->getId(),
+            'sylabus' => $sylabus,
             'numer_katalogowy' => $numer_katalogowy,
             'jednostka_realizujaca' => $jednostka_realizujaca,
             'jednostka_zlecajaca' => $jednostka_zlecajaca,
