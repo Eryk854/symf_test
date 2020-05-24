@@ -29,5 +29,14 @@ class SylabusRepository extends ServiceEntityRepository
             ->getOneOrNullResult()
         ;
     }
+    public function findOneByZajecia($value): ?Sylabus
+    {
+        return $this->createQueryBuilder('s')
+            ->andWhere('s.zajecia = :val')
+            ->setParameter('val', $value)
+            ->getQuery()
+            ->getOneOrNullResult()
+            ;
+    }
 
 }

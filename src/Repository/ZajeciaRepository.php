@@ -22,7 +22,7 @@ class ZajeciaRepository extends ServiceEntityRepository
     // /**
     //  * @return Zajecia[] Returns an array of Zajecia objects
     //  */
-    public function findByExampleField($value)
+    public function findByFieldNazwaPolska($value)
     {
 
         return $this->createQueryBuilder('z')

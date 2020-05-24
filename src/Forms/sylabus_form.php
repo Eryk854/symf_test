@@ -31,14 +31,14 @@ class SylabusType extends AbstractType
                 'class'=>Instytucja::class,
                 'choice_label'=>'pelna_nazwa',
                 'multiple'=>false,
-                'required'=>false,
+                'required'=>true,
                 'attr'=>['class'=>'form-control']
             ])
             ->add('jednostka_zlecajaca', EntityType::class, [
                 'class'=>Instytucja::class,
                 'choice_label'=>'pelna_nazwa',
                 'multiple'=>false,
-                'required'=>false,
+                'required'=>true,
                 'attr'=>['class'=>'form-control']
             ])
             ->add('numer_katalogowy', TextType::class,[

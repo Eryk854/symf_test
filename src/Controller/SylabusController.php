@@ -6,11 +6,17 @@ namespace App\Controller;
 use App\Entity\Instytucja;
 use App\Entity\Program;
 use App\Entity\Sylabus;
+use App\Entity\Uzytkownik;
 use App\Entity\Zajecia;
+
+use App\Forms\Type\HourType;
 use App\Forms\Type\NowySylabusType;
+use App\Forms\Type\ZajeciaType;
+
 use App\Forms\Type\SylabusType;
 use App\Repository\SylabusRepository;
 use App\Security\Voter\EditSylabusVoter;
+
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -131,7 +137,8 @@ class SylabusController extends AbstractController
         $form = $this->createForm(SylabusType::class, $sylabus);
         $form->handleRequest($request);
 
-        if ($form->isSubmitted() && $form->isValid()) {
+        if ($form->isSubmitted() && $form->isValid())
+        {
             $sylabus = $form->getData();
             $entityManager->persist($sylabus);
             $entityManager->flush();
@@ -151,6 +158,7 @@ class SylabusController extends AbstractController
     public function new(Request $request, $program_id)
     {
         $entityManager = $this->getDoctrine()->getManager(); # polaczenie do bazy
+
         $rok_akademicki = $this->getDoctrine()->getRepository(Program::class)->find($program_id)->getRokAkademicki();
         $forma_studiow = $this->getDoctrine()->getRepository(Program::class)->find($program_id)->getFormaStudiow();
         $poziom_studiow = $this->getDoctrine()->getRepository(Program::class)->find($program_id)->getPoziomStudiow();
@@ -160,11 +168,12 @@ class SylabusController extends AbstractController
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
             $sylabus = $form->getData();
-            $podobne_przedmioty = $this->getDoctrine()->getRepository(Zajecia::class)->findByExampleField($sylabus['nazwa']);
+            $podobne_przedmioty = $this->getDoctrine()->getRepository(Zajecia::class)->findByFieldNazwaPolska($sylabus['nazwa']);
+
             // na podstawie id kazdego przedmiotu pobieram z jego sylabusa program a z programu rok stopień i formę studiów
             $dane = array();
             for ($i = 0; $i < count($podobne_przedmioty); $i++) {
-                $program_przedmiotu = $this->getDoctrine()->getRepository(Sylabus::class)->findOneBySomeField($podobne_przedmioty[$i])->getProgram();
+                $program_przedmiotu = $this->getDoctrine()->getRepository(Sylabus::class)->findOneByZajecia($podobne_przedmioty[$i])->getProgram();
                 array_push($dane, array(
                     'forma_studiow' => $program_przedmiotu->getFormaStudiow(),
                     'rok_akademicki' => $program_przedmiotu->getRokAkademicki(),
@@ -194,7 +203,7 @@ class SylabusController extends AbstractController
     }
 
     /**
-     * @Route("/sylabus/new/make", name="make_sylabus")
+     * @Route("/sylabus/make", name="make_sylabus")
      */
     public function make(Request $request)
     {
@@ -203,6 +212,9 @@ class SylabusController extends AbstractController
         $program_id = $request->request->get('program_id');
         $program = $this->getDoctrine()->getRepository(Program::class)->find($program_id);
 
+        // użytkownik który tworzy sylabus jest automatycznie przypisywany jako jego koordynator
+        $user_id = $this->getUser()->getId();
+        $user = $this->getDoctrine()->getRepository(Uzytkownik::class)->find($user_id);
         if ($request->request->get('przedmiot_id')) {
             // użytkownik chce zduplikować istniejący sylabus
             $przedmiot_duplikat_id = $request->request->get('przedmiot_id');
@@ -215,15 +227,15 @@ class SylabusController extends AbstractController
             $entityManager->flush();
 
             // stworzenie sylabusa odwołującego się do tych zajęć w danym programie studiów
-            dump($przedmiot->getId());
             $sylabus = new Sylabus();
             $sylabus->setZajecia($przedmiot);
             $sylabus->setProgram($program);
+            $sylabus->setKoordynatorZajec($user);
             $entityManager->persist($sylabus);
             $entityManager->flush();
 
             //przekierowanie do wypełniania tego sylabusa
-            return $this->redirectToRoute('sylabus', ['id' => $sylabus->getId()]);
+            return $this->redirectToRoute('sylabusForm', ['id' => $sylabus->getId()]);
         } else {
             //użytkownik tworzy całkiem nowy sylabus bez duplikacji danych
             $nazwa = $request->request->get('nazwa');
@@ -235,11 +247,14 @@ class SylabusController extends AbstractController
             $sylabus = new Sylabus();
             $sylabus->setZajecia($zajecia);
             $sylabus->setProgram($program);
+            $sylabus->setKoordynatorZajec($user);
 
             $entityManager->persist($sylabus);
             $entityManager->flush();
 
             return $this->redirectToRoute('sylabusForm', ['id' => $sylabus->getId()]);
+
         }
     }
+
 }
