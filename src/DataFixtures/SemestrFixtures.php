@@ -34,12 +34,17 @@ class SemestrFixtures extends Fixture
         $semestr6->setNumerSemestru(6);
         $semestr6->setRodzajSemestru("Letni");
 
+        $semestr7 = new Semestr();
+        $semestr7->setNumerSemestru(7);
+        $semestr7->setRodzajSemestru("Zimowy");
+
         $manager->persist($semestr);
         $manager->persist($semestr2);
         $manager->persist($semestr3);
         $manager->persist($semestr4);
         $manager->persist($semestr5);
         $manager->persist($semestr6);
+        $manager->persist($semestr7);
 
         $this->addReference('semestr1', $semestr);
         $this->addReference('semestr2', $semestr2);
@@ -47,6 +52,7 @@ class SemestrFixtures extends Fixture
         $this->addReference('semestr4', $semestr4);
         $this->addReference('semestr5', $semestr5);
         $this->addReference('semestr6', $semestr6);
+        $this->addReference('semestr7', $semestr7);
 
         $manager->flush();
     }

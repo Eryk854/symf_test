@@ -36,9 +36,14 @@ class UzytkownikFixtures extends Fixture implements DependentFixtureInterface
         $user->setImie('manager1');
         $user->setEmail('manager1' . '@sggw.edu.pl');
         $user->setRoles(array('ROLE_TUTOR'));
-        $user->addKoordynowaneSylabusy($this->getReference('sylabus1'));
-        $user->addKoordynowaneSylabusy($this->getReference('sylabus2'));
-        $user->addKoordynowaneSylabusy($this->getReference('sylabus3'));
+
+        for ($program = 1; $program <= 2; $program++) {
+            for ($sem = 1; $sem <= SylabusFixture::liczbaSemestrowNaProgram; $sem++) {
+                for ($i = 1; $i <= SylabusFixture::liczbaSylabusowNaSemestr; $i++) {
+                    $user->addKoordynowaneSylabusy($this->getReference('sylabus' . $program . $sem . $i));
+                }
+            }
+        }
         $user->setPassword($this->passwordEncoder->encodePassword(
             $user,
             'manager1'
@@ -49,9 +54,13 @@ class UzytkownikFixtures extends Fixture implements DependentFixtureInterface
         $user2->setImie('manager2');
         $user2->setEmail('manager2' . '@sggw.edu.pl');
         $user2->setRoles(array('ROLE_TUTOR'));
-        $user2->addKoordynowaneSylabusy($this->getReference('sylabus4'));
-        $user2->addKoordynowaneSylabusy($this->getReference('sylabus5'));
-        $user2->addKoordynowaneSylabusy($this->getReference('sylabus6'));
+        for ($program = 3; $program <= 4; $program++) {
+            for ($sem = 1; $sem <= SylabusFixture::liczbaSemestrowNaProgram; $sem++) {
+                for ($i = 1; $i <= SylabusFixture::liczbaSylabusowNaSemestr; $i++) {
+                    $user->addKoordynowaneSylabusy($this->getReference('sylabus' . $program . $sem . $i));
+                }
+            }
+        }
         $user2->setPassword($this->passwordEncoder->encodePassword(
             $user2,
             'manager2'
@@ -72,11 +81,14 @@ class UzytkownikFixtures extends Fixture implements DependentFixtureInterface
             $user->setImie('user' . $x);
             $user->setEmail('user' . $x . '@sggw.edu.pl');
             $user->setRoles(array('ROLE_TUTOR'));
-            $user->addProwadzoneSylabusy($this->getReference('sylabus1'));
-            $user->addProwadzoneSylabusy($this->getReference('sylabus2'));
-            $user->addProwadzoneSylabusy($this->getReference('sylabus3'));
-            $user->addProwadzoneSylabusy($this->getReference('sylabus4'));
-            $user->addProwadzoneSylabusy($this->getReference('sylabus5'));
+
+            for ($program = 1; $program <= SylabusFixture::liczbaProgramow; $program++) {
+                for ($sem = 1; $sem <= SylabusFixture::liczbaSemestrowNaProgram; $sem++) {
+                    for ($i = 1; $i <= SylabusFixture::liczbaSylabusowNaSemestr; $i++) {
+                        $user->addProwadzoneSylabusy($this->getReference('sylabus' . $program . $sem . $i));
+                    }
+                }
+            }
             $user->setPassword($this->passwordEncoder->encodePassword(
                 $user,
                 'user' . $x

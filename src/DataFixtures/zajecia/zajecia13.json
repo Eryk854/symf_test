@@ -1,0 +1,58 @@
+{
+  "nazwaPolska": "Podstawy fizyki",
+  "nazwaAngielska": "Fundamentals of physics",
+  "jezykWykladowy": "polski",
+  "zalozenia": "",
+  "cele": "Celem przedmiotu jest: przypomnienie najważniejszych pojęć, praw i zasad mechaniki klasycznej, przypomnienie i poszerzenie wiedzy na temat elektryczności i magnetyzmu, przedstawienie podstaw nierelatywistycznej mechaniki kwantowej oraz zapoznanie studentów z zastosowaniem rachunku różniczkowego i całkowego w wybranych zagadnieniach z fizyki.",
+  "opis": "",
+  "zakresTematow": "•\tZagadnienia, którymi zajmuje się fizyka. Działy fizyki. Oddziaływania fundamentalne. Jednostki stosowane w fizyce.\n•\tWprowadzenie matematyczne: pochodna funkcji jednej zmiennej, całka nieoznaczona i oznaczona, iloczyn skalarny i wektorowy, pochodne cząstkowe, operatory różniczkowe.\n•\tKinematyka punktu materialnego. Opis położenia. Opis ruchu: tor, droga, prędkość i przyspieszenie. Klasyfikacja ruchów. \n•\tPodstawowe pojęcia dynamiki: masa, siła i moment siły, pęd i moment pędu, energia, praca, moc. Zasady dynamiki Newtona. Równania ruchu. Zasady zachowania.\n•\tWybrane zagadnienia dynamiki: ruch w centralnym i jednorodnym polu grawitacyjnym, siły oporu, ruch w jednorodnych polach elektrycznym i magnetycznym, ruch harmoniczny. \n•\tPole elektryczne: prawo Coulomba, natężenie pola elektrycznego, prawo Gaussa, zasada superpozycji, kondensatory, przewodniki i dielektryki. \n•\tPole magnetyczne: wektor indukcji magnetycznej, prawo Biota-Savarta, prawo Ampere’a, przewodnik z prądem w polu magnetycznym. \n•\tPrąd elektryczny: przewodnictwo elektryczne, natężenie prądu, prawo Ohma, równania Kirchhoffa, praca i moc prądu stałego. obwody prądu stałego, prawo indukcji Faradaya, indukcja wzajemna i własna, obwody prądu zmiennego. \n•\tPrawa Maxwella. Fala elektromagnetyczna. Równanie ciągłości. Opis pól w różnych układach odniesienia.  \n•\tElementy mechaniki kwantowej: podstawy doświadczalne, funkcja falowa, wartość oczekiwana wielkości fizycznej, operatory energii i pędu, zasada nieoznaczoności, równanie Schrödingera, studnia i próg potencjału, przejście przez barierę potencjału, budowa atomu.\n•\tElementy fizyki ciała stałego: budowa kryształów, pasmowy model przewodnictwa, przewodniki, półprzewodniki i izolatory. \n",
+  "metodyDydaktyczne": ["Wykład", "rozwiązywanie zadań rachunkowych oraz dyskusja na ćwiczeniach", "materiały pomocnicze do samodzielnej pracy studenta", "konsultacje"],
+  "wymaganiaFormalne": "Zakładana jest znajomość matematyki w zakresie szkolnym na poziomie przynajmniej dostatecznym.",
+  "zalozeniaWstepne": "",
+  "efektyUczenia": {
+    "wiedza": "1 -  Student zna i rozumie podstawowe pojęcia, prawa, zasady, zależności \ni zjawiska fizyczne z zakresu mechaniki \nklasycznej, elektryczności i magnetyzmu oraz mechaniki kwantowej.",
+    "umiejetnosci": "1 -  Potrafi rozwiązywać zadania rachunkowe z fizyki z wykorzystaniem rachunku różniczkowego i całkowego.\n\n2 -  Analizując proste problemy z omawianych działów fizyki umie wykonać kilkustopniowe rozumowanie \nwykraczające poza podstawienie do gotowych \nwzorów.",
+    "kompetencje": ""
+  },
+  "weryfikacjaEfektowUczenia": ["Ocena przygotowania i aktywności na ćwiczeniach", "kolokwium", "egzamin"],
+  "dokumentacjaEfektowUczenia": ["Kolokwium pisemne" , "egzamin pisemny"],
+  "kryteriaOceniania": "Ćwiczenia i kolokwium pisemne 40%, egzamin pisemny 60%.",
+  "statusPodstawowe": true,
+  "statusObowiazkowe": true,
+  "uwagi": "",
+  "miejsceRealizacji": {
+    "cwiczenia": "sala do ćwiczeń audytoryjnych",
+    "wyklad": "sala wykładowa"
+  },
+  "godziny": {
+    "ects": "5",
+    "cwiczenia": "30",
+    "wyklad": "30"
+  },
+  "literatura": [
+    {
+      "autor": "J. Blinowski, J. Trylski",
+      "tytul": "Fizyka dla kandydatów na wyższe uczelnie",
+      "wydawnictwo": "PWN, Warszawa",
+      "rodzaj": "Podstawowa"
+    },
+    {
+      "autor": "W. Bogusz, J. Garbarczyk, F. Krok",
+      "tytul": "Podstawy fizyki",
+      "wydawnictwo": "Oficyna Wydawnicza Politechniki Warszawskiej",
+      "rodzaj": "Podstawowa"
+    },
+    {
+      "autor": "Cz. Bobrowski",
+      "tytul": "Fizyka – krótki kurs",
+      "wydawnictwo": "WNT",
+      "rodzaj": "Podstawowa"
+    },
+    {
+      "autor": "M. A. Herman, A. Kalestyński, L. Widomski",
+      "tytul": "Podstawy fizyki dla kandydatów na wyższe uczelnie i studentów",
+      "wydawnictwo": "PWN",
+      "rodzaj": "Podstawowa"
+    }
+  ]
+}

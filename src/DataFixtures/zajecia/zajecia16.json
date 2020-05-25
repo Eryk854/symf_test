@@ -1,0 +1,70 @@
+{
+  "nazwaPolska": "Podstawy analizy matematycznej",
+  "nazwaAngielska": "Principles of Mathematical Analysis",
+  "jezykWykladowy": "polski",
+  "zalozenia": "",
+  "cele": "Celem przedmiotu jest poznanie podstaw rachunku różniczkowego i całkowego funkcji jednej zmiennej oraz ich zastosowań do problemów praktycznych.",
+  "opis": "",
+  "zakresTematow": "Wykłady\nFunkcje jednej zmiennej – podstawowe pojęcia i własności.\nCiągi liczbowe. Granica ciągu. Liczba e. Rachunek granic. Symbole nieoznaczone.\nGranica i ciągłość funkcji. Własności funkcji ciągłych. \nRachunek różniczkowy funkcji jednej zmiennej. Pochodna, różniczka. Twierdzenia o przyrostach. Wyznaczanie ekstremów. Badanie przebiegu zmienności funkcji. Wzór Taylora. \nRachunek całkowy funkcji jednej zmiennej. Całka nieoznaczona. Całka oznaczona. Funkcja górnej granicy całkowania. Całki niewłaściwe. Zastosowania geometryczne i fizyczne całek pojedynczych. Przybliżone metody całkowania.\nĆwiczenia\nTematyka ćwiczeń ściśle powiązana z materiałem przedstawionym na wykładzie. Zadania przerabiane na ćwiczeniach mają na celu ilustrować i utrwalać materiał wykładu.",
+  "metodyDydaktyczne": ["wykład"],
+  "wymaganiaFormalne": "Zakres wiedzy obowiązujący na maturze z matematyki na poziomie rozszerzonym.",
+  "zalozeniaWstepne": "",
+  "efektyUczenia": {
+    "wiedza": "1. Zna i rozumie podstawowe pojęcia analizy matematycznej.",
+    "umiejetnosci": "Umiejętności:\n2. Umie zastosować rachunek różniczkowy do badania funkcji.\n3. Umie stosować całki w zagadnieniach praktycznych.\n4. Umie stosować podstawowe metody aproksymacyjne.\n5. Umie formułować proste problemy w języku matematyki.",
+    "kompetencje": ""
+  },
+  "weryfikacjaEfektowUczenia": ["dwa pisemne kolokwia", "egzamin pisemny"],
+  "dokumentacjaEfektowUczenia": ["prace pisemne"],
+  "kryteriaOceniania": "kolokwia 60%; egzamin 40%.",
+  "statusPodstawowe": true,
+  "statusObowiazkowe": true,
+  "uwagi": "Kolokwia z przedmiotu przeprowadzane są poza zajęciami w dodatkowym czasie.",
+  "miejsceRealizacji": {
+    "cwiczenia": "",
+    "wyklad": "sala audytoryjna"
+  },
+  "godziny": {
+    "ects": "6",
+    "cwiczenia": "30",
+    "wyklad": "30"
+  },
+  "literatura": [
+    {
+      "autor": "G. Decewicz, W. Żakowski",
+      "tytul": "Matematyka",
+      "wydawnictwo": "WNT",
+      "rodzaj": "Podstawowa i uzupełniająca"
+    },
+    {
+      "autor": "M. Gewert, Z. Skoczylas",
+      "tytul": "Analiza Matematyczna 1",
+      "wydawnictwo": "Oficyna Wydawnicza GiS",
+      "rodzaj": "Podstawowa i uzupełniająca"
+    },
+    {
+      "autor": "R. Rudnick",
+      "tytul": "Wykłady z analizy matematycznej",
+      "wydawnictwo": "PWN",
+      "rodzaj": "Podstawowa i uzupełniająca"
+    },
+    {
+      "autor": "J. Banaś, S. Wędrychowicz",
+      "tytul": "Zbiór zadań z analizy matematycznej",
+      "wydawnictwo": "PWN",
+      "rodzaj": "Podstawowa i uzupełniająca"
+    },
+    {
+      "autor": "W. Stankiewicz",
+      "tytul": "Zadania z matematyki dla wyższych uczelni technicznych",
+      "wydawnictwo": "PWN",
+      "rodzaj": "Podstawowa i uzupełniająca"
+    },
+    {
+      "autor": "L. Włodarski, W. Krysicki",
+      "tytul": "Analiza matematyczna w zadaniach",
+      "wydawnictwo": "PWN",
+      "rodzaj": "Podstawowa i uzupełniająca"
+    }
+  ]
+}
