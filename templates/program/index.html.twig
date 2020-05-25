@@ -1,4 +1,4 @@
-{% extends 'base.html.twig' %}
+{% extends 'baseWithoutJquery.html.twig' %}
 
 {% block title %}Programy studiów{% endblock %}
 
@@ -33,13 +33,10 @@
         <br/>
 
         <button id="search_button" class="ajax">Szukaj programu studiów</button>
-        {% if is_granted('ROLE_TUTOR') %}
-            <a id="nowy_sylabus_button">Dodaj sylabus</a>
-        {% endif %}
         <div id="ajax-results"></div>
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <script>
             $(document).ready(function() {
                 $('#search_button').click();
@@ -83,7 +80,6 @@
                                 $('<p>', {
                                     text: 'Brak programów dla wybranego filtra!'}).appendTo('div#ajax-results');
                             }
-                            $("#nowy_sylabus_button").attr("href",'/sylabus/new/'+data.programy[0]["id"].toString());
                         }
                     },
                     error: function () {

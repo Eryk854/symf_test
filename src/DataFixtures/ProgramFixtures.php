@@ -22,17 +22,18 @@ class ProgramFixtures extends Fixture implements DependentFixtureInterface
         $program->setPoziomStudiow("1 stopień");
         $program->setKierunek($this->getReference('kierunek1'));
 
+
         $program2 = new Program();
-        $program2->setOpis('Informatyka 1 stopień niestacjonarne 2019/2020');
-        $program2->setRokAkademicki('2019/2020');
-        $program2->setFormaStudiow("Niestacjonarne");
+        $program2->setOpis('Informatyka 1 stopień stacjonarne 2018/2019');
+        $program2->setRokAkademicki('2018/2019');
+        $program2->setFormaStudiow("Stacjonarne");
         $program2->setPoziomStudiow("1 stopień");
         $program2->setKierunek($this->getReference('kierunek1'));
 
         $program3 = new Program();
-        $program3->setOpis('Informatyka 1 stopień stacjonarne 2018/2019');
-        $program3->setRokAkademicki('2018/2019');
-        $program3->setFormaStudiow("Stacjonarne");
+        $program3->setOpis('Informatyka 1 stopień niestacjonarne 2019/2020');
+        $program3->setRokAkademicki('2019/2020');
+        $program3->setFormaStudiow("Niestacjonarne");
         $program3->setPoziomStudiow("1 stopień");
         $program3->setKierunek($this->getReference('kierunek1'));
 

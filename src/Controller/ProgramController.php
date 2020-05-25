@@ -65,7 +65,7 @@ class ProgramController extends AbstractController
                 }
             }
 
-            $arrData = ['output' => $output_programy, 'programy' => $output_programy];
+            $arrData = ['output' => $output_programy];
 
             return new JsonResponse($arrData);
         }
@@ -116,6 +116,7 @@ class ProgramController extends AbstractController
         $nowy_url .= 'sylabus/';
 
         return $this->render('program/program.html.twig', [
+            'programId' => $program->getId(),
             'kierunek' => $kierunek,
             'forma' => $forma,
             'rok' => $rok,

@@ -11,7 +11,7 @@
   "zalozeniaWstepne": "",
   "efektyUczenia": {
     "wiedza": "1- zna własności macierzy (w tym macierzy odwzorowań liniowych) i ich zastosowania.\n2 – rozumie pojęcie przestrzeni linowych,  bazy i wymiaru. \n3 – ma wiedzę dotyczącą podstaw geometrii przestrzennej.\n\n",
-    "umiejetnosci": "Umiejętności:\n1 -  potrafi rozwiązać układy równań liniowych i analizować ich własności .\n2 – potrafi wyznaczyć wartości i wektory własne macierzy oraz podać postać diagonalną macierzy.\n\n",
+    "umiejetnosci": "1 -  potrafi rozwiązać układy równań liniowych i analizować ich własności .\n2 – potrafi wyznaczyć wartości i wektory własne macierzy oraz podać postać diagonalną macierzy.\n\n",
     "kompetencje": ""
   },
   "weryfikacjaEfektowUczenia": ["Dwa kolokwia pisemne", "pisemny egzamin", "aktywność na zajęciach", "zadania domowe"],
