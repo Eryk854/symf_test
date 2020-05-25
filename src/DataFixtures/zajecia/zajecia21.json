@@ -1,0 +1,58 @@
+{
+  "nazwaPolska": "Matematyka dyskretna 2",
+  "nazwaAngielska": "Discrete mathematics 2",
+  "jezykWykladowy": "polski",
+  "zalozenia": "",
+  "cele": "",
+  "opis": "",
+  "zakresTematow": "Tematyka wykładów:\n\n•\tI i II zasada indukcji matematycznej\n•\tWspółczynniki dwumianowe – zliczanie podzbiorów, trójkąt Pascala, podstawowe tożsamości, dwumiany, uogólniony współczynnik dwumianowy\n•\tZliczanie – prawo sumy, prawo iloczynu, zasada szufladkowa Dirichleta, zasada włączania i wyłączania\n•\tElementy kombinatoryki – wariacje z powtórzeniami, wariacje bez powtórzeń, permutacje, kombinacje bez powtórzeń, permutacje z powtórzeniami, kombinacje z powtórzeniami.\n•\tRekurencja – definicje i zależności rekurencyjne, liczby Fibonacciego, rozwiązywanie równań rekurencyjnych (równania liniowe, 2-go rzędu).\n•\tFunkcje tworzące – rozwijanie funkcji wymiernych w szereg, funkcje tworzące w rozwiązywaniu zależności rekurencyjnych.\n•\tZachowanie asymptotyczne – notacja asymptotyczna duże O, Omega, Theta, metoda iteracyjna rozwiązywania równań rekursji, twierdzenie o rekursji uniwersalnej.\n•\tTeoria liczb – podzielność, NWD, NWW, liczby pierwsze, rozszerzony algorytm Euklidesa\n•\tArytmetyka modularna – działania w zborach reszt Zm, rozwiązywanie równań modularnych, małe twierdzenie Fermata, twierdzenie Eulera\n\nĆwiczenia\nTematyka ćwiczeń ściśle powiązana z materiałem przedstawionym na wykładzie. Zadania przerabiane na ćwiczeniach mają na celu ilustrować i utrwalać materiał wykładu.",
+  "metodyDydaktyczne": ["wykład", "dyskusja problemu", "rozwiązywanie problemu", "konsultacje"],
+  "wymaganiaFormalne": "Matematyka dyskretna 1. Podstawy matematyki wyższej. Podstawy analizy matematycznej.\n\n",
+  "zalozeniaWstepne": "",
+  "efektyUczenia": {
+    "wiedza": "Ma wiedzę z matematyki - obejmującą matematykę dyskretną - przydatne do formułowania i rozwiązywania prostych zadań związanych z informatyką.\n-  Ma szczegółową wiedzę na temat algorytmiki oraz projektowania i programowania obiektowego.",
+    "umiejetnosci": "Potrafi wykorzystać nabytą wiedzę matematyczną do opisu procesów, tworzenia modeli, zapisu algorytmów oraz innych działań w obszarze informatyki.",
+    "kompetencje": ""
+  },
+  "weryfikacjaEfektowUczenia": ["Aktywność na zajęciach; pisemne prace domowe; kolokwium zaliczeniowe"],
+  "dokumentacjaEfektowUczenia": ["Listy obecności z zaznaczeniem aktywności w czasie zajęć", "Pisemne prace domowe", "Kolokwium pisemne (w wersji elektronicznej na platformie Moodle) z ocenami."],
+  "kryteriaOceniania": "Aktywność na zajęciach – 20%; pisemne prace domowe – 30%; kolokwium pisemne – 50%",
+  "statusPodstawowe": true,
+  "statusObowiazkowe": true,
+  "uwagi": "Minimalna liczba punktów konieczna do zaliczenia: 50%",
+  "miejsceRealizacji": {
+    "cwiczenia": "sala audytoryjna",
+    "wyklad": "sala audytoryjna"
+  },
+  "godziny": {
+    "ects": "5",
+    "cwiczenia": "30",
+    "wyklad": "30"
+  },
+  "literatura": [
+    {
+      "autor": "Kenneth A. Ross, Charles R. B. Wright",
+      "tytul": "Matematyka Dyskretna",
+      "wydawnictwo": "PWN",
+      "rodzaj": "Podstawowa"
+    },
+    {
+      "autor": "Wiktor Marek, Janusz Onyszkiewicz",
+      "tytul": "Elementy Logiki i Teorii Mnogości w Zadaniach",
+      "wydawnictwo": "PWN",
+      "rodzaj": "Podstawowa"
+    },
+    {
+      "autor": "Helena Rasiowa",
+      "tytul": "Wstęp do Matematyki Współczesnej",
+      "wydawnictwo": "PWN",
+      "rodzaj": "Uzupełniająca"
+    },
+    {
+      "autor": "Ronald L. Graham, Donald E. Knuth, Oren Patashink",
+      "tytul": "Matematyka Konkretna",
+      "wydawnictwo": "PWN",
+      "rodzaj": "Uzupełniająca"
+    }
+  ]
+}

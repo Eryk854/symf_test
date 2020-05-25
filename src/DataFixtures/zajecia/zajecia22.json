@@ -1,0 +1,76 @@
+{
+  "nazwaPolska": "Podstawy Elektroniki",
+  "nazwaAngielska": "Fundamentals of Electronics",
+  "jezykWykladowy": "polski",
+  "zalozenia": "",
+  "cele": "Celem przedmiotu jest zapoznanie studentów z podstawowymi pojęciami z dziedziny elektroniki, dotyczącymi obwodów i sygnałów. Podstawowe metody analizy układów elektronicznych pozwalają lepiej zrozumieć dobór parametrów układów i systemów informatycznych oraz są przydatne do oceny/wykorzystania sprzętu informatycznego w praktyce.",
+  "opis": "",
+  "zakresTematow": "Opis tematów poruszanych podczas zajęć:\n1.\tPostęp technologiczny w elektronice, krótki rys historyczny\n2.\tPodstawowe wielkości związane z przepływem prądu elektrycznego\n- prąd, napięcie, \n- rezystancja/impedancja, pojemność, indukcyjność\n3.\tElementy bierne i elementy czynne w elektronice\n4.\tObwody prądu stałego i przemiennego, zasady obliczania napięć i prądów, impedancji i impedancji zastępczej, wykresy wskazowe.\n5.\tElementy półprzewodnikowe – diody, tranzystory bipolarne i tranzystory polowe – charakterystyki, parametry, układy pracy, zastosowania.\n6.\tPodstawowe układy tranzystorowe.\n7.\tSprzężenia zwrotne.\n8.\tWzmacniacze operacyjne – struktura, modele, obliczanie układów wzmacniaczy operacyjnych, zasady działania, parametry i zastosowania.",
+  "metodyDydaktyczne": ["wykład", "dyskusja problemu", "rozwiązywanie problemu", "konsultacje"],
+  "wymaganiaFormalne": "Wymagana jest wiedza z zakresu analizy matematycznej, fizyki.",
+  "zalozeniaWstepne": "",
+  "efektyUczenia": {
+    "wiedza": "1 - ma elementarną wiedzę w zakresie elektrotechniki, pozwalającą zrozumieć elektronikę oraz dokonywać pomiarów wielkości elektrycznych\n\n2 – ma elementarną wiedzę w zakresie elektroniki, potrzebną do zrozumienia techniki analogowej i cyfrowej, układów logicznych oraz zasad funkcjonowania współczesnych komputerów",
+    "umiejetnosci": "1 - potrafi pozyskiwać informacje z literatury, baz danych oraz innych źródeł, integrować je, dokonywać ich interpretacji oraz wyciągać wnioski i formułować opinie na temat problemów informatycznych oraz proponowanych rozwiązań\n\n2 -  potrafi planować i przeprowadzać eksperymenty symulacyjne i praktyczne oraz interpretować uzyskane wyniki i wyciągać wnioski\n\n3 -  wykazuje się umiejętnością logicznego myślenia i porządkowania informacji w postaci wiedzy ogólnej",
+    "kompetencje": "1 -  rozumie szybkość procesu zachodzenia zmian w technikach komputerowych; jest przygotowany do nieustannego poszerzania swojej wiedzy i umiejętności w ramach pracy zawodowej"
+  },
+  "weryfikacjaEfektowUczenia": ["Kolokwium pisemne"],
+  "dokumentacjaEfektowUczenia": ["Kolokwium pisemne z ocenami."],
+  "kryteriaOceniania": "Kolokwium pisemne – 100%",
+  "statusPodstawowe": true,
+  "statusObowiazkowe": true,
+  "uwagi": "Minimalna liczba punktów konieczna do zaliczenia: 50%",
+  "miejsceRealizacji": {
+    "cwiczenia": "laboratorium komputerowe",
+    "wyklad": "sala audytoryjna"
+  },
+  "godziny": {
+    "ects": "5",
+    "cwiczenia": "30",
+    "wyklad": "30"
+  },
+  "literatura": [
+    {
+      "autor": "P.Horowitz, W.Hill",
+      "tytul": "Sztuka elektroniki",
+      "wydawnictwo": "WKŁ",
+      "rodzaj": "Podstawowa"
+    },
+    {
+      "autor": "J. Osiowski, J. Szabatin",
+      "tytul": "Podstawy teorii obwodów",
+      "wydawnictwo": "WNT",
+      "rodzaj": "Podstawowa"
+    },
+    {
+      "autor": "Szabatin J., Śliwa E",
+      "tytul": "Zbiór zadań z teorii obwodów",
+      "wydawnictwo": ". Oficyna Wydawnicza Politechniki Warszawskiej",
+      "rodzaj": "Podstawowa"
+    },
+    {
+      "autor": "Filipkowski A",
+      "tytul": "Elementy i układy elektroniczne. Projekt i laboratorium",
+      "wydawnictwo": "Oficyna Wydawnicza Politechniki Warszawskiej",
+      "rodzaj": "Uzupełniająca"
+    },
+    {
+      "autor": "Rusek M., Pasierbiński J",
+      "tytul": "Elementy i układy elektroniczne w pytaniach i odpowiedziach",
+      "wydawnictwo": "PWN",
+      "rodzaj": "Uzupełniająca"
+    },
+    {
+      "autor": "Wawrzyński W",
+      "tytul": "Podstawy współczesnej elektroniki",
+      "wydawnictwo": "Oficyna Wydawnicza Politechniki Warszawskiej",
+      "rodzaj": "Uzupełniająca"
+    },
+    {
+      "autor": "Nawrocki W",
+      "tytul": "Elektronika. Układy Elektroniczne",
+      "wydawnictwo": "Wydawnictwo Politechniki Poznańskiej",
+      "rodzaj": "Uzupełniająca"
+    }
+  ]
+}

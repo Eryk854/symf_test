@@ -1,0 +1,64 @@
+{
+  "nazwaPolska": "Programowanie komponentowe",
+  "nazwaAngielska": "Component programming",
+  "jezykWykladowy": "polski",
+  "zalozenia": "",
+  "cele": "Celem przedmiotu jest zapoznanie studentów z podstawami tworzenia programów w technologiach komponentowych. W trakcie zajęć studenci poznają możliwości wykorzystania zdefiniowanych przez siebie komponentów w programach napisanych w wybranym języku programowania.",
+  "opis": "",
+  "zakresTematow": "1. Przypomnienie podstaw programowania proceduralnego w wybranym języku programowania: wprowadzanie i wyprowadzanie danych, instrukcja warunkowa, instrukcja iteracyjna WHILE, instrukcje iteracyjne FOR, sekwencje – łańcuchy znaków, krotki, listy i słowniki, funkcje i ich wykorzystanie do tworzenia własnych modułów i pakietów, programy z argumentami pozycyjnymi, obsługa wyjątków, operacje na plikach.\n\n2. Przypomnienie podstaw programowania obiektowego w wybranym języku programowania: klasy, metody, obiekty i pola, konstruktory i atrybuty klas, polimorfizm i dziedziczenie.\n\n3. Tworzenie interfejsów graficznych GUI z wykorzystaniem wybranego języka programowania jako przykład wykorzystania paradygmatu programowania obiektowego. Wykorzystanie elementów graficznych i multimedialnych.\n\n4. Pojęcie interfejsu. Przykłady wykorzystania interfejsów w programowaniu obiektowym.\n\n5. Wprowadzenie do programowania komponentowego. Teoria i inżynieria oprogramowania komponentowego. Wzorzec odwróconego sterowania. Pojęcie i rola kontenera,\n\n6. Przegląd wybranych technologii komponentowych.\n\n7. Wykorzystanie odpowiedniego pakietu (biblioteki) wybranego języka programowania do tworzenia komponentów. Typy komponentów i ich użycie. Cykl życia komponentów. Wersjonowanie komponentów. \n\n8. Tworzenie aplikacji w wybranej technologii komponentowej.",
+  "metodyDydaktyczne": ["wykład", "dyskusja problemu", "rozwiązywanie problemu", "studium przypadku", "projekt grupowy", "konsultacje" ],
+  "wymaganiaFormalne": "Wymagana jest wiedza z zakresu przedmiotów: Wstęp do programowania, Programowanie imperatywno – strukturalne, Programowanie obiektowe, Algorytmy i struktury danych, Inżynieria oprogramowania",
+  "zalozeniaWstepne": "",
+  "efektyUczenia": {
+    "wiedza": "1 – zna specyfiki programowania proceduralnego, obiektowego i komponentowego w wybranym języku programowania\n2 – rozumie pojęcie komponentu programowego oraz ma wiedzę na temat podstaw tworzenia i wykorzystania wybranej technologii komponentowej",
+    "umiejetnosci": "1 – potrafi tworzyć programy z wykorzystaniem paradygmatów: proceduralnego, obiektowego i komponentowego, w tym projektować, wytwarzać, wdrażać i utrzymywać komponenty programowe, wykorzystując wybraną technologię komponentową\n2 - projektuje rozbudowane aplikacje z wykorzystaniem stworzonych samodzielnie obiektów i komponentów, w tym modułów wielokrotnego użycia, wykorzystując wybrany język programowania",
+    "kompetencje": ""
+  },
+  "weryfikacjaEfektowUczenia": ["Pisemny test wiedzy ze znajomości specyfiki programowania proceduralnego, obiektowego oraz komponentowego w wybranym języku programowania (efekty wiedzy)","Kolokwium praktyczne polegające na napisaniu określonej liczby programów komputerowych rozwiązujących postawione problemy (efekt umiejętności 1)","Grupowy projekt aplikacji wykorzystującej interfejs graficzny (GUI) oraz technologię komponentową (efekty umiejętności 2 oraz 3)"],
+  "dokumentacjaEfektowUczenia": ["Ocenione prace studentów z pisemnego testu wiedzy","Ocenione pliki kolokwium praktycznego w wersji elektronicznej","Ocenione i zarchiwizowane pliki grupowych projektów studenckich"],
+  "kryteriaOceniania": "Kolokwium praktyczne – 50%\nProjekt grupowy – 25%\nTest wiedzy – 25%\n",
+  "statusPodstawowe": false,
+  "statusObowiazkowe": false,
+  "uwagi": "Minimalna liczba punktów konieczna do zaliczenia: 50% z kolokwium praktycznego, 50% z projektu indywidualnego oraz 50% z testu wiedzy",
+  "miejsceRealizacji": {
+    "cwiczenia": "laboratorium komputerowe",
+    "wyklad": ""
+  },
+  "godziny": {
+    "ects": "3",
+    "cwiczenia": "30",
+    "wyklad": "15"
+  },
+  "literatura": [
+    {
+      "autor": "Szyperski Clemens",
+      "tytul": "Oprogramowanie komponentowe. Obiekty to za mało",
+      "wydawnictwo": "WNT",
+      "rodzaj": "Podstawowa"
+    },
+    {
+      "autor": "Andy Ju An Wang, Kai Qian",
+      "tytul": "Component-Oriented Programming",
+      "wydawnictwo": "John Wiley & Sons",
+      "rodzaj": "Podstawowa"
+    },
+    {
+      "autor": "Ian Sommerville",
+      "tytul": "Inżynieria oprogramowania",
+      "wydawnictwo": "WNT",
+      "rodzaj": "Podstawowa"
+    },
+    {
+      "autor": "Michael Dawson",
+      "tytul": ": Python dla każdego. Podstawy programowania. Od zera do bohatera",
+      "wydawnictwo": "Helion",
+      "rodzaj": "Uzupełniająca"
+    },
+    {
+      "autor": "",
+      "tytul": "Dive into Python – internetowy podręcznik programowania w Pythonie ",
+      "wydawnictwo": "",
+      "rodzaj": "Uzupełniająca"
+    }
+  ]
+}

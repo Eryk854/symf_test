@@ -1,0 +1,64 @@
+{
+  "nazwaPolska": "Język angielski",
+  "nazwaAngielska": "English as a foreign language",
+  "jezykWykladowy": "polski",
+  "zalozenia": "",
+  "cele": "Opanowanie języka angielskiego na poziomie B2 Europejskiego Systemu Opisu Kształcenia Językowego, osiągnięcie niezależności językowej umożliwiającej efektywne posługiwanie się językiem angielskim w zakresie czterech sprawności (słuchanie, mówienie, pisanie i czytanie) w komunikacji zawodowej i naukowej, \nz uwzględnieniem języka specjalistycznego ( ESP ) dla kierunku Informatyka ",
+  "opis": "",
+  "zakresTematow": "Słownictwo ESP związane z informatyką, urządzeniami komputerowymi, rozwiązaniami informatycznymi, zastosowaniami i obsługą systemów i sieci komputerowych, ekonomią, ekonometrią, matematyką.\nFunkcje językowe: opisywanie trendów, procesów, procedur, sporządzanie pism i dokumentów służbowych, udział w spotkaniach, negocjowanie, przygotowanie i wygłaszanie prezentacji. \nGramatyka: prawidłowe użycie form czasownikowych, zdań złożonych, form określonych i nieokreślonych, konstrukcji wyrazowych, słowotwórstwo. Ćwiczenie komunikacji, wymowy i pisowni.",
+  "metodyDydaktyczne": ["ćwiczenia językowe wykonywane w parach i grupach", "dyskusja", "symulacja", "rozwiązywanie problemu", "studium przypadku"],
+  "wymaganiaFormalne": "",
+  "zalozeniaWstepne": "",
+  "efektyUczenia": {
+    "wiedza": "",
+    "umiejetnosci": "1.\tPotrafi porozumiewać się przy użyciu różnych technik w środowisku zawodowym oraz w innych środowiskach, także z wykorzystaniem narzędzi informatycznych.\n2.\tPosługuje się językiem angielskim w stopniu pozwalającym na porozumienie się, przeczytanie ze zrozumieniem tekstów i dokumentacji oprogramowania.",
+    "kompetencje": "1.\tRozumie szybkość procesu zachodzenia zmian w technikach komputerowych; jest przygotowany do nieustannego poszerzania swojej wiedzy i umiejętności w ramach pracy zawodowej."
+  },
+  "weryfikacjaEfektowUczenia": ["prace pisemne", "okresowe kolokwia", "program wraz z kartą ocen"],
+  "dokumentacjaEfektowUczenia": ["Arkusz z zestawem pytań do zaliczenia końcowego"],
+  "kryteriaOceniania": "kolokwium końcowe 70%, ocena bieżąca pracy studenta, w tym prezentacje i praca pisemna na określony temat 30%;",
+  "statusPodstawowe": true,
+  "statusObowiazkowe": true,
+  "uwagi": "",
+  "miejsceRealizacji": {
+    "cwiczenia": "Sala dydaktyczna",
+    "wyklad": "Sala dydaktyczna"
+  },
+  "godziny": {
+    "ects": "3",
+    "cwiczenia": "60",
+    "wyklad": "0"
+  },
+  "literatura": [
+    {
+      "autor": "Eric H. Glendinning, John McEwan",
+      "tytul": "Oxford English for Information Technology Second Edition",
+      "wydawnictwo": "",
+      "rodzaj": "Podstawowa i uzupełniająca"
+    },
+    {
+      "autor": "",
+      "tytul": "Dictionary of Contemporary English for Advanced Learners",
+      "wydawnictwo": "Longman",
+      "rodzaj": "Podstawowa i uzupełniająca"
+    },
+    {
+      "autor": "Santiago Remacha Esteras, Elena Marco Fabre",
+      "tytul": "Professional English in Use ICT",
+      "wydawnictwo": "",
+      "rodzaj": "Podstawowa i uzupełniająca"
+    },
+    {
+      "autor": "Raymond Murphy",
+      "tytul": "English Grammar in Use",
+      "wydawnictwo": "",
+      "rodzaj": "Podstawowa i uzupełniająca"
+    },
+    {
+      "autor": "Michael McCarthy, Felicity O’Dell",
+      "tytul": "English Vocabulary in Use Upper Intermediate and Advanced",
+      "wydawnictwo": "",
+      "rodzaj": "Podstawowa i uzupełniająca"
+    }
+  ]
+}

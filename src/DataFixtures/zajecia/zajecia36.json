@@ -1,0 +1,70 @@
+{
+  "nazwaPolska": "Formy działalności gospodarczej",
+  "nazwaAngielska": "Form of business activity",
+  "jezykWykladowy": "polski",
+  "zalozenia": "",
+  "cele": "•\tZdobycie wiedzy obejmującej podstawy teoretyczne występowania zjawisk społeczno-ekonomicznych i procesów gospodarczych oraz czynników je kształtujących we współczesnej gospodarce. \n•\tZapoznanie studentów z różnymi aspektami podejmowania działalności gospodarczej.\n•\tPrzekazanie podstawowej wiedzy o formach organizacyjno-prawnych prowadzenia działalności gospodarczej w warunkach gospodarki rynkowej, przedstawienie zasad obowiązujących przy zakładaniu i prowadzeniu przedsiębiorstw.\n•\t Przygotowanie studentów do patrzenia na podmiot gospodarczy jako złożoną organizację, której działalność zależy od wielu czynników i jest regulowana w  wielu płaszczyznach. \n•\tZwiększenie świadomości studentów dotyczącej posiadanej przez nich wiedzy, jako motyw do podejmowania różnych aktywności osobistych, w tym także w zakresie podejmowania aktywności gospodarczej na własny rachunek. \n•\tStymulowanie do kształtowania i doskonalenia własnej postawy otwartej na przedsiębiorczość.",
+  "opis": "",
+  "zakresTematow": "Tematyka wykładów:\nZjawiska społeczno ekonomiczne oraz procesy kształtujące współczesną gospodarkę. Działalność gospodarcza, przedsiębiorca, przedsiębiorstwo – istota, podstawowe charakterystyki i funkcje w organizacji i systemie społeczno-gospodarczym. Motywy i cele podejmowania działalności gospodarczej. Podmioty prowadzące działalność gospodarczą – formy organizacyjne i prawne przedsiębiorstw funkcjonujących we współczesnej gospodarce. Przedsiębiorstwo osoby fizycznej jako indywidualna aktywność gospodarcza przedsiębiorcy. Spółki prawa handlowego: spółki osobowe, spółki kapitałowe. Spółdzielnie i inne formy aktywności gospodarczej. Uwarunkowania zewnętrzne i wewnętrzne podejmowania działalności gospodarczej, jej prowadzenia i rozwoju. Swoboda i wolność gospodarcza w gospodarce rynkowej a ograniczenia dotyczące prowadzenia działalności: koncesje, licencje, zgody i zezwolenia na działalność gospodarczą, obowiązki publiczno-prawne przedsiębiorstw. Informacja ekonomiczna i finansowa o działalności podmiotu gospodarującego – potrzeby i obowiązki w zakresie gromadzenia informacji dla różnych grup odbiorców. Zakres, metody i szczegółowość podstawowych grup informacji o stanie finansowym, majątkowym i przebiegu prowadzonej działalności. Informacje o rodzajach działalności społeczno-gospodarczej - Polska Klasyfikacja Działalności. Formy prawne i ogólne warunki prowadzenia działalności gospodarczej w krajach Unii Europejskiej (wybrane przykłady).\nTematyka ćwiczeń: \n Społeczne, ekonomiczne i prawne determinanty prowadzenia działalności gospodarczej. Zasady podejmowania, prowadzenia i likwidacji działalności gospodarczej w przedsiębiorstwie osoby fizycznej oraz w spółkach cywilnych. Procedury związane z rozpoczynaniem i prowadzeniem działalności, wymogi formalne i obowiązki publiczno prawne oraz podobieństwa i różnice w spółkach prawa handlowego: spółki jawne, spółki partnerskie, spółki komandytowe, komandytowo-akcyjne, spółki z ograniczoną odpowiedzialnością i spółki akcyjne. Spółka europejska (SE) jako forma prowadzenia działalności – organizacja i funkcjonowanie.\nZasoby i finanse podmiotu gospodarującego i ich cechy. Źródła i formy finansowania działalności gospodarczej na przykładzie wybranych podmiotów gospodarczych. Sprawozdanie finansowe jako synteza podstawowych informacji o strukturze zasobów majątku, sytuacji finansowej oraz efektach prowadzonej działalności gospodarczej. Wstępna analiza sytuacji finansowej i wyników działalności przedsiębiorstwa. Podatkowe i nie podatkowe obciążenia podmiotów prowadzących działalność gospodarczą. \nCzynniki kształtujące aktywność gospodarczą podmiotów funkcjonujących w Polsce. Możliwości rozwoju i bariery w prowadzeniu działalności gospodarczej dla małych i średnich przedsiębiorstw.",
+  "metodyDydaktyczne": ["Dyskusja", "zadania sytuacyjne", "studium przypadków", "konsultacje"],
+  "wymaganiaFormalne": "",
+  "zalozeniaWstepne": "",
+  "efektyUczenia": {
+    "wiedza": "1\tZna podstawowe pojęcia z zakresu ekonomii odnoszące się do inwestycji informatycznych i projektów informatycznych, takie jak zwrot z inwestycji, koszty stałe i koszty zmienne, ryzyko finansowe, przychód a zysk, zysk a przepływy pieniężne (ang. cash flow).\n2\tMa podstawową wiedzę dotyczącą prowadzenia działalności gospodarczej i zarządzania nią.",
+    "umiejetnosci": "",
+    "kompetencje": ""
+  },
+  "weryfikacjaEfektowUczenia": ["Pisemne zaliczeniowe z części wykładowej oraz części ćwiczeniowej.",  "Prace pisemne i prezentacje studentów - opracowania dotyczące rozwiązania zadań sytuacyjnych z wybranych problemów szczegółowych)."],
+  "dokumentacjaEfektowUczenia": ["Zaliczenie pisemne po zakończeniu wykładów i ćwiczeń – treść pytań i zadań na zaliczenie.", "Pisemne opracowanie zadania problemowego jako pracy domowej"],
+  "kryteriaOceniania": "Kolokwium na zajęciach ćwiczeniowych – 40%,  Opracowanie zadań problemowych – 10%  Zaliczenie w formie testu i zadań części wykładowej – 50%.",
+  "statusPodstawowe": true,
+  "statusObowiazkowe": true,
+  "uwagi": "",
+  "miejsceRealizacji": {
+    "cwiczenia": "sala audytoryjna,",
+    "wyklad": "sala audytoryjna,"
+  },
+  "godziny": {
+    "ects": "2",
+    "cwiczenia": "15",
+    "wyklad": "15"
+  },
+  "literatura": [
+    {
+      "autor": "Praca zbiorowa pod red. M. Koralewski",
+      "tytul": "Prawo spółek - praktyczny komentarz, czyli jak prowadzić działalność gospodarczą w formie spółki",
+      "wydawnictwo": "CEDEWU",
+      "rodzaj": "Podstawowa"
+    },
+    {
+      "autor": "Mućko P., Sokół A",
+      "tytul": "Jak założyć i prowadzić działalność gospodarczą w Polsce i wybranych krajach Europejskich",
+      "wydawnictwo": "CEDEWU",
+      "rodzaj": "Podstawowa"
+    },
+    {
+      "autor": "Filipowicz A",
+      "tytul": "Podstawy prawa dla ekonomistów",
+      "wydawnictwo": "C.H. Beck",
+      "rodzaj": "Podstawowa"
+    },
+    {
+      "autor": "Pietrzak M., Baran J",
+      "tytul": "Podstawy zarządzania. Studia przypadków i inne ćwiczenia aktywizujące",
+      "wydawnictwo": "SGGW",
+      "rodzaj": "Podstawowa"
+    },
+    {
+      "autor": "Sudoł S",
+      "tytul": "Przedsiębiorstwo. Podstawy nauki o przedsiębiorstwie. Zarządzanie przedsiębiorstwem",
+      "wydawnictwo": "PWE",
+      "rodzaj": "Podstawowa"
+    },
+    {
+      "autor": "Świderska G. K",
+      "tytul": "Jak czytać sprawozdanie finansowe. Przewodnik menedżera",
+      "wydawnictwo": "Difin",
+      "rodzaj": "Podstawowa"
+    }
+  ]
+}

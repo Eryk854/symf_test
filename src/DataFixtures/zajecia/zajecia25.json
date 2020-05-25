@@ -1,0 +1,64 @@
+{
+  "nazwaPolska": "Filozofia",
+  "nazwaAngielska": "History of Philosophy",
+  "jezykWykladowy": "polski",
+  "zalozenia": "",
+  "cele": "",
+  "opis": "",
+  "zakresTematow": "Wykłady: Narodziny filozofii europejskiej. Główne pojęcia presokratyków. Heraklit z Efezu. Sokratesa a sofiści. Platon – teoria bytu, poznania i państwa. Metafizyka i etyka Arystotelesa. Teoria szczęścia Epikurejczyków i Stoików. Święty Augustyn i filozofia chrześcijańska. Przełom kartezjański w filozofii i nauce europejskiej. Teoria Nicolo Machiavelli. Błażeja  Pascala. Angielskie i francuskie oświecenie w filozofii europejskiej. Filozofia i etyka Immanuela Kanta. Historiozofia G.W.F. Hegla. Polska i europejska reakcja na filozofię Hegla. Wybrane kierunki  filozofii współczesnej.",
+  "metodyDydaktyczne": ["Wykład", "konsultacje"],
+  "wymaganiaFormalne": "",
+  "zalozeniaWstepne": "",
+  "efektyUczenia": {
+    "wiedza": "",
+    "umiejetnosci": "1 Wykazuje się umiejętnością logicznego myślenia i porządkowania informacji w postaci wiedzy ogólnej",
+    "kompetencje": ""
+  },
+  "weryfikacjaEfektowUczenia": ["Zaliczenie pisemne"],
+  "dokumentacjaEfektowUczenia": ["Zaliczenie pisemne"],
+  "kryteriaOceniania": "Zaliczenie pisemne",
+  "statusPodstawowe": true,
+  "statusObowiazkowe": false,
+  "uwagi": "",
+  "miejsceRealizacji": {
+    "cwiczenia": "",
+    "wyklad": "sala audytoryjna"
+  },
+  "godziny": {
+    "ects": "2",
+    "cwiczenia": "0",
+    "wyklad": "30"
+  },
+  "literatura": [
+    {
+      "autor": "M. Brzostek, J. Chojnacki, Z. Wendland",
+      "tytul": "Antologia historii filozofii",
+      "wydawnictwo": "wydawnictwo SGGW",
+      "rodzaj": "Podstawowa i uzupełniająca"
+    },
+    {
+      "autor": "",
+      "tytul": "Myśli i Ludzie, poświęcone sylwetkom i poglądom wybranych filozofów europejskich",
+      "wydawnictwo": "PIW",
+      "rodzaj": "Podstawowa i uzupełniająca"
+    },
+    {
+      "autor": "A. Korczak",
+      "tytul": "Mądrość Starożytnych Greków",
+      "wydawnictwo": "",
+      "rodzaj": "Podstawowa i uzupełniająca"
+    },
+    {
+      "autor": "W Tatarkiewicz",
+      "tytul": "Historia filozofii",
+      "wydawnictwo": "",
+      "rodzaj": "Podstawowa i uzupełniająca"
+    },
+    {
+      "autor": "Z. Wendland",
+      "tytul": "Historia filozofii",
+      "wydawnictwo": "wydawnictwo SGGW",
+      "rodzaj": "Podstawowa i uzupełniająca"
+    }
+  ]
+}

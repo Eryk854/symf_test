@@ -1,0 +1,98 @@
+{
+  "nazwaPolska": "Inżynieria oprogramowania",
+  "nazwaAngielska": "Software engineering",
+  "jezykWykladowy": "polski",
+  "zalozenia": "",
+  "cele": "Celem przedmiotu jest przedstawienie i wykorzystanie praktyczne inżynierii oprogramowania i jej narzędzi.",
+  "opis": "",
+  "zakresTematow": "Tematyka wykładów:\n\nPrzewidzianych jest piętnaście wykładów. Obejmują one przedstawienie pojęć z inżynierii oprogramowania oraz narzędzi z tej dziedziny. W kolejności są prezentowane: metody zarządzania projektem informatycznym, w tym problematyka jakości i bezpieczeństwa, metody i narzędzia wspomagające tworzenie oprogramowanie (CASE), diagramy UML oraz zagadnienia związane z testowaniem oprogramowania, począwszy od debugowania programu, a skończywszy na testach akceptacyjnych.\n\nTematyka ćwiczeń laboratoryjnych: \nWykorzystanie wiedzy z wykładów do napisania i przetestowania aplikacji, włącznie z etapem negocjacji. Grupa laboratoryjna studentów pracuje wspólnie na zajęciach nad realizacją projektu.",
+  "metodyDydaktyczne": [
+    "wykład",
+    "dyskusja",
+    "ćwiczenia rachunkowe (szacowanie czasu potrzebnego na projekt IT)",
+    "rysowanie diagramów UML",
+    "tworzenie kodu za pomocą narzędzi CASE",
+    "praca grupowa  nad projektem"
+  ],
+  "wymaganiaFormalne": "Programowanie obiektowe, podstawy rachunku prawdopodobieństwa i statystyki",
+  "zalozeniaWstepne": "",
+  "efektyUczenia": {
+    "wiedza": "1.\tZna problemy związane z zarządzaniem jakością,\n2.\tZna sposoby zarządzana czasem, w tym wykresy Gantta oraz grafy PERT,\n3.\tZna podstawy zarządzania wiedzą,\n4.\tZna podstawowe narzędzia CASE,\n5.\tZna najczęściej używane diagramy UML,\n6.\tZna metody debugowania i testowania aplikacji,\n7.\tZna podstawy wzorców projektowych.",
+    "umiejetnosci": "1.\tUmie zarządzać jakością projektu IT,\n2.\tPotrafi szacować czas realizacji projektu za pomocą wykresu Gantta oraz grafów PERT,\n3.\tUmie posługiwać się diagramami UML oraz narzędziami CASE,\n4.\tPotrafi napisać test jednostkowy i integracyjny,\n5.\tPotrafi prawidłowo znaleźć najczęściej popełniane błędy w kodzie,\n6.\tPotrafi przeprowadzić testy systemowe i akceptacyjne.",
+    "kompetencje": "1.\tStudent jest gotowy do pracy w projekcie zespołowym."
+  },
+  "weryfikacjaEfektowUczenia": [
+    "Egzamin pisemny",
+    "ocena za wkład własny studenta w projekt grupowy realizowany podczas zajęć",
+    "kolokwia z: modelowania diagramu klas UML, projektowania diagramu Gantta oraz szacowanie rozkładu prawdopodobieństwa czasu realizacji projektu za pomocą grafu PERT."
+  ],
+  "dokumentacjaEfektowUczenia": [
+    "Sprawozdania z pracy",
+    "dokumentacja projektu",
+    "kolokwia",
+    "egzamin"
+  ],
+  "kryteriaOceniania": "Egzamin – 70%, laboratorium – 30%",
+  "statusPodstawowe": true,
+  "statusObowiazkowe": true,
+  "uwagi": "Minimalna liczba punktów konieczna do zaliczenia: 50. Punkty liczone są według następującej zasady:\n\nPunkty z laboratorium =  0,4*A + 0,2*B + 0,2*C + 0,2*D.  Ocena A wynika z pracy nad projektem, która pochodzi z dwóch czynników. Pierwszym z nich jest budżet punktów zdobyty przez grupę za projekt. Budżet jest iloczynem liczby studentów w grupie oraz punktów za projekt i jest on w całości rozdysponowany pomiędzy studentów, według ich zaangażowania podczas tworzenia projektu. Istnieje możliwość zdobycia premii punktowej (w ocenie projektu), gdy jest on wykonany lepiej, niż zostało to określone w specyfikacji. Jednakże we wspomnianym budżecie punktów nie ma możliwości udzielenia kredytu, czyli dania komuś więcej punktów, niż to wynika z bilansu.\nOcena B jest wynikiem oceny za kolokwium z diagramu klas UML, ocena C jest oceną za projekt diagramu Gantta, natomiast ocena C jest oceną za wyliczenie rozkładu prawdopodobieństwa czasu realizacji projektu z wykorzystaniem grafu PERT.\n\nNa egzaminie można zdobyć maksymalnie 70 punktów. Liczba punktów zdobytych na laboratorium może być większa niż 30 (w przypadku premii). W przypadku, gdy student zdobędzie więcej niż 100 punktów, również otrzymuje ocenę 5,0 z przedmiotu.",
+  "miejsceRealizacji": {
+    "cwiczenia": "sala audytoryjna",
+    "wyklad": "laboratorium komputerowe"
+  },
+  "godziny": {
+    "ects": "5",
+    "cwiczenia": "30",
+    "wyklad": "30"
+  },
+  "literatura": [
+    {
+      "autor": "Sacha Krzysztof",
+      "tytul": "Inżynieria oprogramowania",
+      "wydawnictwo": "PWN",
+      "rodzaj": "Podstawowa"
+    },
+    {
+      "autor": "Butchter Paul",
+      "tytul": "Debugowanie – Jak wyszukiwać i naprawiać błędy w kodzie oraz im zapobiegać",
+      "wydawnictwo": "Helion",
+      "rodzaj": "Podstawowa"
+    },
+    {
+      "autor": "Wryczy Stanisława",
+      "tytul": "Ćwiczenia UML 2.1",
+      "wydawnictwo": "Helion",
+      "rodzaj": "Podstawowa"
+    },
+    {
+      "autor": "Ezust Alan, Ezust Paul",
+      "tytul": "C++ i Qt, Wprowadzenie do wzorców projektowych",
+      "wydawnictwo": "Helion",
+      "rodzaj": "Podstawowa"
+    },
+    {
+      "autor": "Antani Ved, Stefanov Stoyan",
+      "tytul": "Programowanie zorientowane obiektowo w języku JavaScript",
+      "wydawnictwo": "Helion",
+      "rodzaj": "Podstawowa"
+    },
+    {
+      "autor": "Zandstra Matt",
+      "tytul": "PHP Obiekty, wzorce, narzędzia",
+      "wydawnictwo": "Helion",
+      "rodzaj": "Podstawowa"
+    },
+    {
+      "autor": "Bereza -Jarociński Bogdan, Szomański Bolesław",
+      "tytul": "Inżynieria oprogramowania",
+      "wydawnictwo": "Helion",
+      "rodzaj": "Uzupełniająca"
+    },
+    {
+      "autor": "Schmuller Joseph",
+      "tytul": "UML in 24 Hours",
+      "wydawnictwo": "SAMS",
+      "rodzaj": "Uzupełniająca"
+    }
+  ]
+}

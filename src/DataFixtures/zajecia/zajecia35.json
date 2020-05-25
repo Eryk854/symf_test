@@ -1,0 +1,64 @@
+{
+  "nazwaPolska": "Ochrona własności intelektualnej",
+  "nazwaAngielska": "Intellectual Property Protection",
+  "jezykWykladowy": "polski",
+  "zalozenia": "",
+  "cele": "Przekazanie studentom podstaw wiedzy z dziedziny ochrony własności intelektualnej, w zakresie jaki jest  niezbędny dla absolwenta wyższej uczelni, w celu sprawnego poruszania się w zagadnieniach przestrzeni publicznej.",
+  "opis": "",
+  "zakresTematow": "",
+  "metodyDydaktyczne": ["Dyskusja", "zadania sytuacyjne", "studium przypadków", "konsultacje"],
+  "wymaganiaFormalne": "",
+  "zalozeniaWstepne": "",
+  "efektyUczenia": {
+    "wiedza": "Ma podstawową wiedzę nt. patentów, ustawy prawo autorskie i prawa pokrewne oraz ustawy o ochronie danych osobowych.",
+    "umiejetnosci": "Ma podstawową wiedzę dotyczącą prowadzenia działalności gospodarczej i zarządzania nią.",
+    "kompetencje": "Potrafi pracować indywidualnie oraz w zespole informatyków, potrafi zarządzać swoim czasem oraz podejmować zobowiązania i dotrzymywać terminów"
+  },
+  "weryfikacjaEfektowUczenia": ["Zaliczenie końcowe"],
+  "dokumentacjaEfektowUczenia": ["Arkusz z zestawem pytań do zaliczenia końcowego"],
+  "kryteriaOceniania": "Zaliczenie końcowe wykładów – 100%",
+  "statusPodstawowe": true,
+  "statusObowiazkowe": true,
+  "uwagi": "",
+  "miejsceRealizacji": {
+    "cwiczenia": "",
+    "wyklad": "Sala dydaktyczna"
+  },
+  "godziny": {
+    "ects": "1",
+    "cwiczenia": "0",
+    "wyklad": "15"
+  },
+  "literatura": [
+    {
+      "autor": "A. Adamczyk, M. du Vall ",
+      "tytul": "Ochrona własności intelektualnej",
+      "wydawnictwo": "UW",
+      "rodzaj": "Podstawowa i uzupełniająca"
+    },
+    {
+      "autor": "",
+      "tytul": "Konstytucja RP",
+      "wydawnictwo": "",
+      "rodzaj": "Podstawowa i uzupełniająca"
+    },
+    {
+      "autor": "",
+      "tytul": "Dziennik Urzędowy RP",
+      "wydawnictwo": "",
+      "rodzaj": "Podstawowa i uzupełniająca"
+    },
+    {
+      "autor": "",
+      "tytul": "Kodeks cywilny",
+      "wydawnictwo": "",
+      "rodzaj": "Podstawowa i uzupełniająca"
+    },
+    {
+      "autor": "",
+      "tytul": "Dziennik Urzędowy Unii Europejskiej ",
+      "wydawnictwo": "",
+      "rodzaj": "Podstawowa i uzupełniająca"
+    }
+  ]
+}

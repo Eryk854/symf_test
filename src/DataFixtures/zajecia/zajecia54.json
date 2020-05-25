@@ -1,0 +1,33 @@
+{
+  "nazwaPolska": "Praktyki",
+  "nazwaAngielska": "Students practices",
+  "jezykWykladowy": "polski",
+  "zalozenia": "",
+  "cele": "Studenci poznają realia pracy zawodowej. Zapoznają się ze specyfiką przedsiębiorstwa, w którym odbywają praktyki. Nabierają doświadczenia w pracy zespołowej oraz umiejętności wykorzystywania współczesnych techniki komunikacji.",
+  "opis": "Praktyki obejmują 4 tygodnie pracy w przedsiębiorstwie prywatnym lub instytucji państwowej. W ramach przedmiotu studenci prowadzą wspólnie z opiekunem praktyk w przedsiębiorstwie dzienniczki praktyk. Do dzienniczka wpisywane są, w porządku chronologicznym, wykonywane czynności lub zadania.",
+  "zakresTematow": "",
+  "metodyDydaktyczne": ["Nie dotyczy"],
+  "wymaganiaFormalne": "Brak",
+  "zalozeniaWstepne": "",
+  "efektyUczenia": {
+    "wiedza": "1-Ma szczegółową wiedzę na temat  projektowania i programowania relacyjnych baz danych\n2-Ma podstawową wiedzę w zakresie standardu SQL.\n3-Posiada podstawową wiedzę na temat metod gromadzenia, przetwarzania i analizy danych (bez względu na ich pochodzenie) oraz wyciągania wniosków na tej podstawie.",
+    "umiejetnosci": "1-Potrafi pozyskiwać informacje z literatury, baz danych oraz innych źródeł, integrować je, dokonywać ich interpretacji oraz wyciągać wnioski i formułować opinie na temat problemów informatycznych oraz proponowanych rozwiązań.\n2-Ma umiejętność budowy prostych systemów bazodanowych, wykorzystujących przynajmniej jeden z najbardziej popularnych systemów zarządzania bazą danych oraz posiada umiejętność utrzymywania systemów bazodanowych",
+    "kompetencje": "1-Rozumie szybkość procesu zachodzenia zmian w technikach komputerowych; jest przygotowany do nieustannego poszerzania swojej wiedzy i umiejętności w ramach pracy zawodowej."
+  },
+  "weryfikacjaEfektowUczenia": ["Dzienniczek praktyk"],
+  "dokumentacjaEfektowUczenia": ["Kolokwium pisemne z ocenami"],
+  "kryteriaOceniania": "Opinia z miejsca pracy – 100%",
+  "statusPodstawowe": true,
+  "statusObowiazkowe": false,
+  "uwagi": "Poza dzienniczkiem weryfikacja praktyk może odbywać się dodatkowo na podstawie rozmowy z opiekunem",
+  "miejsceRealizacji": {
+    "cwiczenia": "W terenie",
+    "wyklad": "W terenie"
+  },
+  "godziny": {
+    "ects": "4",
+    "cwiczenia": "0",
+    "wyklad": "0"
+  },
+  "literatura": []
+}

@@ -1,0 +1,40 @@
+{
+  "nazwaPolska": "Paradygmaty programowania",
+  "nazwaAngielska": "Programming paradigms",
+  "jezykWykladowy": "polski",
+  "zalozenia": "",
+  "cele": "",
+  "opis": "Modele programowania zmieniają się co około 10-20 lat. Od programowania proceduralne (Fortran) przeszliśmy do strukturalnego (Pascal/C) i następnie obiektowego (C++/Java). To ostatnie jest obecnie dominującym paradygmatem i poświęcony mu jest odrębny przedmiot w toku studiów. Model ten pozwala jednak na obiekty mutowalne i efekty uboczne co czyni go niezbyt dobrze dostosowanym do programowania nowoczesnych aplikacji współbieżnych. Student powinien zatem znać także inne paradygmaty i wspierające je języki. Niniejszy przedmiot stanowi przegląd pozostałych znanych paradygmatów: funkcyjnego, logicznego oraz prototypowego. \n\nPodczas zajęć przedstawimy trzy języki programowania:\n·\tProlog – język logiczny pozwalający w prosty sposób atakować niektóre zadania programistyczne\n·\tRuby – język obiektowy z dynamiczną typizacją i wsparciem dla metaprogramowania\n·\tScala – język ma maszynę wirtualną Java łączący paradygmat funkcyjny z obiektowym",
+  "zakresTematow": "",
+  "metodyDydaktyczne": ["dyskusja", "projekt", "rozwiązywanie problemu", "studium przypadku"],
+  "wymaganiaFormalne": "Student potrafi biegle programować przynajmniej w jednym języku wysokiego poziomu i zna dominujący obecnie paradygmat obiektowy",
+  "zalozeniaWstepne": "",
+  "efektyUczenia": {
+    "wiedza": "1 – zna popularne paradygmaty programowania (obiektowy, prototypowy, funkcyjny i logiczny) oraz języki je wspierające (Ruby, Prolog, Scala)\n\n2 – rozumie jak działają różne narzędzia komunikacji programisty z językiem: konsola interaktywna, kompilator, maszyna wirtualna \n\n3 – rozumie jak działają różne konstrukcje dla obsługi współbieżności (aktory, futury, pamięć transakcyjna)",
+    "umiejetnosci": "1 – wie czym jest metaprogramowanie i potrafi używać go do tworzenia aplikacji internetowych opartych o bazę danych\n\n2 – posiada wiedzę na temat modeli typizacji: statycznej i dynamicznej oraz silnej i słabej i umiejętnie wykorzystuje ją do rozwiązywania zagadnień programistycznych\n\n3 – zna i potrafi stosować w praktyce podstawowe konstrukcje decyzyjne i zasadnicze struktury danych oraz unikalne cechy prezentowanych języków (dopasowanie wzorców, unifikacja, listy składane, monady)",
+    "kompetencje": ""
+  },
+  "weryfikacjaEfektowUczenia": ["Praca na ćwiczeniach"],
+  "dokumentacjaEfektowUczenia": ["Oddawanie zadania elektroniczne przechowywane na platformie Moodle","Testy elektroniczne archiwizowane na platformie Moodle"],
+  "kryteriaOceniania": "Ćwiczenia laboratoryjne – 33%, zadania domowe – 33%, kolokwia pisemne – 34%",
+  "statusPodstawowe": true,
+  "statusObowiazkowe": true,
+  "uwagi": "Ocena dostateczna od 50% punktów, potem co 10% zmienia się o pół stopnia.",
+  "miejsceRealizacji": {
+    "cwiczenia": "laboratorium komputerowe",
+    "wyklad": "sala audytoryjna"
+  },
+  "godziny": {
+    "ects": "4",
+    "cwiczenia": "30",
+    "wyklad": "30"
+  },
+  "literatura": [
+    {
+      "autor": "Bruce A. Tate",
+      "tytul": "Siedem języków w siedem tygodni. Praktyczny przewodnik nauki języków programowania",
+      "wydawnictwo": "Helion",
+      "rodzaj": "Podstawowa i uzupełniająca"
+    }
+  ]
+}

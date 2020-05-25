@@ -1,0 +1,52 @@
+{
+  "nazwaPolska": "Budowa serwisów internetowych",
+  "nazwaAngielska": "Webservices development",
+  "jezykWykladowy": "polski",
+  "zalozenia": "",
+  "cele": "",
+  "opis": "",
+  "zakresTematow": "Tematyka wykładów i ćwiczeń laboratoryjnych: \n•\tWprowadzenie do technologii klient-serwer\n•\tWprowadzenie do HTML\n•\tStruktura strony w HTML (tabele)\n•\tFormularze i ich elementy w HTML\n•\tArkusze stylów CSS\n•\tWprowadzenie do JavaScript\n•\tWalidacja danych na przykładzie JavaScript oraz wyrażeń regularnych\n•\tPodstawy XSL+XML\n•\tWprowadzenie do PHP\n•\tSesje w PHP - realizacja funkcjonalności logowania\n•\tPHP - połączenie z bazą danych MySQL - tworzenie aplikacji bazodanowej\n•\tWprowadzenie do ASP.NET\n•\tTworzenie aplikacji internetowej w ASP.NET\n•\tSystemy CMS",
+  "metodyDydaktyczne": ["Wykład", "dyskusja problemu", "laboratoria", "prezentacja i analiza kodów źródłowych", "konsultacje",  "projekty realizowane na laboratorium oraz w domu"],
+  "wymaganiaFormalne": "Podstawowa znajomość programowania ",
+  "zalozeniaWstepne": "",
+  "efektyUczenia": {
+    "wiedza": "01\tzna zasadę działania podstawowych języków i metod programowania internetowego ",
+    "umiejetnosci": "01 Potrafi tworzyć aplikacje internetowe     \n02  Potrafi zaprojektować interfejs użytkownika ",
+    "kompetencje": ""
+  },
+  "weryfikacjaEfektowUczenia": ["Cotygodniowe projekty praktyczne"],
+  "dokumentacjaEfektowUczenia": ["Kod źródłowy projektów"],
+  "kryteriaOceniania": "Cotygodniowe projekty – 100%",
+  "statusPodstawowe": true,
+  "statusObowiazkowe": true,
+  "uwagi": "Minimalna liczba punktów konieczna do zaliczenia: 50%, maksymalna liczba nieoddanych projektów: 2",
+  "miejsceRealizacji": {
+    "cwiczenia": "laboratorium komputerowe",
+    "wyklad": "sala audytoryjna"
+  },
+  "godziny": {
+    "ects": "2",
+    "cwiczenia": "15",
+    "wyklad": "15"
+  },
+  "literatura": [
+    {
+      "autor": "Jon Dcket",
+      "tytul": "HTML i CSS. Zaprojektuj i zbuduj witrynę WWW. Podręcznik Front-End Developera",
+      "wydawnictwo": "Helion",
+      "rodzaj": "Podstawowa"
+    },
+    {
+      "autor": "Jon Ducket",
+      "tytul": "JavaScript i jQuery. Interaktywne strony WWW dla każdego. Podręcznik Front-End Developera",
+      "wydawnictwo": "Helion",
+      "rodzaj": "Podstawowa"
+    },
+    {
+      "autor": "W3C",
+      "tytul": "https://www.w3schools.com/",
+      "wydawnictwo": "",
+      "rodzaj": "Uzupełniająca"
+    }
+  ]
+}

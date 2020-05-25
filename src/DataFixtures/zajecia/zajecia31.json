@@ -1,0 +1,64 @@
+{
+  "nazwaPolska": "Architektura komputerów",
+  "nazwaAngielska": "Computer Architecture",
+  "jezykWykladowy": "polski",
+  "zalozenia": "",
+  "cele": "Zapoznanie studentów z architekturami współczesnych komputerów. Przekazanie studentom wiedzy na temat zasady działania komputera oraz urządzeń peryferyjnych. Zapoznanie studentów z zasadami projektowania systemów komputerowych. Nabycie przez studentów umiejętności programowania niskopoziomowego. Zapoznanie studentów ze szczegółami powiązania sprzętu komputerowego oraz systemów operacyjnych",
+  "opis": "",
+  "zakresTematow": "Tematyka wykładów:\n•\tHistoria systemów komputerowych. Generacje komputerów oraz procesorów. Przerwa wydajnościowa. Prawo Moore’a.\n•\tOrganizacja systemów jednoprocesorowych (elementy tradycyjnej organizacji komputerów). Architektura von Neumanna oraz modyfikacje (architektura Harvard). Budowa procesora, pamięci oraz urządzeń magistrali systemowej. Zasady wykonywania programu w systemie komputerowym.\n•\tReprezentacja danych w systemie komputerowym. Kod dwójkowy, reprezentacje liczb całkowitych i zmiennoprzecinkowych. Operacje arytmetyczne w kodzie dwójkowym. Norma IEEE 754. Budowa podstawowych układów sprzętowych do realizacji operacji arytmetycznych i logicznych. Jednostka arytmetyczno-logiczna i zmiennoprzecinkowa.\n•\tPolecenia (rozkazy) i argumenty instrukcji maszynowych. Wykorzystanie rozkazów. Rejestry procesora. Rozkazy do obliczeń wektorowych. Programowanie niskiego poziomu – asembler, tryby dostępu do pamięci, tryby adresowania w rozkazach. Stos. Współdziałanie programu z systemem operacyjnym, zarządzanie pamięcią.\n•\tKlasyfikacja pamięci. Efektywność pamięci i procesora. Parametry czasowe pamięci. Pamięć główna, zewnętrzna (wirtualna) i podręczna. \n•\tPamięci masowe – organizacja i zarządzanie. Pamięć wirtualna. Struktura fizyczna przechowywania danych na dysku.\n•\tUrządzenia wejścia-wyjścia. Parametry wydajnościowe urządzeń peryferyjnych. Sposoby komunikacji z urządzeniami zewnętrznymi. Moduły wejścia-wyjścia. Magistrale rozszerzeń. Technologia DMA.\n•\tOrganizacja współczesnych procesorów: architektury potokowe, superpotokowe i superskalarne. Procesory wielowątkowe i wektorowe. Porównanie architektur RISC i CISC. Architektura IA-64.\n•\tSystemy wieloprocesorowe. Taksonomia Flynna. Równoległe wykonywanie rozkazów. Prawo Amdahla. Sposoby wymiany informacji pomiędzy procesorami: pamięć dzielona i komunikaty. Architektury UMA, NUMA, COMA. Klastry obliczeniowe.\nTematyka ćwiczeń laboratoryjnych: \n•\tAsembler procesorów Intel oraz MIPS 2000 (poprzez symulator PC-Spim),\n•\tMetody programowania maszyn CISC i RISC (wykorzystanie rejestrów procesora, operacje  arytmetyczne i na łańcuchach znakowych), \n•\tWykorzystanie stosu, rejestrów indeksowych, zmiennoprzecinkowych i MMX,\n•\tMetody adresowania i wykorzystanie ich w rozkazach,\n•\tTworzenie wstawek asemblerowych w języku wysokiego poziomu),\n•\tWykorzystanie jednostki zmiennoprzecinkowej\n•\tZastosowanie powyższych elementów do tworzenia prostych programów wykonujących operacje matematyczne oraz na łańcuchach znakowych.\n•\tProgramowanie w trybie 16- i 32-bitowym. Wykorzystanie API Win32.\nTematyka projektów:\n•\tStworzenie prostych programów w działających w trybie 16-bitowym, wykonujących działania na łańcuchach znakowych,\n•\tStworzenie programów wykonujących algorytmy numeryczne przy użyciu jednostki zmiennoprzecinkowej w architekturze x86",
+  "metodyDydaktyczne": ["Dyskusja problemu", "studium przypadków", "konsultacje"],
+  "wymaganiaFormalne": "brak",
+  "zalozeniaWstepne": "",
+  "efektyUczenia": {
+    "wiedza": "1 – zna budowę współczesnego systemu komputerowego oraz zasady wykonywania programu przez system komputerowy \n2 – zna i rozumie klasyfikację współczesnych systemów komputerowych ze względu na równoległość przetwarzania, rozmiar potoku, liczbę jednostek wykonawczych",
+    "umiejetnosci": "1 – potrafi programować w języku niskiego poziomu dla różnych architektur komputerowych, a także posiada umiejętność łączenia kodu niskiego poziomu z językami wysokiego poziomu",
+    "kompetencje": "1 -  Rozumie szybkość procesu zachodzenia zmian w technikach komputerowych; jest przygotowany do nieustannego poszerzania swojej wiedzy i umiejętności w ramach programowania nisko i wysokopoziomowego."
+  },
+  "weryfikacjaEfektowUczenia": ["Sprawozdania projektowe","Egzaminy pisemne z ocenami"],
+  "dokumentacjaEfektowUczenia": ["Egzamin pisemny", "archiwum plików projektów"],
+  "kryteriaOceniania": "Ćwiczenia laboratoryjne – 10%, zadania projektowe – 40%, egzamin pisemny – 50%",
+  "statusPodstawowe": true,
+  "statusObowiazkowe": true,
+  "uwagi": "",
+  "miejsceRealizacji": {
+    "cwiczenia": "laboratorium komputerowe",
+    "wyklad": "sala audytoryjna"
+  },
+  "godziny": {
+    "ects": "5",
+    "cwiczenia": "30",
+    "wyklad": "30"
+  },
+  "literatura": [
+    {
+      "autor": "W. Stallings",
+      "tytul": "Organizacja i architektura systemu komputerowego",
+      "wydawnictwo": "WNT",
+      "rodzaj": "Podstawowa i uzupełniająca"
+    },
+    {
+      "autor": "B.S. Chalk",
+      "tytul": "Organizacja i architektura komputerów",
+      "wydawnictwo": "WNT",
+      "rodzaj": "Podstawowa i uzupełniająca"
+    },
+    {
+      "autor": "J. Ogrodzki",
+      "tytul": "Wstęp do systemów komputerowych",
+      "wydawnictwo": "Oficyna Wydawnicza Politechniki Warszawskiej",
+      "rodzaj": "Podstawowa i uzupełniająca"
+    },
+    {
+      "autor": "P. Metzger",
+      "tytul": "Anatomia PC: architektura komputerów zgodnych z IBM PC",
+      "wydawnictwo": "Helion",
+      "rodzaj": "Podstawowa i uzupełniająca"
+    },
+    {
+      "autor": "J. Biernat",
+      "tytul": "Architektura komputerów",
+      "wydawnictwo": "Oficyna Wydawnicza Politechniki Wrocławskiej",
+      "rodzaj": "Podstawowa i uzupełniająca"
+    }
+  ]
+}

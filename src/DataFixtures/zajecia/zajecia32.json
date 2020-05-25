@@ -1,0 +1,64 @@
+{
+  "nazwaPolska": "Algorytmy i struktury danych",
+  "nazwaAngielska": "Algorithms and data structures",
+  "jezykWykladowy": "polski",
+  "zalozenia": "",
+  "cele": "Celem przedmiotu jest przedstawienie podstawowych pojęć dotyczących algorytmów (poprawność, skończoność, złożoność, metody konstruowania) i dynamicznych struktur danych (listy, drzewa, grafy oraz ich reprezentacje). Prezentacja standardowych algorytmów wyszukiwania i sortowania oraz dodatkowo ich implementacja. Struktury danych (rekord, stos kolejka), dynamiczne struktury danych wbudowane w nowoczesne środowiska programistyczne. Omówienie działania i obszarów zastosowań takich struktur (rekordy, listy, słowniki). Student nabywa wiedzę teoretyczną z podstaw algorytmów i struktur danych oraz umiejętność samodzielnego projektowania, analizowania i implementowanie algorytmów rozwiązujących postawiony problem a także umiejętność tworzenia odpowiednich struktur danych.",
+  "opis": "",
+  "zakresTematow": "Tematyka wykładów: Poprawność i skończoność algorytmów. Złożoność obliczeniowa i pamięciowa. Metody konstruowania algorytmów (zachłanne, dziel i zwyciężaj, programowanie dynamiczne). Elementarne metody sortowania (przez wybieranie, przez wstawianie i bąbelkowe). Sortowanie przez wstawianie połówkowe, szybkie i przez scalanie. Sortowanie równoległe. Elementarne struktury danych oraz ich reprezentacja tablicowa i dowiązaniowa. Drzewa i ich notacja nawiasowa. Kopce i sortowanie przez kopcowanie. Drzewa BST – ich konstruowanie i zastosowanie. Reprezentacja grafów i podstawowe algorytmy na grafach – przeszukiwanie w głąb i wszerz, najlżejsze ścieżki.\nTematyka ćwiczeń: Problem stopu w zadaniu Steinhausa i w algorytmie Kaprekara. Złożoność obliczeniowa algorytmu Euklidesa z odejmowaniem i dzieleniem. Wyszukiwanie liniowe z wartownikiem i bez. Przywódca ciągu, wyznaczanie przywódców dowolnego rzędu. Rekurencyjny przywódca i wyszukiwanie połówkowe (metoda dziel i zwyciężaj). Sklejanie par przez wybieranie minimum lub sortowanie i wstawianie (metoda zachłanna).  Uproszczone sortowanie przez wybieranie i przez wstawianie na listach dynamicznych. Implementacja notacji nawiasowej drzew przez zagnieżdżone listy. Sprawdzanie czy tablica reprezentuje kopiec. Przechodzenie całego drzewa binarnego w różnych porządkach. Przechodzenie określonej ścieżki w drzewie BST. Sprawdzanie czy ścieżka jest legalną ścieżka poszukiwania danej wartości. Tworzenie macierzowej i dowiązaniowej (listy sąsiedztwa) reprezentacji dla przykładowego grafu.",
+  "metodyDydaktyczne": ["Wykład", "dyskusja problemu", "studium przypadków", "pisanie programów", "prezentacja i analiza kodów źródłowych", "konsultacje"],
+  "wymaganiaFormalne": "Wstęp do Programowania, Matematyka Dyskretna. Programowanie obiektowe. Umiejętność programowania w języku wysokiego poziomu.  Umiejętność definiowania klas i tworzenia obiektów. Znajomość rachunku zdań do dowodzenia poprawności algorytmów, znajomość indukcji do dowodów skończoności oraz znajomość elementarnych funkcji do notacji O.",
+  "zalozeniaWstepne": "",
+  "efektyUczenia": {
+    "wiedza": "1 - Ma szczegółową wiedzę na temat algorytmiki. Zna podstawowe algorytmy oraz metody układania algorytmów (dziel i zwyciężaj, programowanie zachłanne i dynamiczne). i sposób ich wykorzystania w programach\n\n2 - Ma podstawową wiedzę na temat złożoności obliczeniowej algorytmów i jej wpływu na praktyczne działanie systemów informatycznych",
+    "umiejetnosci": "1 - Potrafi wykorzystać wiedzę matematyczną do konstruowania i analizy algorytmów\n\n2 - Ma umiejętność formułowania algorytmów dla zadań informatycznych oraz potrafi praktycznie je programować i wykorzystywać dynamiczne struktury danych\n\n3 - Potrafi ocenić złożoność obliczeniową algorytmów i problemów.",
+    "kompetencje": ""
+  },
+  "weryfikacjaEfektowUczenia": ["Zadania bieżące wykonywane podczas laboratorium." ,"Dwa sprawdziany praktyczne (kolokwia) podczas laboratorium" ,"Egzamin pisemny praktyczny z pytaniami i zadaniami podobnymi do zadań z kolokwiów obejmujących całość materiału."],
+  "dokumentacjaEfektowUczenia": ["Zadania bieżące wykonywane podczas laboratorium (archiwum na Moodle).","Dwa sprawdziany praktyczne (kolokwia) podczas laboratorium (archiwum na Moodle)","Egzamin pisemny z ocenami"],
+  "kryteriaOceniania": "Ćwiczenia laboratoryjne (wejściówki, zadania rozwiązywane na laboratorium) – 15%, dwa sprawdziany praktyczne – 35%, egzamin – 50%.",
+  "statusPodstawowe": true,
+  "statusObowiazkowe": true,
+  "uwagi": "Liczba punktów do zdobycia za bieżące ćwiczenia laboratoryjne: 30\nLiczba punktów do zdobycia za sprawdziany praktyczne: 70\nLiczba punktów do zdobycia za egzamin praktyczny pisemny: 100\nMinimalna łączna liczba punktów konieczna do zaliczenia: 101",
+  "miejsceRealizacji": {
+    "cwiczenia": "laboratorium komputerowe",
+    "wyklad": "sala audytoryjna"
+  },
+  "godziny": {
+    "ects": "6",
+    "cwiczenia": "30",
+    "wyklad": "30"
+  },
+  "literatura": [
+    {
+      "autor": "Banachowski, Diks, Rytter",
+      "tytul": "Algorytmy i struktury danych",
+      "wydawnictwo": "WNT",
+      "rodzaj": "Podstawowa i uzupełniająca"
+    },
+    {
+      "autor": "Cormen, Leiserson, Rivest",
+      "tytul": "Wprowadzenie do algorytmów",
+      "wydawnictwo": "PWN",
+      "rodzaj": "Podstawowa i uzupełniająca"
+    },
+    {
+      "autor": "Dasgupta, Papadimitriou, Vazirani",
+      "tytul": "Algorytmy",
+      "wydawnictwo": "PWN",
+      "rodzaj": "Podstawowa i uzupełniająca"
+    },
+    {
+      "autor": "Harel",
+      "tytul": "Rzecz o istocie informatyki. Algorytmika",
+      "wydawnictwo": "WNT",
+      "rodzaj": "Podstawowa i uzupełniająca"
+    },
+    {
+      "autor": "Wirth",
+      "tytul": "Algorytmy + struktury danych = programy",
+      "wydawnictwo": "WNT",
+      "rodzaj": "Podstawowa i uzupełniająca"
+    }
+  ]
+}

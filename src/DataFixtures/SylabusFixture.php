@@ -10,7 +10,7 @@ use Doctrine\Persistence\ObjectManager;
 class SylabusFixture extends Fixture implements DependentFixtureInterface
 {
     const liczbaSylabusowNaSemestr = 6;
-    const liczbaSemestrowNaProgram = 1;
+    const liczbaSemestrowNaProgram = 5;
     const liczbaProgramow = 4;
 
     public function load(ObjectManager $manager)

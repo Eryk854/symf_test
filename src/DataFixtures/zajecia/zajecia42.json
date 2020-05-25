@@ -1,0 +1,88 @@
+{
+  "nazwaPolska": "Grafy i sieci",
+  "nazwaAngielska": "Graphs and networks",
+  "jezykWykladowy": "polski",
+  "zalozenia": "",
+  "cele": "Celem przedmiotu jest zapoznanie studentów z podstawami teorii grafów, metodami konstrukcji, analizy kosztów i poprawności algorytmów grafowych, z efektywnymi algorytmami rozwiązywania popularnych zagadnień; nabycie przez studentów umiejętności konstruowania i analizy prostych algorytmów grafowych.",
+  "opis": "",
+  "zakresTematow": "Opis tematów poruszanych podczas zajęć:\n1.\tWprowadzenie do teorii grafów i sieci.  Podstawowe pojęcia\n2.\tDefinicje grafów prostych i multigrafów\n\uF02D\tCzęść grafu, podgraf, podgrafy puste i pełne, baza grafu\n\uF02D\tMarszrut, ścieżka, droga, cykl, odległości, stopni wierzchołków\n\uF02D\tSposoby opisywania grafów.\n3.\tWłasności klas grafów\n\uF02D\tGrafy Eulerowskie\n\uF02D\tGrafy Hamiltonowskie\n\uF02D\tGrafy dwudzielne i planarne\n\uF02D\tPojęcia punktów rozdzielających, mostów i rozcięć\n4.\tPodstawowe algorytmy grafowe\n\uF02D\tPrzeszukiwanie wszerz\n\uF02D\tPrzeszukiwanie w głąb\n\uF02D\tSortowanie topologiczne\n5.\tSpójność grafów\n\uF02D\tKlasyfikacja krawędzi. Spójność grafów nieskierowanych\n\uF02D\tDrogi cykliczne w digrafach\n\uF02D\tSilna spójność digrafu. Silnie spójne składowe digrafu \n6.\tNajkrótsze ścieżki\n\uF02D\tAlgorytm Dijkstry\n\uF02D\tAlgorytm Bellmana-Forda\n\uF02D\tNajkrótsze ścieżki z jednym źródłem w acyklicznych grafach skierowanych\n\uF02D\tNajkrótsze ścieżki między wszystkimi parami wierzchołków. Algorytm Floyda-Warszalla\n7.\tDrzewa\n\uF02D\tPojęcie lasów, właściwości drzew\n\uF02D\tMinimalne drzewa rozpinające\n\uF02D\tAlgorytmy Kruskala i Prima.\n8.\tPrzepływy i przepustowości w sieciach\n\uF02D\tSieci przepływowe. Przepływ maksymalny\n\uF02D\tMetoda Forda-Fulkersona\n\uF02D\tMaksymalne skojarzenie w grafach dwudzielnych.\n9.\tZagadnienia związane z kolorowaniem grafów\n\uF02D\tPokrycia minimalne zbiorów\n\uF02D\tSkojarzenia i pokrycia w grafach\n\uF02D\tChromatyka grafów. Oszacowanie liczby chromatycznej \n\uF02D\tMetody kolorowania grafów",
+  "metodyDydaktyczne": ["wykład", "dyskusja problemu", "rozwiązywanie problemu", "konsultacje"],
+  "wymaganiaFormalne": "Wymagana jest wiedza z zakresu matematyki dyskretnej, podstaw programowania, algorytmów i struktur danych.",
+  "zalozeniaWstepne": "",
+  "efektyUczenia": {
+    "wiedza": "1 -  Zna podstawy teorii grafów, metody konstrukcji i analizy kosztu algorytmów grafowych\n\n2 - wie podstawowe algorytmy grafowe,  stosowane przy formułowaniu i rozwiązywaniu prostych zadań informatycznych",
+    "umiejetnosci": "1 – Potrafi wykorzystać nabytą wiedzę matematyczną do opisu procesów, tworzenia modeli oraz innych działań w obszarze informatyki z użyciem algorytmów grafowych\n\n2 – potrafi wykorzystać wiedzę matematyczną oraz metody analityczne do formułowania i rozwiązywania zadań informatycznych\n\n3 – ma umiejętność formułowania algorytmów i ich programowania z użyciem przynajmniej jednego z popularnych narzędzi i środowisk projektowych\n\n4 – potrafi ocenić złożoność obliczeniową algorytmów i problemów, planować i przeprowadzać eksperymenty symulacyjne",
+    "kompetencje": "1 -  Rozumie szybkość procesu zachodzenia zmian w technikach komputerowych; jest przygotowany do nieustannego poszerzania swojej wiedzy i umiejętności w ramach pracy zawodowej "
+  },
+  "weryfikacjaEfektowUczenia": ["Dwa kolokwia pisemne", "projekt"],
+  "dokumentacjaEfektowUczenia": ["Kolokwia pisemne z ocenami", "projekt z oceną"],
+  "kryteriaOceniania": "Kolokwia pisemne – 30%, projekt – 20%, egzamin pisemny – 50%",
+  "statusPodstawowe": true,
+  "statusObowiazkowe": true,
+  "uwagi": "Minimalna liczba punktów konieczna do zaliczenia: 50%",
+  "miejsceRealizacji": {
+    "cwiczenia": "sala audytoryjna",
+    "wyklad": "sala audytoryjna"
+  },
+  "godziny": {
+    "ects": "3",
+    "cwiczenia": "15",
+    "wyklad": "30"
+  },
+  "literatura": [
+    {
+      "autor": "R.J. Wilson",
+      "tytul": "Wprowadzenie do teorii grafów",
+      "wydawnictwo": "PWN",
+      "rodzaj": "Podstawowa"
+    },
+    {
+      "autor": "Th.H. Cormen, Ch.E. Leiserson, R.L. Rivest",
+      "tytul": "Wprowadzenie do algorytmów",
+      "wydawnictwo": "WNT",
+      "rodzaj": "Podstawowa"
+    },
+    {
+      "autor": "J. Xu",
+      "tytul": "Theory and Application of Grapphs",
+      "wydawnictwo": "Kluwer",
+      "rodzaj": "Podstawowa"
+    },
+    {
+      "autor": "K.A. Ross, Ch.R.B. Wright",
+      "tytul": "Matematyka dyskretna",
+      "wydawnictwo": "PWN",
+      "rodzaj": "Podstawowa"
+    },
+    {
+      "autor": "D.K. Smith",
+      "tytul": "Networks and Graphs: Techniques and Computational Methods",
+      "wydawnictwo": "Philadelphia, Oxford, Cambridge: Woodhead Publ.",
+      "rodzaj": "Podstawowa"
+    },
+    {
+      "autor": "S. Dasgupta, C. Papadimitriu, U. Vazirani",
+      "tytul": ". Algorytmy",
+      "wydawnictwo": "PWN",
+      "rodzaj": "Uzupełniająca"
+    },
+    {
+      "autor": "G. Brassard, P. Bratley",
+      "tytul": "Fundamentals of Algorithms",
+      "wydawnictwo": "Prentice-Hall, Englewood Cliffs",
+      "rodzaj": "Uzupełniająca"
+    },
+    {
+      "autor": "M.J. Atallah, M. Blanton ",
+      "tytul": "Algorithms and Theory of Computation Handbook. General Concepts and Technics",
+      "wydawnictwo": "Chapman & Hall/ CRC Press",
+      "rodzaj": "Uzupełniająca"
+    },
+    {
+      "autor": "K.K. Meng, D. Fengming, T.E. Guan",
+      "tytul": "Introduction to Graph Theory. H3 Mathematics",
+      "wydawnictwo": "World Scientific",
+      "rodzaj": "Uzupełniająca"
+    }
+  ]
+}

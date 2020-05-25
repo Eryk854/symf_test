@@ -1,0 +1,64 @@
+{
+  "nazwaPolska": "Programowanie obiektowe",
+  "nazwaAngielska": "Object oriented programming",
+  "jezykWykladowy": "polski",
+  "zalozenia": "",
+  "cele": "Zaznajomienie studentów z zasadami programowania obiektowego\nPrzekazanie studentom wiedzy na temat podstawowych zasad obiektowej analizy dziedziny i projektowania klas \nPrzekazanie studentom wiedzy o znaczeniu programowania obiektowego dla tworzenia dużych systemów\nNabycie przez studentów umiejętności posługiwania się środowiskiem programistycznym wspierającym programowanie obiektowe\nNabycie przez studentów umiejętności projektowania, implementowania, testowania i debugowania programów obiektowych a także właściwego wykorzystywania mechanizmów dziedziczenia, polimorfizmu i klas abstrakcyjnych.",
+  "opis": "",
+  "zakresTematow": "Tematyka wykładów:\n•\tWprowadzenie do programowania obiektowego. Pojęcie klasy i obiektu. Składowe klasy - pola i metody. \n•\tOchrona danych, hermetyzacja, specyfikacja dostępu do pól i metod, słowo kluczowe this. \n•\tSkładowe statyczne. \n•\tTworzenie, inicjalizacja i niszczenie obiektów. \n•\tPrzeciążanie konstruktorów. Projektowanie klas. Obiektowe modelowanie dziedziny. Dziedziczenie. \n•\tDziedziczenie a zawieranie. \n•\tHierarchia klas, konstruktory a dziedziczenie. \n•\tFunkcje wirtualne i polimorfizm. \n•\tKlasy abstrakcyjne i interfejsy. Zastosowanie interfejsów. \n•\tWyjątki. Przestrzenie nazw. \n•\tPrzeciążanie operatorów, indeksatory, funkcje konwertujące. \n•\tStrumienie, praca z plikami, serializacja. \n•\tKolekcje. \n•\tTypy ogólne. \n•\tMechanizm refleksji..\nTematyka ćwiczeń laboratoryjnych: \n•\tInformacje o środowisku Visual Studio i języku C#. Uwagi o Javie i środowisku NetBeans. \n•\tTworzenie klas. Hermetyzacja. \n•\tPrzykłady klas z .NET i ich zastosowania (Math, Convert, String, StringBuilder,  Tablice i klasa Array). \n•\tProgramowanie z wykorzystaniem dziedziczenia, funkcji wirtualnych oraz polimorfizmu. \n•\tProgramowanie z wykorzystaniem interfejsów. \n•\tProgramowanie z wykorzystaniem kolekcji. \n•\tProgramowanie z zastosowaniem typów ogólnych. \n•\tSamodzielne tworzenie bibliotek obiektowych.",
+  "metodyDydaktyczne": ["Wykład", "dyskusja problemu", "studium przypadków", "pisanie programów", "prezentacja i analiza kodów źródłowych", "konsultacje"],
+  "wymaganiaFormalne": "Wstęp do Programowania, Matematyka Dyskretna. Konieczna podstawowa umiejętność programowania imperatywnego w językach strukturalnych oraz  umiejętność projektowania prostych struktur danych",
+  "zalozeniaWstepne": "",
+  "efektyUczenia": {
+    "wiedza": "1 - Zna podstawowe zasady programowania obiektowego. Rozumie znaczenie programowania obiektowego dla tworzenia dużych systemów informatycznych\n\n2 - Zna środowisko programistyczne wspierające pracę w wybranym obiektowym języku programowania, zna mechanizmy dziedziczenia i polimorfizmu, klasy abstrakcyjne oraz interfejsy\n\n3 -  zna przydatność paradygmatu obiektowego do rozwiązywania różnego typu problemów",
+    "umiejetnosci": "1 -  Ma umiejętność formułowania algorytmów i ich programowania z użyciem języka obiektowego\n\n2 -  potrafi dokonać obiektowej analizy dziedziny i  zaprojektować strukturę klas dla danego zagadnienia i\n\n3 - Potrafi ocenić przydatność środowiska programistycznego wspierającego pracę w wybranym obiektowym języku programowania. Potrafi wybrać i używać narzędzia do projektowania, implementowania, testowania i debugowania  programów obiektowych",
+    "kompetencje": ""
+  },
+  "weryfikacjaEfektowUczenia": ["Zadania bieżące wykonywane podczas laboratorium. Dwa sprawdziany praktyczne (kolokwia) podczas laboratorium \nEgzamin pisemny praktyczny z pytaniami i zadaniami podobnymi do zadań z kolokwiów obejmujących całość materiału"],
+  "dokumentacjaEfektowUczenia": ["Zadania bieżące wykonywane podczas laboratorium (archiwum na Moodle).","Dwa sprawdziany praktyczne (kolokwia) podczas laboratorium (archiwum na Moodle)","Egzamin pisemny z ocenami"],
+  "kryteriaOceniania": "Ćwiczenia laboratoryjne (wejściówki, zadania rozwiązywane na laboratorium) – 15%, dwa sprawdziany praktyczne – 35%, egzamin – 50%.",
+  "statusPodstawowe": true,
+  "statusObowiazkowe": true,
+  "uwagi": "Liczba punktów do zdobycia za bieżące ćwiczenia laboratoryjne: 30\nLiczba punktów do zdobycia za sprawdziany praktyczne: 70\nLiczba punktów do zdobycia za egzamin praktyczny pisemny: 100\nMinimalna łączna liczba punktów konieczna do zaliczenia: 101",
+  "miejsceRealizacji": {
+    "cwiczenia": "laboratorium komputerowe",
+    "wyklad": "sala audytoryjna"
+  },
+  "godziny": {
+    "ects": "6",
+    "cwiczenia": "30",
+    "wyklad": "30"
+  },
+  "literatura": [
+    {
+      "autor": "Ian Graham",
+      "tytul": "Metody obiektowe w teorii i w praktyce",
+      "wydawnictwo": "WNT",
+      "rodzaj": "Podstawowa i uzupełniająca"
+    },
+    {
+      "autor": "Matt Weisfeld",
+      "tytul": ": Myślenie obiektowe w programowaniu",
+      "wydawnictwo": "Helion",
+      "rodzaj": "Podstawowa i uzupełniająca"
+    },
+    {
+      "autor": "Jesse Liberty, Brian MacDonald ",
+      "tytul": "C# 2005 Wprowadzenie",
+      "wydawnictwo": "Helion",
+      "rodzaj": "Podstawowa i uzupełniająca"
+    },
+    {
+      "autor": "Bruce Eckel",
+      "tytul": "Thinking in C++",
+      "wydawnictwo": "Helion",
+      "rodzaj": "Podstawowa i uzupełniająca"
+    },
+    {
+      "autor": "Bruce Eckel",
+      "tytul": "Thinking in Java",
+      "wydawnictwo": "Helion",
+      "rodzaj": "Podstawowa i uzupełniająca"
+    }
+  ]
+}

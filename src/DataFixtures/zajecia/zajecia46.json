@@ -1,0 +1,77 @@
+{
+  "nazwaPolska": "Metody numeryczne",
+  "nazwaAngielska": "Numerical Methods",
+  "jezykWykladowy": "polski",
+  "zalozenia": "",
+  "cele": "Celem przedmiotu jest zapoznanie studentów z wybranymi metodami przybliżonego rozwiązywania algebraicznych równań i układów liniowych i nieliniowych. Przekazanie studentom wiedzy na temat zasad aproksymacji i interpolacji funkcji. Zapoznanie studentów z zasadami przybliżonego obliczania całek oznaczonych. Nabycie przez studentów umiejętności przybliżonego wyznaczania wartości własnych macierzy.\nOpis tematów poruszanych podczas zajęć:",
+  "opis": "",
+  "zakresTematow": "1.\tWstęp\n\uF02D\tArytmetyka zmiennopozycyjna. \n\uF02D\tBłędy obliczeniowe. \n\uF02D\tUwarunkowanie problemów numerycznych. \n\uF02D\tZłożoność obliczeniowa algorytmu.\n2.\tPodstawowe algorytmy\n\uF02D\tAlgorytm Herona. \n\uF02D\tSchemat Hornera.\n3.\tInterpolacja \n\uF02D\tWielomianowa. \n\uF02D\tMetody Lagrange'a,i Newtona. \n\uF02D\tInterpolacja funkcjami sklejanymi. \n\uF02D\tInterpolacja trygonometryczna.\n4.\tAproksymacja średniokwadratowa. \n\uF02D\tMetoda najmniejszych kwadratów\n\uF02D\tUogólnienie metody najmniejszych kwadratów. \n\uF02D\tWielomiany ortogonalne.\n5.\tDokładne metody rozwiązywania układów równań liniowych. \n\uF02D\tMetoda eliminacji Gaussa i Gaussa-Jordana. \n\uF02D\tWybór elementu głównego. \n\uF02D\tRozkłady LU i Cholesky’ego-Banachiewicza.\n6.\tIteracyjne metody rozwiązywania układów równań liniowych. \n\uF02D\tMetody Jacobiego i Gaussa-Seidla.\n7.\tSkalarne równania nieliniowe. \n\uF02D\tZbieżność i efektywność metody. \n\uF02D\tMetody połowienia, stycznych, siecznych. Kryteria stopu. \n\uF02D\tWielowymiarowa metoda stycznych.\n8.\tKwadratury. \n\uF02D\tMetody najprostsze: prostokątów, trapezów. \n\uF02D\tKwadratury Newtona-Cotesa: złożone metody trapezów, Simpsona. \n\uF02D\tKwadratury Gaussa. \n\uF02D\tKwadratury Monte-Carlo: średnia całkowa funkcji, metoda chybił-trafił.\n9.\tZagadnienie własne. \n\uF02D\tMetoda potęgowa. \n\uF02D\tMetody Jacobiego i QR: ortogonalizacja Grama-Schmidta, przekształcenie Householdera, obroty Givensa.",
+  "metodyDydaktyczne": ["wykład", "rozwiązywanie zadań", "zapis algorytmów w programie Matlab", "konsultacje"],
+  "wymaganiaFormalne": "Wymagana jest wiedza z zakresu analizy matematycznej, algebry.",
+  "zalozeniaWstepne": "",
+  "efektyUczenia": {
+    "wiedza": "1 -  posiada wiedzę dotyczącą błędów obliczeniowych i ich wpływu na dokładność obliczeń,\n\n2 -  zna i rozumie podstawy matematyczne metod numerycznych stosowanych do wykonywania interpolacji i aproksymacji średniokwadratowej, rozwiązywania układów równań liniowych i nieliniowych, podstawowych rozkładów macierzy na iloczyny macierzy, wyznaczania wartości i wektorów własnych macierzy, całkowania numerycznego,",
+    "umiejetnosci": "1 - potrafi rozwiązać prosty problem matematyczny w postaci algorytmu numerycznego \n\n2 - potrafi rozróżnić podstawowe metody numeryczne ze względu na ich złożoność oraz precyzję obliczeniową – na podstawie wiedzy teoretycznej oraz prostych testów\n\n4 - potrafi zapisać algorytm w języku programu Matlab",
+    "kompetencje": ""
+  },
+  "weryfikacjaEfektowUczenia": ["Dwa kolokwia pisemne z wiedzy praktycznej","Test zaliczeniowy z wiedzy teoretycznej"],
+  "dokumentacjaEfektowUczenia": ["Kolokwia i testy pisemne z ocenami"],
+  "kryteriaOceniania": "Kolokwium pisemne – 66%, test pisemny – 33%",
+  "statusPodstawowe": true,
+  "statusObowiazkowe": true,
+  "uwagi": "Minimalna liczba punktów konieczna do zaliczenia: 50%",
+  "miejsceRealizacji": {
+    "cwiczenia": "laboratorium komputerowe",
+    "wyklad": "sala wykładowa"
+  },
+  "godziny": {
+    "ects": "5",
+    "cwiczenia": "30",
+    "wyklad": "30"
+  },
+  "literatura": [
+    {
+      "autor": "A.Bjorck and G.Dahlquist",
+      "tytul": "Metody numeryczne",
+      "wydawnictwo": "PWN",
+      "rodzaj": "Podstawowa"
+    },
+    {
+      "autor": "Maksymilian Dryja, Janina i Michał Jankowscy",
+      "tytul": "Przegląd metod i algorytmów numerycznych. Biblioteka Inżynierii Oprogramowania",
+      "wydawnictwo": "WNT",
+      "rodzaj": "Podstawowa"
+    },
+    {
+      "autor": "",
+      "tytul": "Numerical Recipes",
+      "wydawnictwo": "/ Cambridge University Press",
+      "rodzaj": "Podstawowa"
+    },
+    {
+      "autor": "A.Grabarski, i inni",
+      "tytul": "Ćwiczenia laboratoryjne z metod numerycznych",
+      "wydawnictwo": "Oficyna wydawnicza Politechniki Warszawskiej",
+      "rodzaj": "Podstawowa"
+    }
+  ,
+    {
+      "autor": "Z. Fortuna,  B. Macukow, J. Wąsowski",
+      "tytul": "Metody numeryczne",
+      "wydawnictwo": "Wydawnictwa Naukowo-Techniczne",
+      "rodzaj": "Uzupełniająca"
+    },
+    {
+      "autor": "J.Stoer, R.Bulirsch",
+      "tytul": "Wstęp do analizy numerycznej",
+      "wydawnictwo": "PWN",
+      "rodzaj": "Uzupełniająca"
+    },
+    {
+      "autor": "M. Stachurski",
+      "tytul": "Metody numeryczne w programie Matlab",
+      "wydawnictwo": "Mikom",
+      "rodzaj": "Uzupełniająca"
+    }
+  ]
+}

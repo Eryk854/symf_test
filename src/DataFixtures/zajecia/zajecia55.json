@@ -1,0 +1,58 @@
+{
+  "nazwaPolska": "Sieci Komputerowe",
+  "nazwaAngielska": "Computer Networks",
+  "jezykWykladowy": "polski",
+  "zalozenia": "",
+  "cele": "Celem przedmiotu jest zapoznanie studentów z architekturami współczesnych sieci komputerowych.\nPrzekazanie studentom wiedzy na temat etapów projektowanie i implementacji okablowania strukturalnego sieci  LAN Ethernet oraz  połączenie jej do sieci WAN z wykorzystaniem urządzeń aktywnych. Przekazanie studentom wiedzy na temat topologii i protokołów sieciowych. Nabycie przez studentów umiejętności projektowania okablowania strukturalnego wg standardów IEEE oraz umiejętność posługiwania się testerami i miernikami sieci.\nZapoznanie studentów z zasadami projektowania logicznej adresacji IP technika VLSM i CIDR\nZapoznanie studentów z zasadami projektowania logicznej adresacji IPv4, IPv6\nNabycie przez studentów umiejętności konfigurowania urządzeń sieciowych (switch, router, router wifi)\nNabycie umiejętność konfigurowania protokołów routingu dynamicznego i statycznego oraz sieci VLAN .\nPrzekazanie studentom wiedzy na temat sieci i standardów WiFi",
+  "opis": "",
+  "zakresTematow": "Tematyka wykładów:\nInformacje wstępne, Historia sieci komputerowych, typy i topologie sieci\nModele OSI, TCP/IP\nTechnologie i funkcjonowanie sieci Ethernet\nOkablowanie strukturalne sieci, standardy, media przewodowe  \nProtokół IPv4, IPv6, Adresy IP, Maski sieci, Podział na podsieci, \nPodział i zasady działania sieci VLSM, CIDR\nRouting statyczny, Trasy domyślne i statyczne.\nRouting dynamiczny. Protokoły routingu z wykorzystaniem wektora odległości, cechy, metryki \nRouting dynamiczny. Protokoły routingu z wykorzystaniem stanu łącza, cechy, metryki, \nSieci przełączane, segmentacja sieci VLAN, Łącza trunkingowe,\nPrzełączanie w sieci VLAN\nSieci WiFi, standardy 802.11, bezpieczeństwo.\nSieci WAN - protokoły \nProtokół DHCP, translacja adresów NAT i PAT\n \nTematyka ćwiczeń laboratoryjnych: \nLaboratorium w praktyczny sposób będzie pogłębiało wiadomości teoretyczne omawiane w części wykładowej. Zagadnienia omawiane w części teoretyczne realizowane będą w laboratorium sieci komputerowych. W pierwszym etapie realizowane będą ćwiczenia z zakresu:\nProjektowanie i badanie warstwy fizycznej sieci.\nOkablowanie strukturalne, standardy, implementacja, mierniki okablowania. \nBudowa i działanie testera sieci i testera okablowania. \nPodział i zasady działania sieci w oparciu o technikę VLSM oraz CIDR\nBudowa i działanie przełącznika warstwy drugiej.\nKonfiguracja systemu IOS, podstawowe  komendy, dostęp zdalny, bezpieczeństwo  \nWarstwa dostępowa sieci – projektowanie sieci w oparciu o sieci VLAN.\nBudowa i działanie routera  warstwy trzeciej, konfiguracja podstawowa\nKonfiguracja routingu statycznego,\nKonfiguracja routingu dynamicznego\nKonfiguracja protokołu DHCP oraz NAT\nKonfiguracja sieci LAN i WAN w oparciu o przełączniki Cisco Catalyst oraz routery Cisco i oprogramowanie IOS\nKonfiguracja sieci WiFi w oparciu o routery Linksys oraz TPLInk",
+  "metodyDydaktyczne": ["Wykład", "Studium przypadków", "Projekty różnych sieci w laboratorium", "Badanie różnych konfiguracji routerów i switchy", "Analiza protokołów sieciowych w laboratorium"],
+  "wymaganiaFormalne": "Podstawy matematyki, Algebra Boola, ogólna wiedza na temat systemów operacyjnych ",
+  "zalozeniaWstepne": "",
+  "efektyUczenia": {
+    "wiedza": "1 - Posiada wiedzę na temat  współczesnych sieci komputerowych\n2 -  Ma praktyczne i teoretyczne podstawy do samodzielnego projektowania i administrowania sieci komputerowych typu SOHO\n3 -  Posiada wiedzę na temat rozwiązywania typowych problemów w sieci komputerowej małej i średniej wielkości",
+    "umiejetnosci": "1 - Potrafi  posługiwać się testerami siec i zaciskarkami.\n2- Potrafi  zaprojektować sieci Ethernet LAN i połączyć ją z siecią WAN",
+    "kompetencje": "1 Umie zaprojektować i podzielić sieć na podsieć VLSM, CIDR "
+  },
+  "weryfikacjaEfektowUczenia": ["Kolokwium pisemne","Ocena efektywności pracy w czasie zajęć laboratoryjnych","Testy cząstkowe i test umiejętności praktycznych"],
+  "dokumentacjaEfektowUczenia": ["Kolokwium pisemne z ocenami"],
+  "kryteriaOceniania": "Kolokwium pisemne – 50%, test_1 25% +  test_2 25%",
+  "statusPodstawowe": false,
+  "statusObowiazkowe": true,
+  "uwagi": "Minimalna liczba punktów konieczna do zaliczenia: 50%",
+  "miejsceRealizacji": {
+    "cwiczenia": "laboratorium komputerowe",
+    "wyklad": "sala audytoryjna"
+  },
+  "godziny": {
+    "ects": "6",
+    "cwiczenia": "30",
+    "wyklad": "30"
+  },
+  "literatura": [
+    {
+      "autor": "",
+      "tytul": "Materiały własne dostarczone w formacie PDF",
+      "wydawnictwo": "",
+      "rodzaj": "Podstawowa"
+    },
+    {
+      "autor": "Andrew Stuart Tanenbaum, Wetherall",
+      "tytul": "Sieci komputerowe",
+      "wydawnictwo": "Helion",
+      "rodzaj": "Podstawowa"
+    },
+    {
+      "autor": "Brad Dunsmore, Toby Skandier",
+      "tytul": "Cisco. Technologie telekomunikacyjne",
+      "wydawnictwo": "MIKOM",
+      "rodzaj": "Uzupełniająca"
+    },
+    {
+      "autor": "Allan Leinwand, Bruce Pinsky",
+      "tytul": "Konfiguracja Routerów Cisco. Podstawy",
+      "wydawnictwo": "MIKOM",
+      "rodzaj": "Uzupełniająca"
+    }
+  ]
+}
