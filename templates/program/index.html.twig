@@ -83,7 +83,7 @@
                                 $('<p>', {
                                     text: 'Brak programów dla wybranego filtra!'}).appendTo('div#ajax-results');
                             }
-                            //$("#nowy_sylabus_button").attr("href",'/sylabus/new/'+data.programId[0].toString());
+                            $("#nowy_sylabus_button").attr("href",'/sylabus/new/'+data.programy[0]["id"].toString());
                         }
                     },
                     error: function () {

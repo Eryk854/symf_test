@@ -65,7 +65,7 @@ class ProgramController extends AbstractController
                 }
             }
 
-            $arrData = ['output' => $output_programy];
+            $arrData = ['output' => $output_programy, 'programy' => $output_programy];
 
             return new JsonResponse($arrData);
         }
