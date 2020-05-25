@@ -5,6 +5,7 @@ namespace App\Forms\Type;
 use App\Entity\Godziny;
 use App\Entity\Instytucja;
 use App\Entity\Literatura;
+use App\Entity\Semestr;
 use App\Entity\Zajecia;
 use Doctrine\DBAL\Types\IntegerType;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
@@ -37,6 +38,15 @@ class SylabusType extends AbstractType
             ->add('jednostka_zlecajaca', EntityType::class, [
                 'class'=>Instytucja::class,
                 'choice_label'=>'pelna_nazwa',
+                'multiple'=>false,
+                'required'=>true,
+                'attr'=>['class'=>'form-control']
+            ])
+            ->add('semestr', EntityType::class, [
+                'class'=>Semestr::class,
+                'choice_label'=>function($semestr){
+                return $semestr->getNumerSemestru()." ".$semestr->getRodzajSemestru();
+                },
                 'multiple'=>false,
                 'required'=>true,
                 'attr'=>['class'=>'form-control']
