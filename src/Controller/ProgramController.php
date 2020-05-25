@@ -100,7 +100,6 @@ class ProgramController extends AbstractController
             $wszystkie_zajecia[$temp]["sylabus_id"] = $sylabus->getId();
             $wszystkie_zajecia[$temp]["godziny_wykladowe"] = $zajecia->getGodziny()->getGodzinyWykladowe();
             $wszystkie_zajecia[$temp]["godziny_cwiczeniowe"] = $zajecia->getGodziny()->getGodzinyCwiczeniowe();
-            $wszystkie_zajecia[$temp]["czas_pracy_wlasnej"] = $zajecia->getGodziny()->getCzasPracyWlasnej();
             $wszystkie_zajecia[$temp]["kryteria_oceniania"] = $zajecia->getKryteriaOceniania();
             $wszystkie_zajecia[$temp]["ects"] = $zajecia->getGodziny()->getECTS();
             $temp = $temp + 1;
