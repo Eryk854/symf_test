@@ -54,7 +54,7 @@ class SylabusType extends AbstractType
             ->add('numer_katalogowy', TextType::class,[
                 'label'=>'Numer katalogowy sylabusa',
                 'attr'=>['class'=>'form-control'],
-                'required'=>false
+                'required'=>true
             ])
             ->add('zajecia', ZajeciaType::class)
             ->add('save', SubmitType::class,[
