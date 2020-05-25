@@ -64,7 +64,7 @@ class Sylabus
     private $program;
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\Semestr", inversedBy="program")
+     * @ORM\ManyToOne(targetEntity="App\Entity\Semestr", inversedBy="sylabus")
      */
     private $semestr;
 
