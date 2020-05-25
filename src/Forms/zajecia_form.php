@@ -26,7 +26,7 @@ class ZajeciaType extends AbstractType
     {
         $builder
             ->add('nazwa_angielska', TextType::class, [
-                'required'=>false,
+                'required'=>true,
                 'attr'=>['class' => 'form-control']
             ])
             ->add('jezyk_wykladowy', ChoiceType::class, [

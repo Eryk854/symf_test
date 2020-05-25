@@ -3,8 +3,10 @@
 namespace App\Controller;
 
 #use http\Env\Request;
+use App\Entity\Godziny;
 use App\Entity\Instytucja;
 use App\Entity\Program;
+use App\Entity\Semestr;
 use App\Entity\Sylabus;
 use App\Entity\Uzytkownik;
 use App\Entity\Zajecia;
@@ -21,6 +23,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+
 
 class SylabusController extends AbstractController
 {
@@ -137,11 +140,36 @@ class SylabusController extends AbstractController
         $form = $this->createForm(SylabusType::class, $sylabus);
         $form->handleRequest($request);
 
+
         if ($form->isSubmitted() && $form->isValid())
         {
             $sylabus = $form->getData();
+
+            $godz = $sylabus->getZajecia()->getGodziny();
+            $efekty = $sylabus->getZajecia()->getEfektyUczenia();
+
+            //tworzymy fikcyjny sylabus1, który zostanie najpierw wrzucony do bazy danych aby w polach z entity wstawić null
+            $sylabus1 = $this->getDoctrine()->getRepository(Sylabus::class)->find($id);
+            $sylabus1->getZajecia()->setGodziny(Null);
+            $sylabus1->getZajecia()->setEfektyUczenia(Null);
+
+            // wrzucenie fikcyjnego sylabusa do bazy
+            $entityManager->persist($sylabus1);
+            $entityManager->flush();
+
+            //wrzucenie prawdziwego sylabusa do bazy
             $entityManager->persist($sylabus);
             $entityManager->flush();
+
+            // wrzucenie zajec zawierajacego nasze entity do bazy
+            $zajecia = $this->getDoctrine()->getRepository(Sylabus::class)->find($sylabus->getId())->getZajecia();
+            $zajecia->setGodziny($godz);
+            $zajecia->setEfektyUczenia($efekty);
+
+            $entityManager->persist($zajecia);
+            $entityManager->flush();
+
+
         }
         return $this->render('sylabus/sylabus.html.twig', [
             'form' => $form->createView(),
@@ -239,14 +267,30 @@ class SylabusController extends AbstractController
         } else {
             //użytkownik tworzy całkiem nowy sylabus bez duplikacji danych
             $nazwa = $request->request->get('nazwa');
+
+            $godziny = new Godziny();
+            $godziny->setECTS(0);
+            $godziny->setGodzinyCwiczeniowe(0);
+            $godziny->setGodzinyWykladowe(0);
+
+
             $zajecia = new Zajecia();
             $zajecia->setNazwaPolska($nazwa);
             $entityManager->persist($zajecia);
+            $zajecia->setGodziny($godziny);
+            $zajecia->setKryteriaOceniania('');
             $entityManager->flush();
 
+            $instytucja = $this->getDoctrine()->getRepository(Instytucja::class)->findAll();
             $sylabus = new Sylabus();
             $sylabus->setZajecia($zajecia);
             $sylabus->setProgram($program);
+            $sylabus->setJednostkaRealizujaca($instytucja[0]);
+            $sylabus->setJednostkaZlecajaca($instytucja[0]);
+            $semestr = $this->getDoctrine()->getRepository(Semestr::class)->findAll();
+            dump($semestr);
+
+            $sylabus->setSemestr($semestr[0]);
             $sylabus->setKoordynatorZajec($user);
 
             $entityManager->persist($sylabus);
