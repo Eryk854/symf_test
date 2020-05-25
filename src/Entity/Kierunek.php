@@ -22,12 +22,17 @@ class Kierunek
     /**
      * @ORM\Column(type="string", length=255)
      */
-    private $informacje;
+    private $nazwa;
 
     /**
      * @ORM\OneToMany(targetEntity=Program::class, mappedBy="kierunek")
      */
     private $program;
+
+    /**
+     * @ORM\Column(type="string", length=100, nullable=true)
+     */
+    private $wydzial;
 
     public function __construct()
     {
@@ -39,14 +44,14 @@ class Kierunek
         return $this->id;
     }
 
-    public function getInformacje(): ?string
+    public function getNazwa(): ?string
     {
-        return $this->informacje;
+        return $this->nazwa;
     }
 
-    public function setInformacje(string $informacje): self
+    public function setNazwa(string $nazwa): self
     {
-        $this->informacje = $informacje;
+        $this->nazwa = $nazwa;
 
         return $this;
     }
@@ -85,6 +90,18 @@ class Kierunek
 
     public function __toString()
     {
-        return $this->informacje;
+        return $this->nazwa;
+    }
+
+    public function getWydzial(): ?string
+    {
+        return $this->wydzial;
+    }
+
+    public function setWydzial(?string $wydzial): self
+    {
+        $this->wydzial = $wydzial;
+
+        return $this;
     }
 }

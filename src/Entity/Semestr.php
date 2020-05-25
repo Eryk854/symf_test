@@ -30,13 +30,13 @@ class Semestr
     private $rodzaj_semestru;
 
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Program", mappedBy="semestr")
+     * @ORM\OneToMany(targetEntity="App\Entity\Sylabus", mappedBy="semestr")
      */
-    private $program;
+    private $sylabus;
 
     public function __construct()
     {
-        $this->program = new ArrayCollection();
+        $this->sylabus = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -71,28 +71,28 @@ class Semestr
     /**
      * @return Collection|Program[]
      */
-    public function getProgram(): Collection
+    public function getSylabus(): Collection
     {
-        return $this->program;
+        return $this->sylabus;
     }
 
-    public function addProgram(Program $program): self
+    public function addSylabus(Sylabus $sylabus): self
     {
-        if (!$this->program->contains($program)) {
-            $this->program[] = $program;
-            $program->setSemestr($this);
+        if (!$this->sylabus->contains($sylabus)) {
+            $this->sylabus[] = $sylabus;
+            $sylabus->setSemestr($this);
         }
 
         return $this;
     }
 
-    public function removeProgram(Program $program): self
+    public function removeSylabus(Sylabus $sylabus): self
     {
-        if ($this->program->contains($program)) {
-            $this->program->removeElement($program);
+        if ($this->sylabus->contains($sylabus)) {
+            $this->sylabus->removeElement($sylabus);
             // set the owning side to null (unless already changed)
-            if ($program->getSemestr() === $this) {
-                $program->setSemestr(null);
+            if ($sylabus->getSemestr() === $this) {
+                $sylabus->setSemestr(null);
             }
         }
 

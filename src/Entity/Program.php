@@ -25,7 +25,7 @@ class Program
     private $opis;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(type="string", length=9)
      */
     private $rok_akademicki;
 
@@ -44,11 +44,6 @@ class Program
      * @ORM\OneToMany(targetEntity=Sylabus::class, mappedBy="program")
      */
     private $sylabusy;
-
-    /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\Semestr", inversedBy="program")
-     */
-    private $semestr;
 
 
     /**
@@ -80,12 +75,12 @@ class Program
         return $this;
     }
 
-    public function getRokAkademicki(): ?int
+    public function getRokAkademicki(): ?string
     {
         return $this->rok_akademicki;
     }
 
-    public function setRokAkademicki(int $rok_akademicki): self
+    public function setRokAkademicki(string $rok_akademicki): self
     {
         $this->rok_akademicki = $rok_akademicki;
 
@@ -147,17 +142,7 @@ class Program
         return $this;
     }
 
-    public function getSemestr(): ?Semestr
-    {
-        return $this->semestr;
-    }
 
-    public function setSemestr(?Semestr $semestr): self
-    {
-        $this->semestr = $semestr;
-
-        return $this;
-    }
 
     public function getKierunek(): ?Kierunek
     {

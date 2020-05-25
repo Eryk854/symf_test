@@ -63,6 +63,12 @@ class Sylabus
      */
     private $program;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Semestr", inversedBy="program")
+     */
+    private $semestr;
+
+
     public function __construct()
     {
         $this->prowadzacyZajecia = new ArrayCollection();
@@ -174,5 +180,17 @@ class Sylabus
     public function __toString()
     {
         return strval($this->numerKatalogowy);
+    }
+
+    public function getSemestr(): ?Semestr
+    {
+        return $this->semestr;
+    }
+
+    public function setSemestr(?Semestr $semestr): self
+    {
+        $this->semestr = $semestr;
+
+        return $this;
     }
 }
