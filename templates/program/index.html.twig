@@ -6,39 +6,33 @@
     <div class="example-wrapper">
         <h1>Programy studiów</h1>
 
-        <!--This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/xampp/htdocs/G4/src/Controller/ProgramController.php'|file_link(0) }}">src/Controller/ProgramController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/xampp/htdocs/G4/templates/program/index.html.twig'|file_link(0) }}">templates/program/index.html.twig</a></code></li>
-    </ul>-->
-
-        Wybierz rok akademicki:
-        <select id="rok" style ="font-size: 15px; margin-bottom: 10px">
-            {% for rok in rok_akademicki %}
+        </br>Wybierz wydział:
+        <select id="wydzial" style ="font-size: 15px; margin-bottom: 10px">
+            {% for kierunek in kierunki %}
                 {% set selected = '' %}
-                <option value="{{rok.rok_akademicki}}" {{ selected }}> {{rok.rok_akademicki}}</option>
+                <option value="{{kierunek[0].wydzial}}" {{ selected }}> {{kierunek[0].wydzial}}</option>
+            {% endfor %}
+        </select>
+
+        </br>Wybierz kierunek studiów:
+        <select id="kierunek" style ="font-size: 15px; margin-bottom: 10px">
+            {% for kierunek in kierunki %}
+                {% set selected = '' %}
+                <option value="{{kierunek[0].nazwa}}" {{ selected }}> {{kierunek[0].nazwa}}</option>
             {% endfor %}
         </select>
 
         </br>Wybierz formę studiów:
         <select id="forma" style ="font-size: 15px; margin-bottom: 10px">
-            {% for forma in forma_studiow %}
+            {% for forma in formy_studiow %}
                 {% set selected = '' %}
                 <option value="{{forma.forma_studiow}}" {{ selected }}> {{forma.forma_studiow}}</option>
             {% endfor %}
         </select>
 
-        <br/>Wybierz poziom studiów:
-        <select id="poziom" style ="font-size: 15px; margin-bottom: 10px">
-            {% for poziom in poziom_studiow %}
-                {% set selected = '' %}
-                <option value="{{poziom.poziom_studiow}}" {{ selected }}> {{poziom.poziom_studiow}}</option>
-            {% endfor %}
-        </select>
-
         <br/>
 
-        <button id="search_button" class="ajax">Szukaj sylabusów</button>
+        <button id="search_button" class="ajax">Szukaj programu studiów</button>
         {% if is_granted('ROLE_TUTOR') %}
             <a id="nowy_sylabus_button">Dodaj sylabus</a>
         {% endif %}
@@ -48,53 +42,52 @@
 
         <script>
             $(document).ready(function() {
-                $('#search_button').click();
+                //$('#search_button').click();
             });
 
             $(document).on('click', 'button.ajax', function(){
                 that = $(this);
-                var selected_rok = $("#rok option:selected").text();
+                var selected_wydzial = $("#wydzial option:selected").text();
+                var selected_kierunek = $("#kierunek option:selected").text();
                 var selected_forma = $("#forma option:selected").text();
-                var selected_poziom = $("#poziom option:selected").text();
                 $.ajax({
                     url: window.location.href,
                     type: "POST",
                     dataType: "json",
                     data: {
-                        "selected_rok": selected_rok,
-                        "selected_forma" : selected_forma,
-                        "selected_poziom" : selected_poziom
+                        "selected_wydzial" : selected_wydzial,
+                        "selected_kierunek" : selected_kierunek,
+                        "selected_forma" : selected_forma
                     },
                     async: true,
                     success: function (data)
                     {
                         //console.log(data);
-                        //console.log(data.output2);
                         $("#ajax-results").empty();
 
                         if ($.trim(data)){
                             //alert("Data not empty");
                             var url = window.location.href;
-                            var new_url = url.replace('/program', '/sylabus/');
+                            var new_url = url.replace('/program', '/program/');
 
                             for (i = 0; i < data.output.length; i++) {
-                                $('<a>', {
-                                    text: 'Sylabus ' + data.output2[i],
-                                    title: 'Sylabus ' + data.output2[i],
-                                    href: new_url + data.output[i]
-                                }).appendTo('div#ajax-results');
-
                                 $('</br>').appendTo('div#ajax-results');
+
+                                $('<a>', {
+                                    text: (i + 1) + ". " + data.output[i]["opis"],
+                                    title: new_url + data.output[i]["id"],
+                                    href: new_url + data.output[i]["id"]
+                                }).appendTo('div#ajax-results');
                             }
                             if(data.output.length==0) {
                                 $('<p>', {
-                                    text: 'Brak sylabusów dla podanego programu!'}).appendTo('div#ajax-results');
+                                    text: 'Brak programów dla wybranego filtra!'}).appendTo('div#ajax-results');
                             }
-                            $("#nowy_sylabus_button").attr("href",'/sylabus/new/'+data.programId[0].toString());
+                            //$("#nowy_sylabus_button").attr("href",'/sylabus/new/'+data.programId[0].toString());
                         }
                     },
                     error: function () {
-                        $("#ajax-results").empty();
+                        $("#ajax-results").empty()
                     },
                 });
                 return false;

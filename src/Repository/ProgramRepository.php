@@ -20,20 +20,6 @@ class ProgramRepository extends ServiceEntityRepository
         parent::__construct($registry, Program::class);
     }
 
-    public function findAllGroupedByRokAkademicki()
-    {
-        $sql = "SELECT rok_akademicki 
-                FROM program 
-                GROUP BY rok_akademicki";
-
-        $rsm = new ResultSetMapping();
-        $rsm->addScalarResult('rok_akademicki', 'rok_akademicki');
-
-        return $this->getEntityManager()
-            ->createNativeQuery($sql, $rsm)
-            ->getResult();
-    }
-
     public function findAllGroupedByFormaStudiow()
     {
         $sql = "SELECT forma_studiow 
@@ -48,14 +34,33 @@ class ProgramRepository extends ServiceEntityRepository
             ->getResult();
     }
 
-    public function findAllGroupedByPoziomStudiow()
+    public function findAllGroupedByKierunekId()
     {
-        $sql = "SELECT poziom_studiow 
-                FROM program 
-                GROUP BY poziom_studiow";
+        $sql = "SELECT kierunek_id 
+                FROM program
+                GROUP BY kierunek_id";
 
         $rsm = new ResultSetMapping();
-        $rsm->addScalarResult('poziom_studiow', 'poziom_studiow');
+        $rsm->addScalarResult('kierunek_id', 'kierunek_id');
+
+        return $this->getEntityManager()
+            ->createNativeQuery($sql, $rsm)
+            ->getResult();
+    }
+
+    public function findAllOrderedByRokAkademicki()
+    {
+        $sql = "SELECT id, kierunek_id, opis, rok_akademicki, forma_studiow, poziom_studiow
+                FROM program
+                ORDER BY rok_akademicki desc";
+
+        $rsm = new ResultSetMapping();
+        $rsm->addScalarResult('id', 'id')
+            ->addScalarResult('kierunek_id', 'kierunek_id')
+            ->addScalarResult('opis', 'opis')
+            ->addScalarResult('rok_akademicki', 'rok_akademicki')
+            ->addScalarResult('forma_studiow', 'forma_studiow')
+            ->addScalarResult('poziom_studiow', 'poziom_studiow');
 
         return $this->getEntityManager()
             ->createNativeQuery($sql, $rsm)

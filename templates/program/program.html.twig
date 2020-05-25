@@ -1,0 +1,68 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Program studiów{% endblock %}
+
+{% block body %}
+    <div class="example-wrapper">
+        <h2>Program: {{ kierunek }}, {{ forma }}, {{ rok }}</h2><br/><br/>
+
+        {% set counter = 1 %}
+
+        <table>
+            <tr>
+                <td>Lp.</td>
+                <td>Semestr</td>
+                <td>Nazwa przedmiotu</td>
+                <td>Godziny wykładowe</td>
+                <td>Godziny ćwiczeniowe</td>
+                <td>Czas pracy własnej</td>
+                <td>Forma zaliczenia</td>
+                <td>ECTS</td>
+            </tr>
+
+            {% for value in zajecia %}
+                <tr>
+                    <td>{{ counter }}</td>
+                    <td>{{ value.semestr }}</td>
+
+                    <td>
+                        <a href="{{ url }}{{ value.sylabus_id }}" title = "{{ url }}{{ value.sylabus_id }}">
+                            {{ value.nazwa }}
+                        </a>
+                    </td>
+
+                    <td>{{ value.godziny_wykladowe }}</td>
+                    <td>{{ value.godziny_cwiczeniowe }}</td>
+                    <td>{{ value.czas_pracy_wlasnej }}</td>
+
+                    <td class="td_smallFontSize">
+                        {{ value.kryteria_oceniania }}
+                    </td>
+
+                    <td>{{ value.ects }}</td>
+
+                    {% set counter = counter + 1 %}
+                </tr>
+            {% endfor %}
+
+        </table>
+
+    </div>
+
+    <style>
+        .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+        .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+        table, td, tr {
+            border: 1px solid black;
+            border-collapse: collapse;
+            text-align: center;
+        }
+        .td_smallFontSize {
+            font-size: 11px;
+        }
+
+        table {
+            width: 100%;
+        }
+    </style>
+{% endblock %}

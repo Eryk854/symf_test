@@ -4,6 +4,7 @@ namespace App\Repository;
 
 use App\Entity\Kierunek;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
+use Doctrine\ORM\Query\ResultSetMapping;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
@@ -19,32 +20,22 @@ class KierunekRepository extends ServiceEntityRepository
         parent::__construct($registry, Kierunek::class);
     }
 
-    // /**
-    //  * @return Kierunek[] Returns an array of Kierunek objects
-    //  */
-    /*
-    public function findByExampleField($value)
-    {
-        return $this->createQueryBuilder('k')
-            ->andWhere('k.exampleField = :val')
-            ->setParameter('val', $value)
-            ->orderBy('k.id', 'ASC')
-            ->setMaxResults(10)
-            ->getQuery()
-            ->getResult()
-        ;
-    }
-    */
+    public function findByKierunekId($kierunek_id) {
 
-    /*
-    public function findOneBySomeField($value): ?Kierunek
-    {
-        return $this->createQueryBuilder('k')
-            ->andWhere('k.exampleField = :val')
-            ->setParameter('val', $value)
-            ->getQuery()
-            ->getOneOrNullResult()
-        ;
+        $sql = "SELECT id, nazwa, wydzial
+                FROM kierunek
+                WHERE id LIKE $kierunek_id";
+
+        $rsm = new ResultSetMapping();
+        $rsm->addScalarResult('kierunek_id', 'kierunek_id')
+            ->addScalarResult("nazwa", "nazwa")
+            ->addScalarResult('wydzial', 'wydzial')
+            ->addScalarResult('id', 'id');
+
+        return $this->getEntityManager()
+            ->createNativeQuery($sql, $rsm)
+            ->getResult();
     }
-    */
+
+
 }
