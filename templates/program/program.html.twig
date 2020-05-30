@@ -27,7 +27,7 @@
                     <td>{{ value.semestr }}</td>
 
                     <td>
-                        <a href="{{ url }}{{ value.sylabus_id }}" title = "{{ url }}{{ value.sylabus_id }}">
+                        <a href="{{ path('sylabus', {'query' : value.sylabus_id}) }}" title = "{{ path('sylabus', {'query' : value.sylabus_id}) }}">
                             {{ value.nazwa }}
                         </a>
                     </td>

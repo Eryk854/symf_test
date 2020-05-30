@@ -111,17 +111,12 @@ class ProgramController extends AbstractController
 
         //dump($wszystkie_zajecia);
 
-        $url = 'http://' . $_SERVER["SERVER_NAME"] . $_SERVER['REQUEST_URI'];
-        $nowy_url = substr($url, 0, strpos($url, 'program'));
-        $nowy_url .= 'sylabus/';
-
         return $this->render('program/program.html.twig', [
             'programId' => $program->getId(),
             'kierunek' => $kierunek,
             'forma' => $forma,
             'rok' => $rok,
-            'zajecia' => $wszystkie_zajecia,
-            'url' => $nowy_url
+            'zajecia' => $wszystkie_zajecia
         ]);
     }
 }
