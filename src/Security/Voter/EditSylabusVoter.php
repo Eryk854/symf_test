@@ -41,20 +41,10 @@ class EditSylabusVoter extends Voter
             case self::SYLABUS_EDIT:
                 return $this->canEdit($subject, $user);
             case self::SYLABUS_VIEW:
-                return $this->canView($subject, $user);
+                return true;
         }
 
         return false;
-    }
-
-    private function canView(Sylabus $sylabus, Uzytkownik $user)
-    {
-        if ($this->canEdit($sylabus, $user)) {
-            return true;
-        }
-
-//        return $sylabus->isZatwierdzony();
-        return true;
     }
 
     private function canEdit(Sylabus $sylabus, Uzytkownik $user)
