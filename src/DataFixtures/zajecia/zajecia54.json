@@ -6,7 +6,9 @@
   "cele": "Studenci poznają realia pracy zawodowej. Zapoznają się ze specyfiką przedsiębiorstwa, w którym odbywają praktyki. Nabierają doświadczenia w pracy zespołowej oraz umiejętności wykorzystywania współczesnych techniki komunikacji.",
   "opis": "Praktyki obejmują 4 tygodnie pracy w przedsiębiorstwie prywatnym lub instytucji państwowej. W ramach przedmiotu studenci prowadzą wspólnie z opiekunem praktyk w przedsiębiorstwie dzienniczki praktyk. Do dzienniczka wpisywane są, w porządku chronologicznym, wykonywane czynności lub zadania.",
   "zakresTematow": "",
-  "metodyDydaktyczne": ["Nie dotyczy"],
+  "metodyDydaktyczne": [
+    "Nie dotyczy"
+  ],
   "wymaganiaFormalne": "Brak",
   "zalozeniaWstepne": "",
   "efektyUczenia": {
@@ -14,8 +16,12 @@
     "umiejetnosci": "1-Potrafi pozyskiwać informacje z literatury, baz danych oraz innych źródeł, integrować je, dokonywać ich interpretacji oraz wyciągać wnioski i formułować opinie na temat problemów informatycznych oraz proponowanych rozwiązań.\n2-Ma umiejętność budowy prostych systemów bazodanowych, wykorzystujących przynajmniej jeden z najbardziej popularnych systemów zarządzania bazą danych oraz posiada umiejętność utrzymywania systemów bazodanowych",
     "kompetencje": "1-Rozumie szybkość procesu zachodzenia zmian w technikach komputerowych; jest przygotowany do nieustannego poszerzania swojej wiedzy i umiejętności w ramach pracy zawodowej."
   },
-  "weryfikacjaEfektowUczenia": ["Dzienniczek praktyk"],
-  "dokumentacjaEfektowUczenia": ["Kolokwium pisemne z ocenami"],
+  "weryfikacjaEfektowUczenia": [
+    "Dzienniczek praktyk"
+  ],
+  "dokumentacjaEfektowUczenia": [
+    "Kolokwium pisemne z ocenami"
+  ],
   "kryteriaOceniania": "Opinia z miejsca pracy – 100%",
   "statusPodstawowe": true,
   "statusObowiazkowe": false,
@@ -25,6 +31,10 @@
     "wyklad": "W terenie"
   },
   "godziny": {
+    "teren": "0",
+    "praktyki": "120",
+    "projekt": "0",
+    "lab": "0",
     "ects": "4",
     "cwiczenia": "0",
     "wyklad": "0"

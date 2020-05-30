@@ -27,6 +27,12 @@ class SylabusFixture extends Fixture implements DependentFixtureInterface
                     $sylabus->setJednostkaZlecajaca($this->getReference('instytucja'));
                     $sylabus->setSemestr($this->getReference('semestr' . $sem));
 
+                    if ($sem == 5 && $i >= 5) {
+                        $sylabus->setZatwierdzony(false);
+                    } else {
+                        $sylabus->setZatwierdzony(true);
+                    }
+
                     $manager->persist($sylabus);
                     $this->addReference('sylabus' . $program . $sem . $i, $sylabus);
                 }

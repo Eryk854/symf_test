@@ -6,7 +6,10 @@
   "cele": "Celem przedmiotu jest wprowadzenie do podstawowych technik fotografii cyfrowej. Student w trakcie prowadzonych zajęć pozna budowę aparatu fotograficznego z obiektywem, technikę powstawania i obróbki zdjęć oraz posiądzie podstawową wiedzę z dziedziny fotografii.",
   "opis": "",
   "zakresTematow": "•\tWprowadzenie do fotografii\n•\tPerspektywa – widzenie głębi. Perspektywa, zmiana perspektywy w zależności od ogniskowej obiektywu.\n•\tFiltry świetlne. Przepuszczalność i pochłanianie światła przez filtry. Podział fotograficznych filtrów świetlnych. Zastosowanie filtrów zdjęciowych. Filtry do fotografii czarno-białej i barwnej. Filtry w fotografii cyfrowej.\n•\tOcena obrazu fotograficznego. Ocena techniczna. Ocena estetyczna. Struktura obrazu. Ziarnistość obrazu. Kontrast. Subiektywna ocena reprodukcji szczegółów w cieniach i światłach obrazu.\n•\tFotografia cyfrowa. Podstawy technologiczne fotografii cyfrowej. Rozdzielczość obrazu. Głębia przestrzeni barwnej. Podstawy obróbki komputerowej.\n•\tGłówne tematy fotograficzne – rozwój wrażliwości estetycznej (portret, pejzaż, reportaż, fotografia dokumentacyjna, fotografia kreacyjna).\n•\tPodstawy pracy w atelier fotograficznym. Światło żarowe, światło błyskowe.\n•\tPercepcja gotowego obrazu fotograficznego. Projekcja fotografii cyfrowej, prezentacja odbitki fotograficznej.\n•\tPostprodukcja - podstawowe techniki postprodukcji zdjęć (zmiana ekspozycji, balansu bieli, stosowanie filtrów gradientowych)",
-  "metodyDydaktyczne": ["Wstęp teoretyczny w formie wykładu", "ćwiczenia laboratoryjne ze sprzętem fotograficznym i praca przy komputerze (przeglądanie i obróbka zdjęć)"],
+  "metodyDydaktyczne": [
+    "Wstęp teoretyczny w formie wykładu",
+    "ćwiczenia laboratoryjne ze sprzętem fotograficznym i praca przy komputerze (przeglądanie i obróbka zdjęć)"
+  ],
   "wymaganiaFormalne": "brak",
   "zalozeniaWstepne": "",
   "efektyUczenia": {
@@ -14,19 +17,27 @@
     "umiejetnosci": "1. Potrafi – przy formułowaniu i rozwiązywaniu zadań informatycznych – dostrzegać ich aspekty społeczne, ekonomiczne i prawne.",
     "kompetencje": "pracy zawodowej."
   },
-  "weryfikacjaEfektowUczenia": ["Samodzielne zadania projektowe"],
-  "dokumentacjaEfektowUczenia": [""],
+  "weryfikacjaEfektowUczenia": [
+    "Samodzielne zadania projektowe"
+  ],
+  "dokumentacjaEfektowUczenia": [
+    ""
+  ],
   "kryteriaOceniania": "Oddanie i zaliczenie wszystkich zadań projektowych",
   "statusPodstawowe": false,
   "statusObowiazkowe": false,
+  "statusNaukowe": true,
   "uwagi": "",
   "miejsceRealizacji": {
     "cwiczenia": "Specjalistyczne laboratorium fotografii cyfrowej",
     "wyklad": "Specjalistyczne laboratorium fotografii cyfrowej"
   },
   "godziny": {
+   "teren":"0",
+   "praktyki":"0",
+   "projekt":"0","lab": "30",
     "ects": "3",
-    "cwiczenia": "30",
+    "cwiczenia": "0",
     "wyklad": "15"
   },
   "literatura": []

@@ -70,6 +70,11 @@ class Sylabus
      */
     private $semestr;
 
+    /**
+     * @ORM\Column(type="boolean", nullable=true)
+     */
+    private $zatwierdzony;
+
 
     public function __construct()
     {
@@ -192,6 +197,18 @@ class Sylabus
     public function setSemestr(?Semestr $semestr): self
     {
         $this->semestr = $semestr;
+
+        return $this;
+    }
+
+    public function getZatwierdzony(): ?bool
+    {
+        return $this->zatwierdzony;
+    }
+
+    public function setZatwierdzony(?bool $zatwierdzony): self
+    {
+        $this->zatwierdzony = $zatwierdzony;
 
         return $this;
     }

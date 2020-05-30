@@ -6,7 +6,11 @@
   "cele": "Celem wykładu jest zaznajomienie z podstawami matematyki niezbędnymi do rozumienia rachunku różniczkowego i algebry liniowej. W szczególności uporządkowanie wiedzy w zakresie funkcji elementarnych, zaznajomienie z ogólnym pojęciem funkcji (odwzorowania) , podstawami teorii liczb zespolonych oraz geometrią płaszczyzny i podstawami algebry liniowej (układy równań liniowych i macierze).",
   "opis": "",
   "zakresTematow": "Wykłady:\n1.\tRachunek zdań: koniunkcja, alternatywa, implikacja i ich zaprzeczenia; kwantyfikatory. Algebra zbiorów: sumy i przecięcia (również uogólnione); iloczyny kartezjańskie. Liczby wymierne i niewymierne.\n2.\tPojęcie funkcji (odwzorowania); składanie odwzorowań, odwracalność. Podstawowe własności i operacje na funkcjach rzeczywistych i  ich zastosowanie do rozwiązywania równań i nierówności. Przegląd funkcji elementarnych (wielomiany, funkcja modułowa, funkcje wymierne, logarytmiczne, wykładnicze, trygonometryczne, cyklometryczne). \n3.\tGeometria analityczna płaszczyzny: iloczyn skalarny wektorów,  równania prostej (kierunkowe, ogólne, przez dwa punkty, odcinkowe, parametryczne).  Odległość, odległość punktu od prostej.. Pole równoległoboku. Krzywe stożkowe. Równanie płaszczyzny w 3 wymiarach.\n4.\tLiczby zespolone. Interpretacja geometryczna, postać trygonometryczna i wzór de Moivre’a.  Pierwiastkowanie liczb zespolonych. Zasadnicze Twierdzenie Algebry. Wyznaczanie pierwiastków zespolonych równań kwadratowych.\n5.\tUkłady równań liniowych. Algebra macierzy. Wyznacznik, macierz odwrotna.  Twierdzenie Cramera.    \nĆwiczenia:  \nTematyka ćwiczeń ściśle powiązana z materiałem przedstawionym na wykładzie. Zadania ilustrujące i  utrwalające materiał wykładu.\n",
-  "metodyDydaktyczne": ["wykład","rozwiązywanie zadań", "konsultacje"],
+  "metodyDydaktyczne": [
+    "wykład",
+    "rozwiązywanie zadań",
+    "konsultacje"
+  ],
   "wymaganiaFormalne": "Znajomość matematyki w zakresie szkoły średniej (program rozszerzony)",
   "zalozeniaWstepne": "",
   "efektyUczenia": {
@@ -14,17 +18,28 @@
     "umiejetnosci": "1 Umie znaleźć przecięcia i sumy podzbiorów płaszczyzny (również przeliczalne) i je naszkicować. \nUmiejętności:\n1 Umie znaleźć przecięcia i sumy podzbiorów płaszczyzny (również przeliczalne) i je naszkicować.\n2. Potrafi zbadać czy dana funkcja jest odwracalna , potrafi rozwiązywać równania i nierówności z funkcjami elementarnymi.\n3. Potrafi zaznaczyć na płaszczyźnie zbiory zadane równaniami i nierównościami liniowymi i (niektórymi) kwadratowymi. Potrafi rozpoznać krzywą stożkową (bez obrotów) i naszkicować ją w układzie współrzędnych, potrafi napisać równanie stożkowej o zadanych własnościach.\n4.Potrafi rozwiązać równanie kwadratowe o wsp. zespolonych, potrafi zaznaczyć na płaszczyźnie zespolonej podzbiory o zadanych własnościach, potrafi znaleźć pierwiastki z liczby zespolonej.\n5. Potrafi efektywnie (redukcja) rozwiązać układ równań liniowych, obliczyć wyznacznik macierzy i znaleźć macierz odwrotną.",
     "kompetencje": ""
   },
-  "weryfikacjaEfektowUczenia": ["Ocena aktywności w trakcie zajęć", "kolokwia pisemne", "egzamin pisemny"],
-  "dokumentacjaEfektowUczenia": ["Kolokwia pisemne", "egzamin pisemny"],
+  "weryfikacjaEfektowUczenia": [
+    "Ocena aktywności w trakcie zajęć",
+    "kolokwia pisemne",
+    "egzamin pisemny"
+  ],
+  "dokumentacjaEfektowUczenia": [
+    "Kolokwia pisemne",
+    "egzamin pisemny"
+  ],
   "kryteriaOceniania": "Kolokwia pisemne  ok 40%, Egzamin pisemny ok 50%, aktywność ok 10%",
   "statusPodstawowe": true,
   "statusObowiazkowe": true,
+  "statusNaukowe": true,
   "uwagi": "",
   "miejsceRealizacji": {
     "cwiczenia": "sale ćwiczeniowe",
     "wyklad": "sala audytoryjna"
   },
   "godziny": {
+   "teren":"0",
+   "praktyki":"0",
+   "projekt":"0","lab": "0",
     "ects": "5",
     "cwiczenia": "30",
     "wyklad": "30"

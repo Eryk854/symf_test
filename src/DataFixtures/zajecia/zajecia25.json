@@ -6,7 +6,10 @@
   "cele": "",
   "opis": "",
   "zakresTematow": "Wykłady: Narodziny filozofii europejskiej. Główne pojęcia presokratyków. Heraklit z Efezu. Sokratesa a sofiści. Platon – teoria bytu, poznania i państwa. Metafizyka i etyka Arystotelesa. Teoria szczęścia Epikurejczyków i Stoików. Święty Augustyn i filozofia chrześcijańska. Przełom kartezjański w filozofii i nauce europejskiej. Teoria Nicolo Machiavelli. Błażeja  Pascala. Angielskie i francuskie oświecenie w filozofii europejskiej. Filozofia i etyka Immanuela Kanta. Historiozofia G.W.F. Hegla. Polska i europejska reakcja na filozofię Hegla. Wybrane kierunki  filozofii współczesnej.",
-  "metodyDydaktyczne": ["Wykład", "konsultacje"],
+  "metodyDydaktyczne": [
+    "Wykład",
+    "konsultacje"
+  ],
   "wymaganiaFormalne": "",
   "zalozeniaWstepne": "",
   "efektyUczenia": {
@@ -14,17 +17,25 @@
     "umiejetnosci": "1 Wykazuje się umiejętnością logicznego myślenia i porządkowania informacji w postaci wiedzy ogólnej",
     "kompetencje": ""
   },
-  "weryfikacjaEfektowUczenia": ["Zaliczenie pisemne"],
-  "dokumentacjaEfektowUczenia": ["Zaliczenie pisemne"],
+  "weryfikacjaEfektowUczenia": [
+    "Zaliczenie pisemne"
+  ],
+  "dokumentacjaEfektowUczenia": [
+    "Zaliczenie pisemne"
+  ],
   "kryteriaOceniania": "Zaliczenie pisemne",
   "statusPodstawowe": true,
   "statusObowiazkowe": false,
+  "statusHumanistycznoSpoleczne": true,
   "uwagi": "",
   "miejsceRealizacji": {
     "cwiczenia": "",
     "wyklad": "sala audytoryjna"
   },
   "godziny": {
+   "teren":"0",
+   "praktyki":"0",
+   "projekt":"0","lab": "0",
     "ects": "2",
     "cwiczenia": "0",
     "wyklad": "30"

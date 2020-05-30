@@ -1,12 +1,15 @@
 {
   "nazwaPolska": "Ergonomia i Bezpieczeństwo Pracy",
-  "nazwaAngielska": "",
+  "nazwaAngielska": "Ergonomics",
   "jezykWykladowy": "polski",
   "zalozenia": "",
   "cele": "Przekazanie studentom interdyscyplinarnej wiedzy o człowieku w środowisku pracy. Zapoznanie z istniejącym stanem prawnym ochrony pracy; z zasadami zachowania się w przypadku zagrożenia oraz uświadomienie obowiązków i praw pracownika i pracodawcy.",
   "opis": "",
   "zakresTematow": "",
-  "metodyDydaktyczne": ["wykład", "konsultacje"],
+  "metodyDydaktyczne": [
+    "wykład",
+    "konsultacje"
+  ],
   "wymaganiaFormalne": "brak",
   "zalozeniaWstepne": "",
   "efektyUczenia": {
@@ -14,8 +17,12 @@
     "umiejetnosci": "1 – zna i potrafi wykorzystać wiedzę na temat środowiska pracy, a także jego stan prawny",
     "kompetencje": "1 - potrafi w właściwy sposób zachowywać się w przypadku zagrożenia, jest świadom obowiązków pracownika i pracodawcy w czasie niebezpieczeństwa"
   },
-  "weryfikacjaEfektowUczenia": ["Kolokwium pisemne"],
-  "dokumentacjaEfektowUczenia": ["Kolokwium pisemne z ocenami"],
+  "weryfikacjaEfektowUczenia": [
+    "Kolokwium pisemne"
+  ],
+  "dokumentacjaEfektowUczenia": [
+    "Kolokwium pisemne z ocenami"
+  ],
   "kryteriaOceniania": "Kolokwium pisemne – 100%",
   "statusPodstawowe": true,
   "statusObowiazkowe": true,
@@ -25,6 +32,9 @@
     "wyklad": "sala audytoryjna"
   },
   "godziny": {
+   "teren":"0",
+   "praktyki":"0",
+   "projekt":"0","lab": "0",
     "ects": "1",
     "cwiczenia": "0",
     "wyklad": "15"

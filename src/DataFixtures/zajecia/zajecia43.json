@@ -35,14 +35,18 @@
   "kryteriaOceniania": "Egzamin – 70%, laboratorium – 30%",
   "statusPodstawowe": true,
   "statusObowiazkowe": true,
+  "statusNaukowe": true,
   "uwagi": "Minimalna liczba punktów konieczna do zaliczenia: 50. Punkty liczone są według następującej zasady:\n\nPunkty z laboratorium =  0,4*A + 0,2*B + 0,2*C + 0,2*D.  Ocena A wynika z pracy nad projektem, która pochodzi z dwóch czynników. Pierwszym z nich jest budżet punktów zdobyty przez grupę za projekt. Budżet jest iloczynem liczby studentów w grupie oraz punktów za projekt i jest on w całości rozdysponowany pomiędzy studentów, według ich zaangażowania podczas tworzenia projektu. Istnieje możliwość zdobycia premii punktowej (w ocenie projektu), gdy jest on wykonany lepiej, niż zostało to określone w specyfikacji. Jednakże we wspomnianym budżecie punktów nie ma możliwości udzielenia kredytu, czyli dania komuś więcej punktów, niż to wynika z bilansu.\nOcena B jest wynikiem oceny za kolokwium z diagramu klas UML, ocena C jest oceną za projekt diagramu Gantta, natomiast ocena C jest oceną za wyliczenie rozkładu prawdopodobieństwa czasu realizacji projektu z wykorzystaniem grafu PERT.\n\nNa egzaminie można zdobyć maksymalnie 70 punktów. Liczba punktów zdobytych na laboratorium może być większa niż 30 (w przypadku premii). W przypadku, gdy student zdobędzie więcej niż 100 punktów, również otrzymuje ocenę 5,0 z przedmiotu.",
   "miejsceRealizacji": {
     "cwiczenia": "sala audytoryjna",
     "wyklad": "laboratorium komputerowe"
   },
   "godziny": {
+   "teren":"0",
+   "praktyki":"0",
+   "projekt":"0","lab": "30",
     "ects": "5",
-    "cwiczenia": "30",
+    "cwiczenia": "0",
     "wyklad": "30"
   },
   "literatura": [

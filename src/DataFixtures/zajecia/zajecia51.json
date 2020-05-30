@@ -6,7 +6,12 @@
   "cele": "",
   "opis": "",
   "zakresTematow": "Tematyka wykładów:\n•\tZjawiska przepływu prądu elektrycznego w obwodach RLC\n•\tZjawiska optyczne w ujęciu geometrycznym i falowym. Równania Maxwella. \n•\tRodzaje mediów transmisyjnych – kable miedziane i światłowodowe, łączność radiowa i satelitarna\n•\tPodstawy teorii sygnałów. Sygnały analogowe i cyfrowe\n•\tPróbkowanie sygnału, kryterium Shannona, kompresja sygnału, kodowanie typu „delta”\n•\tPrzetwarzanie sygnałów analogowo-cyfrowe i cyfrowo-analogowe\n•\tZagadnienia modulacji i detekcji\n•\tSystemy teletransmisyjne – kodowanie liniowe, PCM, sieci ATM, PDH, SDH\n•\tOchrona i archiwizacja danych, podstawy kryptografii\n•\tTechnologie telefonii komórkowej\n•\tTechnologie sieci rozległych (WAN)\n\nTematyka ćwiczeń laboratoryjnych: \n• Pomiary w sieciach teleinformatycznych. Badanie połączeń elektrycznych i tłumienia torów teletransmisyjnych symetrycznych i koncentrycznych.\n• Badanie właściwości transmisyjnych światłowodów. Metody transmisji danych przy pomocy tego medium.\n• Badanie właściwości technologii RFID\n• Badanie właściwości technologii GSM\n• Wykonywanie obliczeń związanych z formowaniem się modów światłowodowych, szerokością pasma transmisyjnego, kodowaniem, charakterystykami częstotliwościowymi sygnałów i kanałów transmisyjnych.",
-  "metodyDydaktyczne": ["wykład", "dyskusja problemu", "rozwiązywanie problemu", "konsultacje"],
+  "metodyDydaktyczne": [
+    "wykład",
+    "dyskusja problemu",
+    "rozwiązywanie problemu",
+    "konsultacje"
+  ],
   "wymaganiaFormalne": "Architektura komputerów, Podstawy elektroniki",
   "zalozeniaWstepne": "",
   "efektyUczenia": {
@@ -14,19 +19,29 @@
     "umiejetnosci": "1 - potrafi zaprojektować architekturę systemu transmisji danych między urządzeniami komputerowymi\n2 - potrafi skonfigurować wybraną technologię transmisji danych i dopasować ją do konkretnych wymagań",
     "kompetencje": ""
   },
-  "weryfikacjaEfektowUczenia": ["Kolokwium pisemne", "ocena efektywności pracy w czasie zajęć laboratoryjnych"],
-  "dokumentacjaEfektowUczenia": ["Kolokwium pisemne z ocenami", "sprawozdania laboratoryjne"],
+  "weryfikacjaEfektowUczenia": [
+    "Kolokwium pisemne",
+    "ocena efektywności pracy w czasie zajęć laboratoryjnych"
+  ],
+  "dokumentacjaEfektowUczenia": [
+    "Kolokwium pisemne z ocenami",
+    "sprawozdania laboratoryjne"
+  ],
   "kryteriaOceniania": "Ćwiczenia laboratoryjne – 40%,  kolokwium pisemne  – 60%",
   "statusPodstawowe": true,
   "statusObowiazkowe": true,
+  "statusNaukowe": true,
   "uwagi": "Minimalna liczba punktów konieczna do zaliczenia: 50%",
   "miejsceRealizacji": {
     "cwiczenia": "laboratorium teleinformatyki",
     "wyklad": "sala audytoryjna"
   },
   "godziny": {
+   "teren":"0",
+   "praktyki":"0",
+   "projekt":"0","lab": "15",
     "ects": "3",
-    "cwiczenia": "30",
+    "cwiczenia": "0",
     "wyklad": "15"
   },
   "literatura": [

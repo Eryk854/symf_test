@@ -6,7 +6,12 @@
   "cele": "Przekazanie studentom podstaw wiedzy z dziedziny ochrony własności intelektualnej, w zakresie jaki jest  niezbędny dla absolwenta wyższej uczelni, w celu sprawnego poruszania się w zagadnieniach przestrzeni publicznej.",
   "opis": "",
   "zakresTematow": "",
-  "metodyDydaktyczne": ["Dyskusja", "zadania sytuacyjne", "studium przypadków", "konsultacje"],
+  "metodyDydaktyczne": [
+    "Dyskusja",
+    "zadania sytuacyjne",
+    "studium przypadków",
+    "konsultacje"
+  ],
   "wymaganiaFormalne": "",
   "zalozeniaWstepne": "",
   "efektyUczenia": {
@@ -14,17 +19,25 @@
     "umiejetnosci": "Ma podstawową wiedzę dotyczącą prowadzenia działalności gospodarczej i zarządzania nią.",
     "kompetencje": "Potrafi pracować indywidualnie oraz w zespole informatyków, potrafi zarządzać swoim czasem oraz podejmować zobowiązania i dotrzymywać terminów"
   },
-  "weryfikacjaEfektowUczenia": ["Zaliczenie końcowe"],
-  "dokumentacjaEfektowUczenia": ["Arkusz z zestawem pytań do zaliczenia końcowego"],
+  "weryfikacjaEfektowUczenia": [
+    "Zaliczenie końcowe"
+  ],
+  "dokumentacjaEfektowUczenia": [
+    "Arkusz z zestawem pytań do zaliczenia końcowego"
+  ],
   "kryteriaOceniania": "Zaliczenie końcowe wykładów – 100%",
   "statusPodstawowe": true,
   "statusObowiazkowe": true,
+  "statusHumanistycznoSpoleczne": true,
   "uwagi": "",
   "miejsceRealizacji": {
     "cwiczenia": "",
     "wyklad": "Sala dydaktyczna"
   },
   "godziny": {
+   "teren":"0",
+   "praktyki":"0",
+   "projekt":"0","lab": "0",
     "ects": "1",
     "cwiczenia": "0",
     "wyklad": "15"

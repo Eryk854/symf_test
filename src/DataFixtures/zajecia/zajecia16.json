@@ -6,7 +6,9 @@
   "cele": "Celem przedmiotu jest poznanie podstaw rachunku różniczkowego i całkowego funkcji jednej zmiennej oraz ich zastosowań do problemów praktycznych.",
   "opis": "",
   "zakresTematow": "Wykłady\nFunkcje jednej zmiennej – podstawowe pojęcia i własności.\nCiągi liczbowe. Granica ciągu. Liczba e. Rachunek granic. Symbole nieoznaczone.\nGranica i ciągłość funkcji. Własności funkcji ciągłych. \nRachunek różniczkowy funkcji jednej zmiennej. Pochodna, różniczka. Twierdzenia o przyrostach. Wyznaczanie ekstremów. Badanie przebiegu zmienności funkcji. Wzór Taylora. \nRachunek całkowy funkcji jednej zmiennej. Całka nieoznaczona. Całka oznaczona. Funkcja górnej granicy całkowania. Całki niewłaściwe. Zastosowania geometryczne i fizyczne całek pojedynczych. Przybliżone metody całkowania.\nĆwiczenia\nTematyka ćwiczeń ściśle powiązana z materiałem przedstawionym na wykładzie. Zadania przerabiane na ćwiczeniach mają na celu ilustrować i utrwalać materiał wykładu.",
-  "metodyDydaktyczne": ["wykład"],
+  "metodyDydaktyczne": [
+    "wykład"
+  ],
   "wymaganiaFormalne": "Zakres wiedzy obowiązujący na maturze z matematyki na poziomie rozszerzonym.",
   "zalozeniaWstepne": "",
   "efektyUczenia": {
@@ -14,17 +16,26 @@
     "umiejetnosci": "Umiejętności:\n2. Umie zastosować rachunek różniczkowy do badania funkcji.\n3. Umie stosować całki w zagadnieniach praktycznych.\n4. Umie stosować podstawowe metody aproksymacyjne.\n5. Umie formułować proste problemy w języku matematyki.",
     "kompetencje": ""
   },
-  "weryfikacjaEfektowUczenia": ["dwa pisemne kolokwia", "egzamin pisemny"],
-  "dokumentacjaEfektowUczenia": ["prace pisemne"],
+  "weryfikacjaEfektowUczenia": [
+    "dwa pisemne kolokwia",
+    "egzamin pisemny"
+  ],
+  "dokumentacjaEfektowUczenia": [
+    "prace pisemne"
+  ],
   "kryteriaOceniania": "kolokwia 60%; egzamin 40%.",
   "statusPodstawowe": true,
   "statusObowiazkowe": true,
+  "statusNaukowe": true,
   "uwagi": "Kolokwia z przedmiotu przeprowadzane są poza zajęciami w dodatkowym czasie.",
   "miejsceRealizacji": {
     "cwiczenia": "",
     "wyklad": "sala audytoryjna"
   },
   "godziny": {
+   "teren":"0",
+   "praktyki":"0",
+   "projekt":"0","lab": "0",
     "ects": "6",
     "cwiczenia": "30",
     "wyklad": "30"

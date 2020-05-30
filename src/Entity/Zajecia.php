@@ -54,7 +54,7 @@ class Zajecia
     /**
      * @ORM\Column(type="text", nullable=true)
      */
-    private $zakresTematow ;
+    private $zakresTematow;
 
     /**
      * @ORM\Column(type="array", nullable=true)
@@ -124,6 +124,21 @@ class Zajecia
      *      )
      */
     private $literatura;
+
+    /**
+     * @ORM\Column(type="boolean", nullable=true)
+     */
+    private $statusHumanistycznoSpoleczne;
+
+    /**
+     * @ORM\Column(type="boolean", nullable=true)
+     */
+    private $statusNaukowe;
+
+    /**
+     * @ORM\Column(type="boolean", nullable=true)
+     */
+    private $statusPraktyczne;
 
     public function __construct()
     {
@@ -395,11 +410,80 @@ class Zajecia
         return $this;
     }
 
-    public function __toString(){
+    public function __toString()
+    {
         return $this->nazwaPolska;
     }
 
-    public function __clone() {
+    public function __clone()
+    {
         $this->id = null;
+    }
+
+    public function getStatusHumanistycznoSpoleczne(): ?bool
+    {
+        return $this->statusHumanistycznoSpoleczne;
+    }
+
+    public function setStatusHumanistycznoSpoleczne(?bool $statusHumanistycznoSpoleczne): self
+    {
+        $this->statusHumanistycznoSpoleczne = $statusHumanistycznoSpoleczne;
+
+        return $this;
+    }
+
+    public function getStatusNaukowe(): ?bool
+    {
+        return $this->statusNaukowe;
+    }
+
+    public function setStatusNaukowe(?bool $statusNaukowe): self
+    {
+        $this->statusNaukowe = $statusNaukowe;
+
+        return $this;
+    }
+
+    public function getStatus1(): ?string
+    {
+        if ($this->getStatusHumanistycznoSpoleczne() === true) {
+            return 'HS';
+        } elseif ($this->getStatusPodstawowe() === false) {
+            return 'K';
+        } else {
+            return 'P';
+        }
+    }
+
+    public function getStatus2(): ?string
+    {
+        if ($this->getStatusObowiazkowe() === true) {
+            return 'O';
+        } else {
+            return 'F';
+        }
+    }
+
+    public function getStatus3(): ?string
+    {
+        if ($this->getStatusNaukowe() === true) {
+            return 'N';
+        } elseif ($this->getStatusPraktyczne() === true) {
+            return 'U';
+        } else {
+            return '';
+        }
+    }
+
+    public function getStatusPraktyczne(): ?bool
+    {
+        return $this->statusPraktyczne;
+    }
+
+    public function setStatusPraktyczne(?bool $statusPraktyczne): self
+    {
+        $this->statusPraktyczne = $statusPraktyczne;
+
+        return $this;
     }
 }

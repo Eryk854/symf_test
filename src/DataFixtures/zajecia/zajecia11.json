@@ -6,7 +6,11 @@
   "cele": "Celem przedmiotu jest  zapoznanie studentów  z podstawowymi pojęciami algebry liniowej  i możliwościami ich zastosowań   w zagadnieniach inżynierskich i  ekonomicznych",
   "opis": "",
   "zakresTematow": "1.\tMacierze i ich zastosowania (relacje, grafy, sieci). Specjalne typy macierzy. Działania na macierzach — własności i interpretacja mnożenia macierzy. \n2.\tMetoda  eliminacji Gaussa i jej  macierzowa interpretacja, operacje elementarne, redukcja macierzy do postaci schodkowej, rząd i zerowość macierzy, rozkłady macierzy w iloczyn macierzy trójkątnych\n3.\tKwadratowe układy równań liniowych, układy Cramera, macierze odwracalne \n4.\tPrzestrzenie liniowe, w szczególności przestrzenie liniowe macierzy i przestrzenie funkcji. Liniowa niezależność wektorów. Baza i wymiar przestrzeni. Podprzestrzenie liniowe przestrzeni liniowej.  Rozkład wektora w bazie, problem zamiany bazy, macierz przejścia.\n5.\tOdwzorowania liniowe, związek z macierzami. Jądro i obraz odwzorowania  —.wyznacznik i ślad  odwzorowania liniowego (macierzy) Macierze odwzorowania liniowego w różnych bazach.\n6.\tPrzestrzenie liniowe z iloczynem skalarnym, ortogonalność wektorów, bazy ortogonalne, rozkład wektora w bazie ortonormalnej, rzut ortogonalny. Statystyczna interpretacja iloczynu skalarnego. \n7.\tPodstawy  geometrii w przestrzeni n-wymiarowej, równania prostych i hiperpłaszczyzn. Odwzorowania ortogonalne i izometrie przestrzeni. Układy współrzędnych prostokątnych w przestrzeni. Zamiana układu  współrzędnych prostokątnych. \n8.\tWektory własne i  wartości własne odwzorowania (macierzy), wielomian charakterystyczny.  Baza wektorów własnych, odwzorowania (macierze) diagonalizowalne i ich zastosowania (np. do rozwiązywania równania różnicowego) \n9.\tFormy kwadratowe, postaci kanoniczne, określoność formy. Twierdzenie Sylwestera o bezwładności form kwadratowych.\n10.\tZastosowanie form kwadratowych do opisu krzywych i powierzchni drugiego stopnia. Klasyfikacja kwadryk w przestrzeni euklidesowej.   \n",
-  "metodyDydaktyczne": ["Wykład", "Rozwiązywanie zadań i problemów", "Konsultacje"],
+  "metodyDydaktyczne": [
+    "Wykład",
+    "Rozwiązywanie zadań i problemów",
+    "Konsultacje"
+  ],
   "wymaganiaFormalne": "Znajomość matematyki ze szkoły średniej na poziomie rozszerzonym, zaliczenie przedmiotu Podstawy matematyki wyższej.",
   "zalozeniaWstepne": "",
   "efektyUczenia": {
@@ -14,17 +18,29 @@
     "umiejetnosci": "1 -  potrafi rozwiązać układy równań liniowych i analizować ich własności .\n2 – potrafi wyznaczyć wartości i wektory własne macierzy oraz podać postać diagonalną macierzy.\n\n",
     "kompetencje": ""
   },
-  "weryfikacjaEfektowUczenia": ["Dwa kolokwia pisemne", "pisemny egzamin", "aktywność na zajęciach", "zadania domowe"],
-  "dokumentacjaEfektowUczenia": ["Treść pytań egzaminacyjnych z oceną"],
+  "weryfikacjaEfektowUczenia": [
+    "Dwa kolokwia pisemne",
+    "pisemny egzamin",
+    "aktywność na zajęciach",
+    "zadania domowe"
+  ],
+  "dokumentacjaEfektowUczenia": [
+    "Treść pytań egzaminacyjnych z oceną"
+  ],
   "kryteriaOceniania": "Ćwiczenia – 50%, egzamin pisemny – 50%.",
   "statusPodstawowe": true,
   "statusObowiazkowe": true,
+  "statusNaukowe": true,
   "uwagi": "Minimalna liczba punktów konieczna do zaliczenia: 50%",
   "miejsceRealizacji": {
     "cwiczenia": "Sala dydaktyczna.",
     "wyklad": "Sala dydaktyczna."
   },
   "godziny": {
+    "teren": "0",
+    "praktyki": "0",
+    "projekt": "0",
+    "lab": "0",
     "ects": "5",
     "cwiczenia": "30",
     "wyklad": "30"

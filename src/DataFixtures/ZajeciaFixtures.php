@@ -28,8 +28,8 @@ class ZajeciaFixtures extends Fixture implements DependentFixtureInterface
 
     private function decodeFromJson($fileName, $manager, $suffix)
     {
-        $strJsonFileContents = file_get_contents(__DIR__."/zajecia/".$fileName . '.json');
-//        dump(json_decode($strJsonFileContents, true));
+        $strJsonFileContents = file_get_contents(__DIR__ . "/zajecia/" . $fileName . '.json');
+
         $array = json_decode($strJsonFileContents, true);
         $zajecia = new Zajecia();
         $zajecia->setCele($array["cele"]);
@@ -39,6 +39,10 @@ class ZajeciaFixtures extends Fixture implements DependentFixtureInterface
         $godziny->setECTS($array["godziny"]["ects"]);
         $godziny->setGodzinyCwiczeniowe($array["godziny"]["cwiczenia"]);
         $godziny->setGodzinyWykladowe($array["godziny"]["wyklad"]);
+        $godziny->setGodzinyLaboratoryjne($array["godziny"]["lab"]);
+        $godziny->setGodzinyTerenowe($array["godziny"]["teren"]);
+        $godziny->setGodzinyPraktyki($array["godziny"]["praktyki"]);
+        $godziny->setGodzinyProjektowe($array["godziny"]["projekt"]);
         $zajecia->setGodziny($godziny);
 
         $zajecia->setDokumentacjaEfektowUczenia($array["efektyUczenia"]);
@@ -67,6 +71,15 @@ class ZajeciaFixtures extends Fixture implements DependentFixtureInterface
         $zajecia->setWeryfikacjaEfektowUczenia($array["weryfikacjaEfektowUczenia"]);
         $zajecia->setStatusPodstawowe($array["statusPodstawowe"]);
         $zajecia->setStatusObowiazkowe($array["statusObowiazkowe"]);
+        if (array_key_exists("statusHumanistycznoSpoleczne", $array)) {
+            $zajecia->setStatusHumanistycznoSpoleczne($array["statusHumanistycznoSpoleczne"]);
+        } else {
+            $zajecia->setStatusHumanistycznoSpoleczne(false);
+        }
+        if (array_key_exists("statusNaukowe", $array)) {
+            $zajecia->setStatusHumanistycznoSpoleczne($array["statusNaukowe"]);
+        }
+
         $zajecia->setNazwaPolska($array["nazwaPolska"]);
         $zajecia->setNazwaAngielska($array["nazwaAngielska"]);
 
@@ -82,7 +95,7 @@ class ZajeciaFixtures extends Fixture implements DependentFixtureInterface
             $zajecia->addLiteratura($literatura);
         }
         $manager->persist($zajecia);
-        $this->addReference($fileName.$suffix, $zajecia);
+        $this->addReference($fileName . $suffix, $zajecia);
     }
 
     public function getDependencies()

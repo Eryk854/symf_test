@@ -6,7 +6,14 @@
   "cele": "",
   "opis": "",
   "zakresTematow": "Tematyka wykładów i ćwiczeń laboratoryjnych: \n•\tWprowadzenie do technologii klient-serwer\n•\tWprowadzenie do HTML\n•\tStruktura strony w HTML (tabele)\n•\tFormularze i ich elementy w HTML\n•\tArkusze stylów CSS\n•\tWprowadzenie do JavaScript\n•\tWalidacja danych na przykładzie JavaScript oraz wyrażeń regularnych\n•\tPodstawy XSL+XML\n•\tWprowadzenie do PHP\n•\tSesje w PHP - realizacja funkcjonalności logowania\n•\tPHP - połączenie z bazą danych MySQL - tworzenie aplikacji bazodanowej\n•\tWprowadzenie do ASP.NET\n•\tTworzenie aplikacji internetowej w ASP.NET\n•\tSystemy CMS",
-  "metodyDydaktyczne": ["Wykład", "dyskusja problemu", "laboratoria", "prezentacja i analiza kodów źródłowych", "konsultacje",  "projekty realizowane na laboratorium oraz w domu"],
+  "metodyDydaktyczne": [
+    "Wykład",
+    "dyskusja problemu",
+    "laboratoria",
+    "prezentacja i analiza kodów źródłowych",
+    "konsultacje",
+    "projekty realizowane na laboratorium oraz w domu"
+  ],
   "wymaganiaFormalne": "Podstawowa znajomość programowania ",
   "zalozeniaWstepne": "",
   "efektyUczenia": {
@@ -14,19 +21,27 @@
     "umiejetnosci": "01 Potrafi tworzyć aplikacje internetowe     \n02  Potrafi zaprojektować interfejs użytkownika ",
     "kompetencje": ""
   },
-  "weryfikacjaEfektowUczenia": ["Cotygodniowe projekty praktyczne"],
-  "dokumentacjaEfektowUczenia": ["Kod źródłowy projektów"],
+  "weryfikacjaEfektowUczenia": [
+    "Cotygodniowe projekty praktyczne"
+  ],
+  "dokumentacjaEfektowUczenia": [
+    "Kod źródłowy projektów"
+  ],
   "kryteriaOceniania": "Cotygodniowe projekty – 100%",
   "statusPodstawowe": true,
   "statusObowiazkowe": true,
+  "statusNaukowe": true,
   "uwagi": "Minimalna liczba punktów konieczna do zaliczenia: 50%, maksymalna liczba nieoddanych projektów: 2",
   "miejsceRealizacji": {
     "cwiczenia": "laboratorium komputerowe",
     "wyklad": "sala audytoryjna"
   },
   "godziny": {
+   "teren":"0",
+   "praktyki":"0",
+   "projekt":"0","lab": "15",
     "ects": "2",
-    "cwiczenia": "15",
+    "cwiczenia": "0",
     "wyklad": "15"
   },
   "literatura": [

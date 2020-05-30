@@ -6,7 +6,18 @@
   "cele": "Celem przedmiotu jest przekazanie studentom  wiedzy z zakresu  podstaw teoretycznych  wybranych  metod analizy wielowymiarowej, wykształcenie umiejętności zastosowania poznanych metod analizy wielowymiarowej w  praktyce (m.in. porównywanie i  klasyfikacja obiektów  oraz  opis i wizualizacja wyników badań  itp. )",
   "opis": "",
   "zakresTematow": "Tematyka wykładów:  \nElementy wielowymiarowej analizy porównawczej – metody doboru  cech diagnostycznych, miary zróżnicowania i podobieństwa obiektów, stymulacja,  normalizacja i ważenie cech diagnostycznych, metody porządkowania liniowego obiektów – mierniki syntetyczne, syntetyczne mierniki rozwoju, metody grupowania obiektów  wielocechowych (z nauczycielem  i bez),  wybrane informacje  o  innych klasycznych metodach   analizy danych  (analiza składowych  głównych, analiza odpowiedniości  i czynnikowa) oraz  o wybranych  o stosunkowo nowych  metod ach  opartych  na  intensywnych obliczeniach komputerowych,  graficzne metody analizy danych oraz wybrane  informacje o możliwościach wykorzystania technik symulacyjnych do badania skuteczności  wybranych  metod .    .  \n\nTematyka ćwiczeń laboratoryjnych: \nPrzygotowanie danych do analizy (tworzenie zmiennych wskaźnikowych, analiza obserwacji nietypowych i ogonów rozkładów, uzupełnianie braków danych).  Elementy wielowymiarowej analizy statystycznej - wielowymiarowy rozkład normalny (właściwości i wnioskowanie statystyczne), wykorzystanie EXCELA i wybranych pakietów statystycznych  do analiz z zakresu: wielowymiarowa analiza regresji, klasyfikacja/grupowanie z , analiza głównych składowych, analiza czynnikowa, analiza korespondencji klasyczna i gradacyjna.,  techniki wizualizacji  wielowymiarowych zbiorów danych i  przykłady wykorzystania symulacji komputerowej  jako narzędzia sprawdzania własności poznanych metod..\n\nTematyka projektów:\n•\t•Porządkowanie liniowe obiektów wielocechowych oraz podział na jednorodne grupy\n•\t  Konstrukcja i ocena reguł klasyfikacyjnych w przypadku dość dużego zbioru uczącego przy wykorzystaniu dostępnego na wydziale oprogramowania aplikacyjnego",
-  "metodyDydaktyczne": ["Wykład", "laboratorium komputerowe", "analiza i interpretacja danych źródłowych", "dyskusja", "projekty", "rozwiązywanie problemu", "studium przypadku", "symulacje", "indywidualne projekty studenckie", "konsultacje"],
+  "metodyDydaktyczne": [
+    "Wykład",
+    "laboratorium komputerowe",
+    "analiza i interpretacja danych źródłowych",
+    "dyskusja",
+    "projekty",
+    "rozwiązywanie problemu",
+    "studium przypadku",
+    "symulacje",
+    "indywidualne projekty studenckie",
+    "konsultacje"
+  ],
   "wymaganiaFormalne": "zaliczenia z przedmiotów:  Analiza matematyczna, algebra liniowa,   rachunek prawdopodobieństwa i statystyka,",
   "zalozeniaWstepne": "w zakresie posiadanej wiedzy: student wykazuje znajomość  podstawowych  zagadnień z zakresu matematyki, rachunku prawdopodobieństwa i statystyki matematycznej  oraz podstawowych technik i narzędzi informatycznych; w zakresie umiejętności: potrafi wyznaczać podstawowe miary statystyczne dla jednej i dwu zmiennych, posługiwać się funkcjami  arkusza kalkulacyjnego Excel związanych ze statystyką oraz algebrą i analizą danych; w zakresie kompetencji (postaw): potrafi pracować w grupie oraz samodzielnie opracowywać  informacje na wskazany temat przy wykorzystaniu podstawowych narzędzi informatycznych",
   "efektyUczenia": {
@@ -14,19 +25,29 @@
     "umiejetnosci": "1 - umie  zastosować przy wykorzystaniu wsparcia informatycznego wybrane  metody analizy wielowymiarowej, potrafi przeprowadzić  identyfikację właściwego narzędzia do analizy konkretnego problemu praktycznego\n\n2 - posiada umiejętność obsługi podstawowych funkcji biurowych narzędzi informatycznych (także arkusza kalkulacyjnego Excel), związanych z analizą wielowymiarową oraz wybranego pakietu specjalistycznego dostępnego na wydziale, potrafi stosować odpowiednie metody uczenia maszynowego do wybranych problemów z praktyki gospodarczej oraz przy wykorzystaniu technik symulacyjnych  ocenić jakość tych metod",
     "kompetencje": "1- świadomie stosuje wybrane  metody analizy wielowymiarowej, sięga bez obawy do narzędzi ilościowych lecz jest ostrożny i kreatywny w korzystaniu z nich, opanował zasady pracy zespołowej, która wymaga samokształcenia  aby wykonać poprawnie duży projekt analityczny  realizowany przez kilkuosobowy Zespół w wyznaczonej roli przez wybranego Lidera Zespołu\n…………………….."
   },
-  "weryfikacjaEfektowUczenia": ["Ocena przygotowanych  indywidualnych  projektów z zakresu analizy danych (i) obejmującego porządkowanie liniowe obiektów zbioru wielowymiarowego, (ii)  projektu obejmującego grupowanie obiektów na jednorodne podzbiory w oparciu o miary niepodobieństwa oraz (iii) projektu zespołowego polegającego na konstrukcji reguł klasyfikacyjnych dla stosunkowo dużego zbioru danych", "test pisemny z materiału omawianego na wykładzie"],
-  "dokumentacjaEfektowUczenia": ["Kolokwium  pisemne w formie testu (papierowo)", "projekty (elektronicznie)"],
+  "weryfikacjaEfektowUczenia": [
+    "Ocena przygotowanych  indywidualnych  projektów z zakresu analizy danych (i) obejmującego porządkowanie liniowe obiektów zbioru wielowymiarowego, (ii)  projektu obejmującego grupowanie obiektów na jednorodne podzbiory w oparciu o miary niepodobieństwa oraz (iii) projektu zespołowego polegającego na konstrukcji reguł klasyfikacyjnych dla stosunkowo dużego zbioru danych",
+    "test pisemny z materiału omawianego na wykładzie"
+  ],
+  "dokumentacjaEfektowUczenia": [
+    "Kolokwium  pisemne w formie testu (papierowo)",
+    "projekty (elektronicznie)"
+  ],
   "kryteriaOceniania": "wykonanie zadania projektowego- waga 30%,  40%,; test –waga  30%",
   "statusPodstawowe": true,
   "statusObowiazkowe": true,
+  "statusNaukowe": true,
   "uwagi": "Minimalna liczba punktów konieczna do zaliczenia: 50%",
   "miejsceRealizacji": {
     "cwiczenia": "laboratorium komputerowe",
     "wyklad": "sala audytoryjna"
   },
   "godziny": {
+   "teren":"0",
+   "praktyki":"0",
+   "projekt":"0","lab": "15",
     "ects": "2",
-    "cwiczenia": "15",
+    "cwiczenia": "0",
     "wyklad": "15"
   },
   "literatura": [
@@ -77,15 +98,13 @@
       "tytul": "Multidimensional similarity structure analysis",
       "wydawnictwo": "Springer",
       "rodzaj": "Uzupełniająca"
-    }
-  ,
+    },
     {
       "autor": "Frątczak (i inni), ",
       "tytul": "Wielowymiarowa analiza statystyczna",
       "wydawnictwo": "SGH",
       "rodzaj": "Uzupełniająca"
-    }
-  ,
+    },
     {
       "autor": "Gatnar E",
       "tytul": "Symboliczne metody klasyfikacji danych",

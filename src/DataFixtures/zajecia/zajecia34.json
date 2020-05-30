@@ -6,7 +6,11 @@
   "cele": "Celem przedmiotu jest wprowadzenie studentów do budowy i badania praktycznych układów elektronicznych prądu stałego i przemiennego, wzmacniaczy opartych na układach jednostopniowych tranzystorowych, układów wielostopniowych, bez pętli i z pętlą ujemnego sprzężenia zwrotnego. Cel obejmuje także układy połączeń rezystancji, dwójników i czwórników RC, wzmacniaczy tranzystorowych, wzmacniaczy operacyjnych występujących w różnych konfiguracjach, odwracających i nieodwracających fazy. Zaznajamia studentów z typowymi układami funkcyjnymi, jak układ różniczkujący/ całkujący czy wtórnik napięciowy. Wymienione układy stanowią integralną część współczesnej elektroniki.",
   "opis": "",
   "zakresTematow": "Opis tematów poruszanych podczas zajęć laboratoryjnych:\n1.\tPomiar rezystancji przy pomocy omomierza w obwodach szeregowych, równoległych i mieszanych. \n2.\tPomiar napięcia stałego i przemiennego przy pomocy woltomierza i prądu stałego i przemiennego przy pomocy amperomierza.\n3.\tSprawdzanie napięciowego prawa Kirchhoffa.\n4.\tZobrazowanie przebiegów przy pomocy oscyloskopu cyfrowego i odczyt wartości zmierzonych parametrów.\n5.\tPomiar wybranych parametrów sygnału źródłowego z zasilacza /generatora funkcyjnego w obwodzie obciążonym impedancją. Zastosowanie potencjometru. \n6.\tBadanie własności dwójników R,L,C i czwórników RC/ RL. \n7.\tPrzekształcenia sygnałów funkcyjnych: prostokąt w harmoniczny lub w piłokształtny i na odwrót. Układ całkujący i różniczkujący. \n8.\tUkłady tranzystorowe jedno- i wielostopniowe.\n9.\tWzmacniacze operacyjne: podstawowe własności WO, podstawowe układy.\n10.\tPorównanie własności układów WO bez USZ oraz z USZ. \n11.\tPodsumowanie, zaległe sprawozdania laboratoryjne.",
-  "metodyDydaktyczne": ["dyskusja problemu", "rozwiązywanie problemu", "konsultacje"],
+  "metodyDydaktyczne": [
+    "dyskusja problemu",
+    "rozwiązywanie problemu",
+    "konsultacje"
+  ],
   "wymaganiaFormalne": "Wymagana jest wiedza z zakresu analizy matematycznej, podstaw elektroniki.",
   "zalozeniaWstepne": "",
   "efektyUczenia": {
@@ -14,19 +18,29 @@
     "umiejetnosci": "1 - potrafi  pracować indywidualnie oraz w zespole informatyków, potrafi zarządzać swoim czasem oraz podejmować zobowiązania i dotrzymywać terminów\n\n2 -  potrafi  wdrażać techniki komputerowe w dziedzinach wymagających ich wsparcia, używając właściwych metod i narzędzi",
     "kompetencje": ""
   },
-  "weryfikacjaEfektowUczenia": ["Ocena zadań postawionych w trakcie zajęć laboratoryjnych.","Sprawdziany pisemne."],
-  "dokumentacjaEfektowUczenia": ["Oceny za pracę na zajęciach laboratoryjnych.","Sprawdziany z ocenami."],
+  "weryfikacjaEfektowUczenia": [
+    "Ocena zadań postawionych w trakcie zajęć laboratoryjnych.",
+    "Sprawdziany pisemne."
+  ],
+  "dokumentacjaEfektowUczenia": [
+    "Oceny za pracę na zajęciach laboratoryjnych.",
+    "Sprawdziany z ocenami."
+  ],
   "kryteriaOceniania": "Oceny za pracę na zajęciach laboratoryjnych – 60%, sprawdziany – 40%.",
   "statusPodstawowe": true,
   "statusObowiazkowe": true,
+  "statusNaukowe": true,
   "uwagi": "Minimalna liczba punktów konieczna do zaliczenia: 50%",
   "miejsceRealizacji": {
     "cwiczenia": "sala laboratorium elektroniki",
     "wyklad": ""
   },
   "godziny": {
+   "teren":"0",
+   "praktyki":"0",
+   "projekt":"0","lab": "30",
     "ects": "2",
-    "cwiczenia": "30",
+    "cwiczenia": "0",
     "wyklad": "0"
   },
   "literatura": [

@@ -6,7 +6,14 @@
   "cele": "Celem przedmiotu jest zapoznanie studentów z podstawami tworzenia programów w technologiach komponentowych. W trakcie zajęć studenci poznają możliwości wykorzystania zdefiniowanych przez siebie komponentów w programach napisanych w wybranym języku programowania.",
   "opis": "",
   "zakresTematow": "1. Przypomnienie podstaw programowania proceduralnego w wybranym języku programowania: wprowadzanie i wyprowadzanie danych, instrukcja warunkowa, instrukcja iteracyjna WHILE, instrukcje iteracyjne FOR, sekwencje – łańcuchy znaków, krotki, listy i słowniki, funkcje i ich wykorzystanie do tworzenia własnych modułów i pakietów, programy z argumentami pozycyjnymi, obsługa wyjątków, operacje na plikach.\n\n2. Przypomnienie podstaw programowania obiektowego w wybranym języku programowania: klasy, metody, obiekty i pola, konstruktory i atrybuty klas, polimorfizm i dziedziczenie.\n\n3. Tworzenie interfejsów graficznych GUI z wykorzystaniem wybranego języka programowania jako przykład wykorzystania paradygmatu programowania obiektowego. Wykorzystanie elementów graficznych i multimedialnych.\n\n4. Pojęcie interfejsu. Przykłady wykorzystania interfejsów w programowaniu obiektowym.\n\n5. Wprowadzenie do programowania komponentowego. Teoria i inżynieria oprogramowania komponentowego. Wzorzec odwróconego sterowania. Pojęcie i rola kontenera,\n\n6. Przegląd wybranych technologii komponentowych.\n\n7. Wykorzystanie odpowiedniego pakietu (biblioteki) wybranego języka programowania do tworzenia komponentów. Typy komponentów i ich użycie. Cykl życia komponentów. Wersjonowanie komponentów. \n\n8. Tworzenie aplikacji w wybranej technologii komponentowej.",
-  "metodyDydaktyczne": ["wykład", "dyskusja problemu", "rozwiązywanie problemu", "studium przypadku", "projekt grupowy", "konsultacje" ],
+  "metodyDydaktyczne": [
+    "wykład",
+    "dyskusja problemu",
+    "rozwiązywanie problemu",
+    "studium przypadku",
+    "projekt grupowy",
+    "konsultacje"
+  ],
   "wymaganiaFormalne": "Wymagana jest wiedza z zakresu przedmiotów: Wstęp do programowania, Programowanie imperatywno – strukturalne, Programowanie obiektowe, Algorytmy i struktury danych, Inżynieria oprogramowania",
   "zalozeniaWstepne": "",
   "efektyUczenia": {
@@ -14,19 +21,31 @@
     "umiejetnosci": "1 – potrafi tworzyć programy z wykorzystaniem paradygmatów: proceduralnego, obiektowego i komponentowego, w tym projektować, wytwarzać, wdrażać i utrzymywać komponenty programowe, wykorzystując wybraną technologię komponentową\n2 - projektuje rozbudowane aplikacje z wykorzystaniem stworzonych samodzielnie obiektów i komponentów, w tym modułów wielokrotnego użycia, wykorzystując wybrany język programowania",
     "kompetencje": ""
   },
-  "weryfikacjaEfektowUczenia": ["Pisemny test wiedzy ze znajomości specyfiki programowania proceduralnego, obiektowego oraz komponentowego w wybranym języku programowania (efekty wiedzy)","Kolokwium praktyczne polegające na napisaniu określonej liczby programów komputerowych rozwiązujących postawione problemy (efekt umiejętności 1)","Grupowy projekt aplikacji wykorzystującej interfejs graficzny (GUI) oraz technologię komponentową (efekty umiejętności 2 oraz 3)"],
-  "dokumentacjaEfektowUczenia": ["Ocenione prace studentów z pisemnego testu wiedzy","Ocenione pliki kolokwium praktycznego w wersji elektronicznej","Ocenione i zarchiwizowane pliki grupowych projektów studenckich"],
+  "weryfikacjaEfektowUczenia": [
+    "Pisemny test wiedzy ze znajomości specyfiki programowania proceduralnego, obiektowego oraz komponentowego w wybranym języku programowania (efekty wiedzy)",
+    "Kolokwium praktyczne polegające na napisaniu określonej liczby programów komputerowych rozwiązujących postawione problemy (efekt umiejętności 1)",
+    "Grupowy projekt aplikacji wykorzystującej interfejs graficzny (GUI) oraz technologię komponentową (efekty umiejętności 2 oraz 3)"
+  ],
+  "dokumentacjaEfektowUczenia": [
+    "Ocenione prace studentów z pisemnego testu wiedzy",
+    "Ocenione pliki kolokwium praktycznego w wersji elektronicznej",
+    "Ocenione i zarchiwizowane pliki grupowych projektów studenckich"
+  ],
   "kryteriaOceniania": "Kolokwium praktyczne – 50%\nProjekt grupowy – 25%\nTest wiedzy – 25%\n",
   "statusPodstawowe": false,
   "statusObowiazkowe": false,
+  "statusNaukowe": true,
   "uwagi": "Minimalna liczba punktów konieczna do zaliczenia: 50% z kolokwium praktycznego, 50% z projektu indywidualnego oraz 50% z testu wiedzy",
   "miejsceRealizacji": {
     "cwiczenia": "laboratorium komputerowe",
     "wyklad": ""
   },
   "godziny": {
+   "teren":"0",
+   "praktyki":"0",
+   "projekt":"0","lab": "30",
     "ects": "3",
-    "cwiczenia": "30",
+    "cwiczenia": "0",
     "wyklad": "15"
   },
   "literatura": [

@@ -6,7 +6,9 @@
   "cele": "Celem wykładu jest zapoznanie z zagadnieniami rachunku różniczkowego i całkowego funkcji wielu zmiennych oraz podstawami szeregów funkcyjnych i równań różniczkowych zwyczajnych.",
   "opis": "",
   "zakresTematow": "Wykłady:\nSzeregi liczbowe.\nSzeregi funkcyjne–potęgowe, Taylora, szereg trygonometryczny Fouriera.\nRachunek różniczkowy funkcji wielu zmiennych - pochodne cząstkowe, pochodna kierunkowa, wzór Taylora, ekstrema lokalne, globalne, ekstrema warunkowe (metoda mnożników Lagrange’a). Funkcje uwikłane.\nRachunek całkowy funkcji wielu zmiennych- całka podwójna i potrójna, całkowanie po obszarach normalnych, zamiana zmiennych (współrzędne biegunowe, cylindryczne, sferyczne). Zastosowania geometryczne i fizyczne całek wielokrotnych.\nRównania różniczkowe zwyczajne -przykłady zjawisk prowadzących do równań różniczkowych. Równania liniowe. \nĆwiczenia:\nTematyka ćwiczeń ściśle powiązana z materiałem przedstawionym na wykładzie. Zadania ilustrujące i utrwalające materiał wykładu",
-  "metodyDydaktyczne": ["Wykład "],
+  "metodyDydaktyczne": [
+    "Wykład "
+  ],
   "wymaganiaFormalne": "Podstawy analizy matematycznej, podstawy matematyki wyższej.",
   "zalozeniaWstepne": "",
   "efektyUczenia": {
@@ -14,17 +16,26 @@
     "umiejetnosci": "2 – Umie rozwijać funkcje w szeregi potęgowe i trygonometryczne.\n3 – Umie stosować rachunek różniczkowy do wyznaczania wartości ekstremalnych.\n4 – Umie stosować całki wielokrotne w zadaniach praktycznych.\n5 – Umie rozwiązać podstawowe typy równań różniczkowych.\n6 – Zna podstawowe zastosowania rozwinięcia funkcji w szereg funkcyjny.\n7 – Umie przedstawić prosty proces za pomocą równania różniczkowego",
     "kompetencje": ""
   },
-  "weryfikacjaEfektowUczenia": ["dwa kolokwia pisemne", "egzamin pisemny"],
-  "dokumentacjaEfektowUczenia": ["Prace pisemne"],
+  "weryfikacjaEfektowUczenia": [
+    "dwa kolokwia pisemne",
+    "egzamin pisemny"
+  ],
+  "dokumentacjaEfektowUczenia": [
+    "Prace pisemne"
+  ],
   "kryteriaOceniania": "kolokwia 60%; egzamin 40%.",
   "statusPodstawowe": true,
   "statusObowiazkowe": true,
+  "statusNaukowe": true,
   "uwagi": "Kolokwia przeprowadzane są poza zajęciam",
   "miejsceRealizacji": {
     "cwiczenia": "",
     "wyklad": ""
   },
   "godziny": {
+   "teren":"0",
+   "praktyki":"0",
+   "projekt":"0","lab": "0",
     "ects": "5",
     "cwiczenia": "30",
     "wyklad": "30"

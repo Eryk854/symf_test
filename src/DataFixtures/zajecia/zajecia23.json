@@ -6,7 +6,12 @@
   "cele": "Celem przedmiotu jest zapoznanie studentów z podstawami pomiarów wielkości fizycznych ,  zasadami szacowania błędów pomiarowych oraz elementami  komputerowej symulacji zjawisk fizycznych .\nZajęcie odbywają się w dwóch niezależnych blokach ćwiczeniowych: blok ćwiczeń pomiarowych, blok ćwiczeń dotyczący symulacji komputerowej.   \nW bloku ćwiczeń pomiarowych studenci powinni nabyć umiejętności: wykonywania prostych pomiarów fizycznych, dokumentowania ich w postaci protokołów, opracowania pomiarów i wykonanie prawidłowego raportu. \nW bloku ćwiczeń symulacyjnych studenci zapoznają się z programem MATLAB,  który będą używać do prostych symulacji komputerowych.",
   "opis": "",
   "zakresTematow": "Tematy zajęć laboratoryjnych: \n1.\tBlok ćwiczeń pomiarowych\n\uF02D\tWykład wstępny dotyczący podstaw pomiarów fizycznych i szacowania ich błędów.\n\uF02D\tĆwiczenia z termodynamiki (przemiana izotermiczna, wyznaczanie stałej adiabaty, ciepło topnienia lodu)\n\uF02D\tĆwiczenia z mechaniki  (wyznaczanie współczynników tarcia, wyznaczenie współczynnika sprężystości, pomiar przyspieszenia ziemskiego za pomocą wahadła matematycznego, doświadczalne wyznaczanie głównych momentów bezwładności)\n\uF02D\tĆwiczenia z optyki (wykorzystanie zjawiska dyfrakcji do pomiaru grubości przesłony i szerokości szczeliny)\n\uF02D\tĆwiczenia z elektromagnetyzmu (wyznaczanie oporu omowego przewodników, znacznie stałej termopary, zjawisko relaksacji w obwodzie elektrycznym) \n\n2.\tBlok ćwiczeń dotyczących komputerowej symulacji zjawisk fizycznych \n\uF02D\tWykład wstępny dotyczący programu MATLAB\n\uF02D\tWykorzystania programu MATLAB do obliczanie wielkości fizycznych na podstawie danych pomiarowych\n\uF02D\tObliczanie  wartości prądów i napięć w obwodach elektrycznych\n\uF02D\tSymulacja powstawania błędów pomiarowych\n\uF02D\tSymulacja ruchu ciał podlegających prawom dynamiki Newtona \n\uF02D\tAnaliza złożonych sygnałów elektrycznych",
-  "metodyDydaktyczne": ["wykład", "dyskusja problemu", "rozwiązywanie problemu", "konsultacje"],
+  "metodyDydaktyczne": [
+    "wykład",
+    "dyskusja problemu",
+    "rozwiązywanie problemu",
+    "konsultacje"
+  ],
   "wymaganiaFormalne": "Wymagana jest wiedza  z zakresu:  podstaw  fizyki, elementów statystyki opisowej i matematyki wyższej  oraz podstaw programowania",
   "zalozeniaWstepne": "",
   "efektyUczenia": {
@@ -14,19 +19,27 @@
     "umiejetnosci": "1 – potrafi zaplanować i wykonać pomiar dowolnej wielkości fizycznej,  potrafi pracować w zespole  i indywidualnie,  potrafi dokumentować wyniki pracy w postaci terminowych raportów\n\n2 - potrafi rozpoznać  rodzaje błędów pomiarowych i użyć właściwej metody do ich szacowania,   potrafi wyciągać  wnioski z  wyników przeprowadzonych eksperymentów , posiada umiejętność tworzenia modeli prostych  zjawisk fizycznych i ich symulacji komputerowych",
     "kompetencje": ""
   },
-  "weryfikacjaEfektowUczenia": ["Sprawozdania pisemne w postaci  elektronicznej"],
-  "dokumentacjaEfektowUczenia": ["Sprawozdania pisemne w postaci elektronicznej z ćwiczeń laboratoryjnych"],
+  "weryfikacjaEfektowUczenia": [
+    "Sprawozdania pisemne w postaci  elektronicznej"
+  ],
+  "dokumentacjaEfektowUczenia": [
+    "Sprawozdania pisemne w postaci elektronicznej z ćwiczeń laboratoryjnych"
+  ],
   "kryteriaOceniania": "Sprawozdania  – 100%",
   "statusPodstawowe": true,
   "statusObowiazkowe": true,
+
   "uwagi": "Do zaliczenia konieczne jest uzyskanie  minimum  50% możliwych punktów  w każdym bloku  ćwiczeniowym.",
   "miejsceRealizacji": {
     "cwiczenia": "laboratorium pomiarowe, laboratorium komputerowe",
     "wyklad": "brak"
   },
   "godziny": {
+   "teren":"0",
+   "praktyki":"0",
+   "projekt":"0","lab": "30",
     "ects": "2",
-    "cwiczenia": "30",
+    "cwiczenia": "0",
     "wyklad": "0"
   },
   "literatura": [

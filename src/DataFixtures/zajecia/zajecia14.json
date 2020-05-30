@@ -6,7 +6,12 @@
   "cele": "",
   "opis": "",
   "zakresTematow": "Wykłady\nRachunek zdań: formy zdaniowe i wartości logiczne; funktory logiczne; tautologie; prawa rachunku zdań; reguły dowodzenia; reguła odrywania; równoważność zdań, kwadrat logiczny; reguły: sylogizmu warunkowego, symplifikacji, Freggego, Dunsa Scotusa, Claviusa, i inne; dowody apagogiczne; podejście aksjomatyczne do rachunku zdań. Elementy rachunku funkcyjnego: kwantyfikatory i funkcje zdaniowe jednej i wielu zmiennych; kwantyfikatory o zakresie ograniczonym przez funkcję zdaniową; prawa rachunku funkcyjnego; prawa włączania i wyłączania dla kwantyfikatorów; prawa dotyczące rozdzielności kwantyfikatorów prawa przemianowywania i przestawiania kwantyfikatorów; reguły dowodzenia; kwantyfikatory a sumy i iloczyny uogólnione zbiorów; teorie sformalizowane. Elementy teorii mnogości: operacje na zbiorach, zbiór potęgowy, zbiory nieskończone – teoria mocy, metoda przekątniowa Cantora; iloczyny kartezjańskie zbiorów, relacje, relacje równoważności, funkcje. Zbiory uporządkowane: porządek liniowy, relacja dobrego uporządkowania, drzewa, kraty. Antynomie logiczne i teoriomnogościowe: paradoks kłamcy, paradoks Russela; aksjomatyczna teoria mnogości. Elementy metalogiki: systemy formalne, sformalizowane teorie aksjomatyczne, niesprzeczność, zupełność, nierozstrzygalność, twierdzenie Goedla, teza Churcha; maszyna Turinga i sztuczna inteligencja. Zastosowania i uzupełnienia: związek z teorią algebr Boole’a, optymalizacja sieci logicznych; wzmianka o logice intuicjonistycznej i o logikach modalnych.\nĆwiczenia\nTematyka ćwiczeń ściśle powiązana z materiałem przedstawionym na wykładzie. Zadania przerabiane na ćwiczeniach mają na celu ilustrować i utrwalać materiał wykładu.",
-  "metodyDydaktyczne": ["wykład","dyskusja problemu", "rozwiązywanie problemu", "konsultacje"],
+  "metodyDydaktyczne": [
+    "wykład",
+    "dyskusja problemu",
+    "rozwiązywanie problemu",
+    "konsultacje"
+  ],
   "wymaganiaFormalne": "Znajomość matematyki w zakresie szkoły średniej.",
   "zalozeniaWstepne": "",
   "efektyUczenia": {
@@ -14,17 +19,29 @@
     "umiejetnosci": "Potrafi wykorzystać nabytą wiedzę matematyczną do opisu procesów, tworzenia modeli, zapisu algorytmów oraz innych działań w obszarze informatyki.\n-  Wykazuje się umiejętnością logicznego myślenia i porządkowania informacji w postaci wiedzy ogólnej.",
     "kompetencje": ""
   },
-  "weryfikacjaEfektowUczenia": ["Aktywność na zajęciach", "pisemne prace domowe", "kolokwium zaliczeniowe"],
-  "dokumentacjaEfektowUczenia": ["Listy obecności z zaznaczeniem aktywności w czasie zajęć", "Pisemne prace domowe", "Kolokwium pisemne (w wersji elektronicznej na platformie Moodle) z ocenami."],
+  "weryfikacjaEfektowUczenia": [
+    "Aktywność na zajęciach",
+    "pisemne prace domowe",
+    "kolokwium zaliczeniowe"
+  ],
+  "dokumentacjaEfektowUczenia": [
+    "Listy obecności z zaznaczeniem aktywności w czasie zajęć",
+    "Pisemne prace domowe",
+    "Kolokwium pisemne (w wersji elektronicznej na platformie Moodle) z ocenami."
+  ],
   "kryteriaOceniania": "Aktywność na zajęciach – 20%; pisemne prace domowe – 30%; kolokwium pisemne – 50%",
   "statusPodstawowe": true,
   "statusObowiazkowe": true,
+  "statusNaukowe": true,
   "uwagi": "Minimalna liczba punktów konieczna do zaliczenia: 50%",
   "miejsceRealizacji": {
     "cwiczenia": "laboratorium komputerowe",
     "wyklad": "sala audytoryjna"
   },
   "godziny": {
+   "teren":"0",
+   "praktyki":"0",
+   "projekt":"0","lab": "0",
     "ects": "5",
     "cwiczenia": "30",
     "wyklad": "30"
