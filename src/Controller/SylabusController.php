@@ -34,7 +34,6 @@ class SylabusController extends AbstractController
     {
         $instytucja_repository = $this->getDoctrine()->getRepository(Instytucja::class);
         $zajecia_repository = $this->getDoctrine()->getRepository(Zajecia::class);
-
         $sylabus = $sylabus_repository->find($query);
         $instyctucja = $instytucja_repository->find($sylabus->getJednostkaRealizujaca());
         $zajecia = $zajecia_repository->find($sylabus->getZajecia());
@@ -140,10 +139,14 @@ class SylabusController extends AbstractController
         $form = $this->createForm(SylabusType::class, $sylabus);
         $form->handleRequest($request);
 
-
         if ($form->isSubmitted() && $form->isValid())
         {
             $sylabus = $form->getData();
+            if($form->get('confirm')->isClicked())
+            {
+                //sprawdzamy czy chcemy zatwierdzić sylabus
+                $sylabus->setZatwierdzony(true);
+            }
 
             $godz = $sylabus->getZajecia()->getGodziny();
             $efekty = $sylabus->getZajecia()->getEfektyUczenia();
@@ -168,6 +171,11 @@ class SylabusController extends AbstractController
 
             $entityManager->persist($zajecia);
             $entityManager->flush();
+
+            if($form->get('confirm')->isClicked())
+            {
+                return $this->redirectToRoute('sylabus', ['query' => $id]);
+            }
 
 
         }

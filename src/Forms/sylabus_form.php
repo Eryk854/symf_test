@@ -45,7 +45,7 @@ class SylabusType extends AbstractType
             ->add('semestr', EntityType::class, [
                 'class'=>Semestr::class,
                 'choice_label'=>function($semestr){
-                return $semestr->getNumerSemestru()." ".$semestr->getRodzajSemestru();
+                    return $semestr->getNumerSemestru()." ".$semestr->getRodzajSemestru();
                 },
                 'multiple'=>false,
                 'required'=>true,
@@ -58,7 +58,12 @@ class SylabusType extends AbstractType
             ])
             ->add('zajecia', ZajeciaType::class)
             ->add('save', SubmitType::class,[
-                'attr'=>['class'=>'btn btn-primary']
+                'attr'=>['class'=>'btn btn-primary'],
+                'label'=>'Zapisz dane do bazy'
+            ])
+            ->add('confirm', SubmitType::class,[
+                'attr'=>['class'=>'btn btn-primary','style'=>'margin-top:20px;'],
+                'label'=>'Zatwierdź dane.(edycja sylabusa będzie już niemożliwa)'
             ])
         ;
 
