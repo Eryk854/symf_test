@@ -74,6 +74,14 @@
                                     title: new_url + data.output[i]["id"],
                                     href: new_url + data.output[i]["id"]
                                 }).appendTo('div#ajax-results');
+
+                                {% if is_granted('ROLE_ADMIN') %}
+                                $('<a>', {
+                                    text: "Podsumowanie",
+                                    title: new_url + data.output[i]["id"] + "/podsumowanie",
+                                    href: new_url + data.output[i]["id"] + "/podsumowanie"
+                                }).appendTo('div#ajax-results');
+                                {% endif %}
                             }
                             if(data.output.length==0) {
                                 $('<p>', {
