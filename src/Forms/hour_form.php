@@ -31,6 +31,22 @@ class HourType extends AbstractType
                 'required'=>false,
                 'attr'=>['type'=>'number', 'class' => 'form-control']
             ])
+            ->add('godziny_laboratoryjne', NumberType::class, [
+                'required'=>false,
+                'attr'=>['type'=>'number', 'class' => 'form-control']
+            ])
+            ->add('godziny_projektowe', NumberType::class, [
+                'required'=>false,
+                'attr'=>['type'=>'number', 'class' => 'form-control']
+            ])
+            ->add('godziny_terenowe', NumberType::class, [
+                'required'=>false,
+                'attr'=>['type'=>'number', 'class' => 'form-control']
+            ])
+            ->add('godziny_praktyki', NumberType::class, [
+                'required'=>false,
+                'attr'=>['type'=>'number', 'class' => 'form-control']
+            ])
             ->add('czas_pracy_wlasnej', NumberType::class, [
                 'required'=>false,
                 'attr'=>['type'=>'number', 'class' => 'form-control']])

@@ -13,8 +13,6 @@ class MiejsceRealizacji
 
     public function getWyklad(): ?string
     {
-        dump('get');
-        dump($this->wyklad);
         return $this->wyklad;
     }
 

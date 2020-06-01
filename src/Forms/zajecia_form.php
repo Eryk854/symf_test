@@ -114,6 +114,18 @@ class ZajeciaType extends AbstractType
                 'label'    => 'Zajęcia podstawowe',
                 'required' => false,
             ])
+            ->add('status_humanistyczno_spoleczne', CheckboxType::class, [
+                'label'    => 'Zajęcia humanistyczno społeczne',
+                'required' => false,
+            ])
+            ->add('status_naukowe', CheckboxType::class, [
+                'label'    => 'Zajęcia naukowe',
+                'required' => false,
+            ])
+            ->add('status_praktyczne', CheckboxType::class, [
+                'label'    => 'Zajęcia praktyczne',
+                'required' => false,
+            ])
             ->add('miejsce_realizacji', MiejsceRealizacjiType::class)
             # take data from db - literatura
             ->add('literatura', EntityType::class, [

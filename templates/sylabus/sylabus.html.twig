@@ -4,8 +4,9 @@
 
 
 {% block body %}
+    <div style="margin:auto; text-align: center; width:75%; ">
     <h2>Wypełniasz przedmiot o nazwie : {{ nazwa }} dla roku akademickiego: {{ rok_akademicki }} </h2>
     <h4>Poziom studiów: {{ poziom_studiow }}, forma studiow {{ forma_studiow }}</h4>
     {{ form(form) }}
-
+    </div>
 {% endblock %}
