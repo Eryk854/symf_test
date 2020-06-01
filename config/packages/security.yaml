@@ -30,6 +30,7 @@ security:
 
   # Note: Only the *first* access control that matches will be used
   access_control:
+    - { path: ^/program/\d+/podsumowanie, roles: ROLE_ADMIN }
     - { path: ^/sylabus/new/, roles: ROLE_TUTOR }
     - { path: ^/admin, roles: ROLE_ADMIN }
     - { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }

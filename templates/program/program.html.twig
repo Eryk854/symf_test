@@ -5,6 +5,10 @@
 {% block body %}
     <div class="example-wrapper">
         <h2>Program: {{ kierunek }}, {{ forma }}, {{ rok }}</h2><br/>
+        {% if is_granted('ROLE_ADMIN') %}
+            <a id="podsumowanie_button" href="/program/{{ programId }}/podsumowanie">Podsumowanie</a>
+        {% endif %}
+        <br>
         {% if is_granted('ROLE_TUTOR') %}
             <a id="nowy_sylabus_button" href="/sylabus/new/{{ programId }}">Dodaj sylabus</a>
         {% endif %}

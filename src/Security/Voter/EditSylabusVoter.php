@@ -32,11 +32,6 @@ class EditSylabusVoter extends Voter
             return false;
         }
 
-        // ROLE_ADMIN can access all
-        if ($this->security->isGranted('ROLE_ADMIN')) {
-            return true;
-        }
-
         switch ($attribute) {
             case self::SYLABUS_EDIT:
                 return $this->canEdit($subject, $user);
@@ -52,6 +47,11 @@ class EditSylabusVoter extends Voter
         if($sylabus->getZatwierdzony()===true){
             return false;
         }
+        // ROLE_ADMIN can access all
+        if ($this->security->isGranted('ROLE_ADMIN')) {
+            return true;
+        }
+
         return $user->getId() === $sylabus->getKoordynatorZajec()->getId();
     }
 }
