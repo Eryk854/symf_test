@@ -71,9 +71,15 @@
                                 $('</br>').appendTo('div#ajax-results');
 
                                 $('<a>', {
-                                    text: (i + 1) + ". " + data.output[i]["opis"],
+                                    text: (i + 1) + ". " + data.output[i]["opis"] + " ",
                                     title: new_url + data.output[i]["id"],
                                     href: new_url + data.output[i]["id"]
+                                }).appendTo('div#ajax-results');
+
+                                $('<a>', {
+                                    text: "Podsumowanie",
+                                    title: new_url + data.output[i]["id"] + "/podsumowanie",
+                                    href: new_url + data.output[i]["id"] + "/podsumowanie"
                                 }).appendTo('div#ajax-results');
                             }
                             if(data.output.length==0) {

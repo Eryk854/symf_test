@@ -1,0 +1,210 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Podsumowanie programu studiów{% endblock %}
+
+{% block body %}
+    <div class="example-wrapper">
+        <h2>Podsumowanie programu studiów</h2><br/>
+
+        <table>
+            <tr>
+                <td>Nazwa</td>
+                <td>{{ nazwa }}</td>
+            </tr>
+
+            <tr>
+                <td>Wydział</td>
+                <td>{{ wydzial }}</td>
+            </tr>
+
+            <tr>
+                <td>Kierunek</td>
+                <td>{{ kierunek }}</td>
+            </tr>
+
+            <tr>
+                <td>Typ</td>
+                <td>{{ typ }}</td>
+            </tr>
+
+            <tr>
+                <td>Tryb</td>
+                <td>{{ tryb }}</td>
+            </tr>
+
+            <tr>
+                <td>Liczba semestrów</td>
+                <td>{{ l_semestrow }}</td>
+            </tr>
+
+            <tr>
+                <td>Liczba zatwierdzonych sylabusów</td>
+                <td>{{ l_zatw_syl }}</td>
+            </tr>
+
+            <tr>
+                <td>Suma punktów ECTS dla semestrów</td>
+                {% set counter = 1 %}
+                <td>{% for suma in sumy_ects %}
+                        <li>Semestr: {{ counter }}, suma punktów ECTS: {{ suma }}</li>
+                        {%  set counter=counter+1 %}
+                    {% endfor %}</td>
+            </tr>
+
+            <tr>
+                <td>Suma punktów ECTS dla zajęć ze statusem 'podstawowe'</td>
+                {% set counter = 1 %}
+                <td>{% for suma in sumy_ects_zaj_podst %}
+                        <li>Semestr: {{ counter }}, suma punktów ECTS: {{ suma }}</li>
+                        {%  set counter=counter+1 %}
+                    {% endfor %}</td>
+            </tr>
+
+            <tr>
+                <td>Suma punktów ECTS dla zajęć ze statusem 'kierunkowe'</td>
+                {% set counter = 1 %}
+                <td>{% for suma in sumy_ects_zaj_kie %}
+                        <li>Semestr: {{ counter }}, suma punktów ECTS: {{ suma }}</li>
+                        {%  set counter=counter+1 %}
+                    {% endfor %}</td>
+            </tr>
+
+            <tr>
+                <td>Suma punktów ECTS dla zajęć ze statusem 'humanistyczne'</td>
+                {% set counter = 1 %}
+                <td>{% for suma in sumy_ects_zaj_human %}
+                        <li>Semestr: {{ counter }}, suma punktów ECTS: {{ suma }}</li>
+                        {%  set counter=counter+1 %}
+                    {% endfor %}</td>
+            </tr>
+
+            <tr>
+                <td>Suma punktów ECTS dla zajęć ze statusem 'obligatoryjne'</td>
+                {% set counter = 1 %}
+                <td>{% for suma in sumy_ects_zaj_obl %}
+                        <li>Semestr: {{ counter }}, suma punktów ECTS: {{ suma }}</li>
+                        {%  set counter=counter+1 %}
+                    {% endfor %}</td>
+            </tr>
+
+            <tr>
+                <td>Suma punktów ECTS dla zajęć ze statusem 'wybór'</td>
+                {% set counter = 1 %}
+                <td>{% for suma in sumy_ects_zaj_do_wyboru %}
+                        <li>Semestr: {{ counter }}, suma punktów ECTS: {{ suma }}</li>
+                        {%  set counter=counter+1 %}
+                    {% endfor %}</td>
+            </tr>
+
+            <tr>
+                <td>Suma punktów ECTS dla zajęć ze statusem 'naukowe'</td>
+                {% set counter = 1 %}
+                <td>{% for suma in sumy_ects_zaj_naukowe %}
+                        <li>Semestr: {{ counter }}, suma punktów ECTS: {{ suma }}</li>
+                        {%  set counter=counter+1 %}
+                    {% endfor %}</td>
+            </tr>
+
+            <tr>
+                <td>Suma punktów ECTS dla zajęć ze statusem 'praktyczne'</td>
+                {% set counter = 1 %}
+                <td>{% for suma in sumy_ects_zaj_praktyczne %}
+                        <li>Semestr: {{ counter }}, suma punktów ECTS: {{ suma }}</li>
+                        {%  set counter=counter+1 %}
+                    {% endfor %}</td>
+            </tr>
+
+            <tr>
+                <td>Suma godzin dla semestrów</td>
+                {% set counter = 1 %}
+                <td>{% for suma in sumy_godzin_semestr %}
+                        <li>Semestr: {{ counter }}, suma godzin: {{ suma }}</li>
+                        {%  set counter=counter+1 %}
+                    {% endfor %}</td>
+            </tr>
+
+            <tr>
+                <td>Suma godzin dla semestrów (wykłady)</td>
+                {% set counter = 1 %}
+                <td>{% for suma in sumy_godzin_wyklad_semestr %}
+                        <li>Semestr: {{ counter }}, suma godzin: {{ suma }}</li>
+                        {%  set counter=counter+1 %}
+                    {% endfor %}</td>
+            </tr>
+
+            <tr>
+                <td>Suma godzin dla semestrów (ćwiczenia)</td>
+                {% set counter = 1 %}
+                <td>{% for suma in sumy_godzin_cwiczenia_semestr %}
+                        <li>Semestr: {{ counter }}, suma godzin: {{ suma }}</li>
+                        {%  set counter=counter+1 %}
+                    {% endfor %}</td>
+            </tr>
+
+            <tr>
+                <td>Suma godzin dla semestrów (labolatoria)</td>
+                {% set counter = 1 %}
+                <td>{% for suma in sumy_godzin_lab_semestr %}
+                        <li>Semestr: {{ counter }}, suma godzin: {{ suma }}</li>
+                        {%  set counter=counter+1 %}
+                    {% endfor %}</td>
+            </tr>
+
+            <tr>
+                <td>Suma godzin dla semestrów (zajęcia terenowe)</td>
+                {% set counter = 1 %}
+                <td>{% for suma in sumy_godzin_teren_semestr %}
+                        <li>Semestr: {{ counter }}, suma godzin: {{ suma }}</li>
+                        {%  set counter=counter+1 %}
+                    {% endfor %}</td>
+            </tr>
+
+            <tr>
+                <td>Suma godzin dla semestrów (zajęcia projektowe)</td>
+                {% set counter = 1 %}
+                <td>{% for suma in sumy_godzin_projekt_semetr %}
+                        <li>Semestr: {{ counter }}, suma godzin: {{ suma }}</li>
+                        {%  set counter=counter+1 %}
+                    {% endfor %}</td>
+            </tr>
+
+            <tr>
+                <td>Suma godzin dla semestrów (zajęcia praktyczne)</td>
+                {% set counter = 1 %}
+                <td>{% for suma in sumy_godzin_praktyki_semestr %}
+                        <li>Semestr: {{ counter }}, suma godzin: {{ suma }}</li>
+                        {%  set counter=counter+1 %}
+                    {% endfor %}</td>
+            </tr>
+
+            <tr>
+                <td>Liczba sylabusów zatwierdzonych</td>
+                <td>{{ l_zatw_syl }}</td>
+            </tr>
+
+            <tr>
+                <td>Lista niezatwierdzonych sylabusów</td>
+                <td>{% for value in l_niezatw_syb %}
+                        <li><a href="{{ path('sylabusForm', {'id': value.id }) }}">Sylabus {{ value.numerKatalogowy }}</a></li>
+                    {% endfor %}</td>
+            </tr>
+        </table>
+    </div>
+
+    <style>
+        .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+        .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+        table, td, tr {
+            border: 1px solid black;
+            border-collapse: collapse;
+            text-align: center;
+        }
+        .td_smallFontSize {
+            font-size: 11px;
+        }
+
+        table {
+            width: 100%;
+        }
+    </style>
+{% endblock %}

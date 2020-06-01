@@ -4,8 +4,8 @@ namespace App\Controller;
 
 use App\Entity\Kierunek;
 use App\Entity\Program;
-use App\Entity\Godziny;
 use App\Repository\ProgramRepository;
+use App\Service\ProgramService;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Request;
@@ -117,6 +117,72 @@ class ProgramController extends AbstractController
             'forma' => $forma,
             'rok' => $rok,
             'zajecia' => $wszystkie_zajecia
+        ]);
+    }
+
+    /**
+     * @Route("/program/{query}/podsumowanie", name="programIdPodsumowanie", methods={"GET"})
+     */
+    public function programIdPodsumowanie($query, ProgramService $program_service): Response
+    {
+        $program_podsumowanie = $program_service->stworzPodsumowanie($query);
+
+        //String
+        $nazwa = $program_podsumowanie->getNazwaProgramu();
+        $wydzial = $program_podsumowanie->getWydzial();
+        $kierunek = $program_podsumowanie->getKierunek();
+        $typ = $program_podsumowanie->getTyp();
+        $tryb = $program_podsumowanie->getTryb();
+
+        //Int
+        $l_semestrow = $program_podsumowanie->getLiczbaSemestrow();
+        $l_zatw_syl = $program_podsumowanie->getLiczbaZatwierdzonychSylabusow();
+
+        //Array
+        $sumy_ects = $program_podsumowanie->getSumyEctsDlaSemestru();
+        $sumy_ects_zaj_podst = $program_podsumowanie->getSumyEctsDlaStatusZajecPodstawowe();
+        $sumy_ects_zaj_kie = $program_podsumowanie->getSumyEctsDlaStatusZajecKierunkowe();
+        $sumy_ects_zaj_human = $program_podsumowanie->getSumyEctsDlaStatusZajecHuman();
+        $sumy_ects_zaj_obl = $program_podsumowanie->getSumyEctsDlaStatusZajecObligatoryjnych();
+        $sumy_ects_zaj_do_wyboru = $program_podsumowanie->getSumyEctsDlaStatusZajecDoWyboru();
+        $sumy_ects_zaj_naukowe = $program_podsumowanie->getSumyEctsDlaStatusZajecNaukowe();
+        $sumy_ects_zaj_praktyczne = $program_podsumowanie->getSumyEctsDlaStatusZajecPraktyczne();
+        $sumy_godzin_semestr = $program_podsumowanie->getSumyGodzinDlaSemestru();
+        $sumy_godzin_wyklad_semestr = $program_podsumowanie->getSumyGodzinWykladDlaSemestrow();
+        $sumy_godzin_cwiczenia_semestr = $program_podsumowanie->getSumyGodzinCwiczeniaDlaSemestrow();
+        $sumy_godzin_lab_semestr = $program_podsumowanie->getSumyGodzinLabDlaSemestrow();
+        $sumy_godzin_teren_semestr = $program_podsumowanie->getSumyGodzinTerenDlaSemestrow();
+        $sumy_godzin_projekt_semetr = $program_podsumowanie->getSumyGodzinProjektDlaSemestrow();
+        $sumy_godzin_praktyki_semestr = $program_podsumowanie->getSumyGodzinPraktykiDlaSemestrow();
+        $l_niezatw_syb = $program_podsumowanie->getListaNiezatwierdzonychSylabusow();
+
+        return $this->render('program/program_podsumowanie.html.twig', [
+            'nazwa' => $nazwa,
+            'wydzial' => $wydzial,
+            'kierunek' => $kierunek,
+            'typ' => $typ,
+            'tryb' => $tryb,
+            'l_semestrow' => $l_semestrow,
+            'l_zatw_syl' => $l_zatw_syl,
+
+            'sumy_ects' => $sumy_ects,
+            'sumy_ects_zaj_podst' => $sumy_ects_zaj_podst,
+            'sumy_ects_zaj_kie' => $sumy_ects_zaj_kie,
+            'sumy_ects_zaj_human' => $sumy_ects_zaj_human,
+            'sumy_ects_zaj_obl' => $sumy_ects_zaj_obl,
+            'sumy_ects_zaj_do_wyboru' => $sumy_ects_zaj_do_wyboru,
+            'sumy_ects_zaj_naukowe' => $sumy_ects_zaj_naukowe,
+            'sumy_ects_zaj_praktyczne' => $sumy_ects_zaj_praktyczne,
+
+            'sumy_godzin_semestr' => $sumy_godzin_semestr,
+            'sumy_godzin_wyklad_semestr' => $sumy_godzin_wyklad_semestr,
+            'sumy_godzin_cwiczenia_semestr' => $sumy_godzin_cwiczenia_semestr,
+            'sumy_godzin_lab_semestr' => $sumy_godzin_lab_semestr,
+            'sumy_godzin_teren_semestr' => $sumy_godzin_teren_semestr,
+            'sumy_godzin_projekt_semetr' => $sumy_godzin_projekt_semetr,
+            'sumy_godzin_praktyki_semestr' => $sumy_godzin_praktyki_semestr,
+
+            'l_niezatw_syb' => $l_niezatw_syb
         ]);
     }
 }
