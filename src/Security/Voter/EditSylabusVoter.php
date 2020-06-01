@@ -49,6 +49,9 @@ class EditSylabusVoter extends Voter
 
     private function canEdit(Sylabus $sylabus, Uzytkownik $user)
     {
+        if($sylabus->getZatwierdzony()===true){
+            return false;
+        }
         return $user->getId() === $sylabus->getKoordynatorZajec()->getId();
     }
 }
