@@ -117,6 +117,15 @@ class Godziny
         $this->godziny_laboratoryjne = $godziny_laboratoryjne;
     }
 
+    public function getSumaGodzin(): ?int
+    {
+        return $this->godziny_laboratoryjne
+            + $this->godziny_cwiczeniowe
+            + $this->godziny_wykladowe
+            + $this->godziny_praktyki
+            + $this->godziny_projektowe
+            + $this->godziny_terenowe;
+    }
 
     public function __toString()
     {

@@ -77,7 +77,7 @@ class ZajeciaFixtures extends Fixture implements DependentFixtureInterface
             $zajecia->setStatusHumanistycznoSpoleczne(false);
         }
         if (array_key_exists("statusNaukowe", $array)) {
-            $zajecia->setStatusHumanistycznoSpoleczne($array["statusNaukowe"]);
+            $zajecia->setStatusNaukowe($array["statusNaukowe"]);
         }
 
         $zajecia->setNazwaPolska($array["nazwaPolska"]);
