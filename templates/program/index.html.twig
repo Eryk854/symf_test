@@ -33,13 +33,22 @@
         <br/>
 
         <button id="search_button" class="ajax">Szukaj programu studiów</button>
-        <div id="ajax-results"></div>
+        <div id="ajax-results">
+            </br>
+                {% for program in programy %}
+                    <a href="{{ path('programId', {'query' : program.id}) }}" title="{{ path('programId', {'query' : program.id}) }}">{{ program.id }}. {{ program.opis }} </a>
+
+                    {% if is_granted('ROLE_ADMIN') %}
+                        <a href="{{ path('programIdPodsumowanie', {'query' : program.id}) }}" title="{{ path('programIdPodsumowanie', {'query' : program.id}) }}">Podsumowanie</a
+                        </br>
+                    {% endif %}
+
+                    </br>
+            {% endfor %}
+        </div>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <script>
-            $(document).ready(function() {
-                $('#search_button').click();
-            });
 
             $(document).on('click', 'button.ajax', function(){
                 that = $(this);

@@ -30,6 +30,11 @@ class Sylabus
 
     /**
      * @ORM\Column(type="string", length=100, nullable=true)
+     * @Assert\Length(
+     *     min = 1,
+     *     max = 100,
+     *     allowEmptyString = true
+     * )
      */
     private $numerKatalogowy;
 

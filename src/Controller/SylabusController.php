@@ -35,8 +35,14 @@ class SylabusController extends AbstractController
         $instytucja_repository = $this->getDoctrine()->getRepository(Instytucja::class);
         $zajecia_repository = $this->getDoctrine()->getRepository(Zajecia::class);
         $sylabus = $sylabus_repository->find($query);
+
         $instyctucja = $instytucja_repository->find($sylabus->getJednostkaRealizujaca());
+
         $zajecia = $zajecia_repository->find($sylabus->getZajecia());
+
+        $koordynator = $sylabus->getKoordynatorZajec();
+
+        $prowadzacy = $sylabus->getProwadzacyZajecia();
 
         $numer_katalogowy = $sylabus->getNumerKatalogowy();
 
@@ -88,10 +94,13 @@ class SylabusController extends AbstractController
 
         $podstawowa_literatura = $zajecia->getLiteratura();
 
+
+
         return $this->render('sylabus/index.html.twig', [
-            'controller_name' => 'SylabusController',
             'id' => $sylabus->getId(),
             'sylabus' => $sylabus,
+            'koordynator' => $koordynator,
+            'prowadzacy' => $prowadzacy,
             'numer_katalogowy' => $numer_katalogowy,
             'jednostka_realizujaca' => $jednostka_realizujaca,
             'jednostka_zlecajaca' => $jednostka_zlecajaca,

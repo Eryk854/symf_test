@@ -23,6 +23,8 @@ class ProgramController extends AbstractController
 
         $kierunek_repository = $this->getDoctrine()->getRepository(Kierunek::class);
 
+        $wszystkie_programy = $program_repository->findAll();
+
         $programy = $program_repository->findAllOrderedByRokAkademicki();
 
         $formy_studiow = $program_repository->findAllGroupedByFormaStudiow();
@@ -71,6 +73,7 @@ class ProgramController extends AbstractController
         }
 
         return $this->render('program/index.html.twig', [
+            'programy' => $wszystkie_programy,
             'formy_studiow' => $formy_studiow,
             'kierunki' => $kierunki,
         ]);
@@ -83,10 +86,6 @@ class ProgramController extends AbstractController
     {
         $program = $programRepository->find($query);
 
-        $kierunek =  $program->getKierunek();
-        $forma = $program->getFormaStudiow();
-        $rok = $program->getRokAkademicki();
-
         $sylabusy = $program->getSylabusy();
 
         $wszystkie_zajecia = array();
@@ -95,13 +94,32 @@ class ProgramController extends AbstractController
 
         foreach($sylabusy as $sylabus) {
             $zajecia = $sylabus->getZajecia();
+            $godziny = $zajecia->getGodziny();
             $wszystkie_zajecia[$temp]["semestr"] = $sylabus->getSemestr()->getNumerSemestru();
             $wszystkie_zajecia[$temp]["nazwa"] = $zajecia->getNazwaPolska();
             $wszystkie_zajecia[$temp]["sylabus_id"] = $sylabus->getId();
-            $wszystkie_zajecia[$temp]["godziny_wykladowe"] = $zajecia->getGodziny()->getGodzinyWykladowe();
-            $wszystkie_zajecia[$temp]["godziny_cwiczeniowe"] = $zajecia->getGodziny()->getGodzinyCwiczeniowe();
-            $wszystkie_zajecia[$temp]["kryteria_oceniania"] = $zajecia->getKryteriaOceniania();
+
+            $wszystkie_zajecia[$temp]["status1"] = $zajecia->getStatus1();
+            $wszystkie_zajecia[$temp]["status2"] = $zajecia->getStatus2();
+            $wszystkie_zajecia[$temp]["status3"] = $zajecia->getStatus3();
+            $wszystkie_zajecia[$temp]["status4"] = $zajecia->getStatusHumanistycznoSpoleczne();
+            $wszystkie_zajecia[$temp]["status5"] = $zajecia->getStatusNaukowe();
+            $wszystkie_zajecia[$temp]["status6"] = $zajecia->getStatusObowiazkowe();
+            $wszystkie_zajecia[$temp]["status7"] = $zajecia->getStatusPodstawowe();
+            $wszystkie_zajecia[$temp]["status8"] = $zajecia->getStatusPraktyczne();
+
+            $wszystkie_zajecia[$temp]["gw"] = $godziny->getGodzinyWykladowe();
+            $wszystkie_zajecia[$temp]["gc"] = $godziny->getGodzinyCwiczeniowe();
+            $wszystkie_zajecia[$temp]["gl"] = $godziny->getGodzinyLaboratoryjne();
+            $wszystkie_zajecia[$temp]["gp"] = $godziny->getGodzinyProjektowe();
+            $wszystkie_zajecia[$temp]["gt"] = $godziny->getGodzinyTerenowe();
+            $wszystkie_zajecia[$temp]["gpr"] = $godziny->getGodzinyPraktyki();
+            $wszystkie_zajecia[$temp]["suma"] = $godziny->getSumaGodzin();
+
             $wszystkie_zajecia[$temp]["ects"] = $zajecia->getGodziny()->getECTS();
+
+            $wszystkie_zajecia[$temp]["kryteria_oceniania"] = $zajecia->getKryteriaOceniania();
+
             $temp = $temp + 1;
         }
 
@@ -109,13 +127,8 @@ class ProgramController extends AbstractController
         $columns_2 = array_column($wszystkie_zajecia, 'nazwa');
         array_multisort($columns_1, SORT_ASC, $columns_2, SORT_ASC, $wszystkie_zajecia);
 
-        //dump($wszystkie_zajecia);
-
         return $this->render('program/program.html.twig', [
-            'programId' => $program->getId(),
-            'kierunek' => $kierunek,
-            'forma' => $forma,
-            'rok' => $rok,
+            'program' => $program,
             'zajecia' => $wszystkie_zajecia
         ]);
     }
@@ -128,32 +141,7 @@ class ProgramController extends AbstractController
         $program_podsumowanie = $program_service->stworzPodsumowanie($query);
 
         return $this->render('program/program_podsumowanie.html.twig', [
-            'nazwa' => $program_podsumowanie->getNazwaProgramu(),
-            'wydzial' => $program_podsumowanie->getWydzial(),
-            'kierunek' => $program_podsumowanie->getKierunek(),
-            'typ' => $program_podsumowanie->getTyp(),
-            'tryb' => $program_podsumowanie->getTryb(),
-            'l_semestrow' => $program_podsumowanie->getLiczbaSemestrow(),
-            'l_zatw_syl' => $program_podsumowanie->getLiczbaZatwierdzonychSylabusow(),
-
-            'sumy_ects' => $program_podsumowanie->getSumyEctsDlaSemestru(),
-            'sumy_ects_zaj_podst' => $program_podsumowanie->getSumyEctsDlaStatusZajecPodstawowe(),
-            'sumy_ects_zaj_kie' => $program_podsumowanie->getSumyEctsDlaStatusZajecKierunkowe(),
-            'sumy_ects_zaj_human' => $program_podsumowanie->getSumyEctsDlaStatusZajecHuman(),
-            'sumy_ects_zaj_obl' => $program_podsumowanie->getSumyEctsDlaStatusZajecObligatoryjnych(),
-            'sumy_ects_zaj_do_wyboru' => $program_podsumowanie->getSumyEctsDlaStatusZajecDoWyboru(),
-            'sumy_ects_zaj_naukowe' => $program_podsumowanie->getSumyEctsDlaStatusZajecNaukowe(),
-            'sumy_ects_zaj_praktyczne' => $program_podsumowanie->getSumyEctsDlaStatusZajecPraktyczne(),
-
-            'sumy_godzin_semestr' =>$program_podsumowanie->getSumyGodzinDlaSemestru(),
-            'sumy_godzin_wyklad_semestr' => $program_podsumowanie->getSumyGodzinWykladDlaSemestrow(),
-            'sumy_godzin_cwiczenia_semestr' => $program_podsumowanie->getSumyGodzinCwiczeniaDlaSemestrow(),
-            'sumy_godzin_lab_semestr' => $program_podsumowanie->getSumyGodzinLabDlaSemestrow(),
-            'sumy_godzin_teren_semestr' => $program_podsumowanie->getSumyGodzinTerenDlaSemestrow(),
-            'sumy_godzin_projekt_semetr' => $program_podsumowanie->getSumyGodzinProjektDlaSemestrow(),
-            'sumy_godzin_praktyki_semestr' => $program_podsumowanie->getSumyGodzinPraktykiDlaSemestrow(),
-
-            'l_niezatw_syb' => $program_podsumowanie->getListaNiezatwierdzonychSylabusow()
+            'program_podsumowanie' => $program_podsumowanie
         ]);
     }
 }

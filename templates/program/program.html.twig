@@ -4,13 +4,13 @@
 
 {% block body %}
     <div class="example-wrapper">
-        <h2>Program: {{ kierunek }}, {{ forma }}, {{ rok }}</h2><br/>
+        <h2>Program: {{ program.getKierunek }}, {{ program.getFormaStudiow }}, {{ program.getRokAkademicki }}</h2><br/>
         {% if is_granted('ROLE_ADMIN') %}
-            <a id="podsumowanie_button" href="/program/{{ programId }}/podsumowanie">Podsumowanie</a>
+            <a id="podsumowanie_button" href="/program/{{ program.getId }}/podsumowanie">Podsumowanie</a>
         {% endif %}
         <br>
         {% if is_granted('ROLE_TUTOR') %}
-            <a id="nowy_sylabus_button" href="/sylabus/new/{{ programId }}">Dodaj sylabus</a>
+            <a id="nowy_sylabus_button" href="/sylabus/new/{{ program.getId }}">Dodaj sylabus</a>
         {% endif %}
         {% set counter = 1 %}
 
@@ -19,10 +19,27 @@
                 <td>Lp.</td>
                 <td>Semestr</td>
                 <td>Nazwa przedmiotu</td>
+
+                <td>Status zajęć |</td>
+                <td>Status zajęć ||</td>
+                <td>Status zajęć |||</td>
+                <td>Status zajęć humanistyczno-społeczne</td>
+                <td>Status zajęć naukowe</td>
+                <td>Status zajęć obowiązkowe</td>
+                <td>Status zajęć podstawowe</td>
+                <td>Status zajęć praktyczne</td>
+
                 <td>Godziny wykładowe</td>
                 <td>Godziny ćwiczeniowe</td>
-                <td>Forma zaliczenia</td>
+                <td>Godziny labolatoryjne</td>
+                <td>Godziny projektowe</td>
+                <td>Godziny terenowe</td>
+                <td>Godziny praktyki</td>
+                <td>Razem godzin</td>
+
                 <td>ECTS</td>
+
+                <td>Kryteria oceniania</td>
             </tr>
 
             {% for value in zajecia %}
@@ -36,14 +53,28 @@
                         </a>
                     </td>
 
-                    <td>{{ value.godziny_wykladowe }}</td>
-                    <td>{{ value.godziny_cwiczeniowe }}</td>
+                    <td>{{ value.status1 }}</td>
+                    <td>{{ value.status2 }}</td>
+                    <td>{{ value.status3 }}</td>
+                    <td>{{ value.status4 }}</td>
+                    <td>{{ value.status5 }}</td>
+                    <td>{{ value.status6 }}</td>
+                    <td>{{ value.status7 }}</td>
+                    <td>{{ value.status8 }}</td>
+
+                    <td>{{ value.gw }}</td>
+                    <td>{{ value.gc }}</td>
+                    <td>{{ value.gl }}</td>
+                    <td>{{ value.gp }}</td>
+                    <td>{{ value.gt }}</td>
+                    <td>{{ value.gpr }}</td>
+                    <td>{{ value.suma }}</td>
+
+                    <td>{{ value.ects }}</td>
 
                     <td class="td_smallFontSize">
                         {{ value.kryteria_oceniania }}
                     </td>
-
-                    <td>{{ value.ects }}</td>
 
                     {% set counter = counter + 1 %}
                 </tr>
@@ -54,7 +85,7 @@
     </div>
 
     <style>
-        .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+        .example-wrapper { margin: auto; width: 95%; font: 18px/1.5 sans-serif; }
         .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
         table, td, tr {
             border: 1px solid black;

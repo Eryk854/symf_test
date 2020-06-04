@@ -28,13 +28,21 @@
             <a href="{{ path('sylabusForm', {'id': id }) }}">Edytuj</a>
         {% endif %}
 
-        <!--This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/xampp/htdocs/G4/src/Controller/SylabusController.php'|file_link(0) }}">src/Controller/SylabusController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/xampp/htdocs/G4/templates/sylabus/index.html.twig'|file_link(0) }}">templates/sylabus/index.html.twig</a></code></li>
-    </ul>-->
 
         <table>
+
+            <tr>
+                <td>Koordynator</td>
+                <td>{{ koordynator.imie }} {{ koordynator.nazwisko }}</td>
+            </tr>
+
+            <tr>
+                <td>Prowadzący</td>
+                <td>{% for val in prowadzacy %}
+                        <li>{{ val.imie }} {{ val.nazwisko }}</li>
+                    {% endfor %}</td>
+            </tr>
+
             <tr>
                 <td>Numer katalogowy:</td>
                 <td>{{ numer_katalogowy }}</td>

@@ -9,38 +9,38 @@
         <table>
             <tr>
                 <td>Nazwa</td>
-                <td>{{ nazwa }}</td>
+                <td>{{ program_podsumowanie.getNazwaProgramu }}</td>
             </tr>
 
             <tr>
                 <td>Wydział</td>
-                <td>{{ wydzial }}</td>
+                <td>{{ program_podsumowanie.getWydzial }}</td>
             </tr>
 
             <tr>
                 <td>Kierunek</td>
-                <td>{{ kierunek }}</td>
+                <td>{{ program_podsumowanie.getKierunek }}</td>
             </tr>
 
             <tr>
                 <td>Typ</td>
-                <td>{{ typ }}</td>
+                <td>{{ program_podsumowanie.getTyp }}</td>
             </tr>
 
             <tr>
                 <td>Tryb</td>
-                <td>{{ tryb }}</td>
+                <td>{{ program_podsumowanie.getTryb }}</td>
             </tr>
 
             <tr>
                 <td>Liczba semestrów</td>
-                <td>{{ l_semestrow }}</td>
+                <td>{{ program_podsumowanie.getLiczbaSemestrow }}</td>
             </tr>
 
             <tr>
                 <td>Suma punktów ECTS dla semestrów</td>
                 {% set counter = 1 %}
-                <td>{% for suma in sumy_ects %}
+                <td>{% for suma in program_podsumowanie.getSumyEctsDlaSemestru %}
                         <li>Semestr: {{ counter }}, suma punktów ECTS: {{ suma }}</li>
                         {%  set counter=counter+1 %}
                     {% endfor %}</td>
@@ -49,7 +49,7 @@
             <tr>
                 <td>Suma punktów ECTS dla zajęć ze statusem 'podstawowe'</td>
                 {% set counter = 1 %}
-                <td>{% for suma in sumy_ects_zaj_podst %}
+                <td>{% for suma in program_podsumowanie.getSumyEctsDlaStatusZajecPodstawowe %}
                         <li>Semestr: {{ counter }}, suma punktów ECTS: {{ suma }}</li>
                         {%  set counter=counter+1 %}
                     {% endfor %}</td>
@@ -58,7 +58,7 @@
             <tr>
                 <td>Suma punktów ECTS dla zajęć ze statusem 'kierunkowe'</td>
                 {% set counter = 1 %}
-                <td>{% for suma in sumy_ects_zaj_kie %}
+                <td>{% for suma in program_podsumowanie.getSumyEctsDlaStatusZajecKierunkowe %}
                         <li>Semestr: {{ counter }}, suma punktów ECTS: {{ suma }}</li>
                         {%  set counter=counter+1 %}
                     {% endfor %}</td>
@@ -67,7 +67,7 @@
             <tr>
                 <td>Suma punktów ECTS dla zajęć ze statusem 'humanistyczne'</td>
                 {% set counter = 1 %}
-                <td>{% for suma in sumy_ects_zaj_human %}
+                <td>{% for suma in program_podsumowanie.getSumyEctsDlaStatusZajecHuman %}
                         <li>Semestr: {{ counter }}, suma punktów ECTS: {{ suma }}</li>
                         {%  set counter=counter+1 %}
                     {% endfor %}</td>
@@ -76,7 +76,7 @@
             <tr>
                 <td>Suma punktów ECTS dla zajęć ze statusem 'obligatoryjne'</td>
                 {% set counter = 1 %}
-                <td>{% for suma in sumy_ects_zaj_obl %}
+                <td>{% for suma in program_podsumowanie.getSumyEctsDlaStatusZajecObligatoryjnych %}
                         <li>Semestr: {{ counter }}, suma punktów ECTS: {{ suma }}</li>
                         {%  set counter=counter+1 %}
                     {% endfor %}</td>
@@ -85,7 +85,7 @@
             <tr>
                 <td>Suma punktów ECTS dla zajęć ze statusem 'wybór'</td>
                 {% set counter = 1 %}
-                <td>{% for suma in sumy_ects_zaj_do_wyboru %}
+                <td>{% for suma in program_podsumowanie.getSumyEctsDlaStatusZajecDoWyboru %}
                         <li>Semestr: {{ counter }}, suma punktów ECTS: {{ suma }}</li>
                         {%  set counter=counter+1 %}
                     {% endfor %}</td>
@@ -94,7 +94,7 @@
             <tr>
                 <td>Suma punktów ECTS dla zajęć ze statusem 'naukowe'</td>
                 {% set counter = 1 %}
-                <td>{% for suma in sumy_ects_zaj_naukowe %}
+                <td>{% for suma in program_podsumowanie.getSumyEctsDlaStatusZajecNaukowe %}
                         <li>Semestr: {{ counter }}, suma punktów ECTS: {{ suma }}</li>
                         {%  set counter=counter+1 %}
                     {% endfor %}</td>
@@ -103,7 +103,7 @@
             <tr>
                 <td>Suma punktów ECTS dla zajęć ze statusem 'praktyczne'</td>
                 {% set counter = 1 %}
-                <td>{% for suma in sumy_ects_zaj_praktyczne %}
+                <td>{% for suma in program_podsumowanie.getSumyEctsDlaStatusZajecPraktyczne %}
                         <li>Semestr: {{ counter }}, suma punktów ECTS: {{ suma }}</li>
                         {%  set counter=counter+1 %}
                     {% endfor %}</td>
@@ -112,7 +112,7 @@
             <tr>
                 <td>Suma godzin dla semestrów</td>
                 {% set counter = 1 %}
-                <td>{% for suma in sumy_godzin_semestr %}
+                <td>{% for suma in program_podsumowanie.getSumyGodzinDlaSemestru %}
                         <li>Semestr: {{ counter }}, suma godzin: {{ suma }}</li>
                         {%  set counter=counter+1 %}
                     {% endfor %}</td>
@@ -121,7 +121,7 @@
             <tr>
                 <td>Suma godzin dla semestrów (wykłady)</td>
                 {% set counter = 1 %}
-                <td>{% for suma in sumy_godzin_wyklad_semestr %}
+                <td>{% for suma in program_podsumowanie.getSumyGodzinWykladDlaSemestrow %}
                         <li>Semestr: {{ counter }}, suma godzin: {{ suma }}</li>
                         {%  set counter=counter+1 %}
                     {% endfor %}</td>
@@ -130,7 +130,7 @@
             <tr>
                 <td>Suma godzin dla semestrów (ćwiczenia)</td>
                 {% set counter = 1 %}
-                <td>{% for suma in sumy_godzin_cwiczenia_semestr %}
+                <td>{% for suma in program_podsumowanie.getSumyGodzinCwiczeniaDlaSemestrow %}
                         <li>Semestr: {{ counter }}, suma godzin: {{ suma }}</li>
                         {%  set counter=counter+1 %}
                     {% endfor %}</td>
@@ -139,7 +139,7 @@
             <tr>
                 <td>Suma godzin dla semestrów (labolatoria)</td>
                 {% set counter = 1 %}
-                <td>{% for suma in sumy_godzin_lab_semestr %}
+                <td>{% for suma in program_podsumowanie.getSumyGodzinLabDlaSemestrow %}
                         <li>Semestr: {{ counter }}, suma godzin: {{ suma }}</li>
                         {%  set counter=counter+1 %}
                     {% endfor %}</td>
@@ -148,7 +148,7 @@
             <tr>
                 <td>Suma godzin dla semestrów (zajęcia terenowe)</td>
                 {% set counter = 1 %}
-                <td>{% for suma in sumy_godzin_teren_semestr %}
+                <td>{% for suma in program_podsumowanie.getSumyGodzinTerenDlaSemestrow %}
                         <li>Semestr: {{ counter }}, suma godzin: {{ suma }}</li>
                         {%  set counter=counter+1 %}
                     {% endfor %}</td>
@@ -157,7 +157,7 @@
             <tr>
                 <td>Suma godzin dla semestrów (zajęcia projektowe)</td>
                 {% set counter = 1 %}
-                <td>{% for suma in sumy_godzin_projekt_semetr %}
+                <td>{% for suma in program_podsumowanie.getSumyGodzinProjektDlaSemestrow %}
                         <li>Semestr: {{ counter }}, suma godzin: {{ suma }}</li>
                         {%  set counter=counter+1 %}
                     {% endfor %}</td>
@@ -166,7 +166,7 @@
             <tr>
                 <td>Suma godzin dla semestrów (zajęcia praktyczne)</td>
                 {% set counter = 1 %}
-                <td>{% for suma in sumy_godzin_praktyki_semestr %}
+                <td>{% for suma in program_podsumowanie.getSumyGodzinPraktykiDlaSemestrow %}
                         <li>Semestr: {{ counter }}, suma godzin: {{ suma }}</li>
                         {%  set counter=counter+1 %}
                     {% endfor %}</td>
@@ -174,12 +174,12 @@
 
             <tr>
                 <td>Liczba sylabusów zatwierdzonych</td>
-                <td>{{ l_zatw_syl }}</td>
+                <td>{{ program_podsumowanie.getLiczbaZatwierdzonychSylabusow }}</td>
             </tr>
 
             <tr>
                 <td>Lista niezatwierdzonych sylabusów</td>
-                <td>{% for value in l_niezatw_syb %}
+                <td>{% for value in program_podsumowanie.getListaNiezatwierdzonychSylabusow %}
                         <li><a href="{{ path('sylabusForm', {'id': value.id }) }}">Sylabus {{ value.numerKatalogowy }}</a></li>
                     {% endfor %}</td>
             </tr>

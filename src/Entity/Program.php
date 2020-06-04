@@ -23,21 +23,41 @@ class Program
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\Length(
+     *     min = 1,
+     *     max = 255,
+     *     allowEmptyString = true
+     * )
      */
     private $opis;
 
     /**
      * @ORM\Column(type="string", length=9)
+     * @Assert\Length(
+     *     min = 1,
+     *     max = 9,
+     *     allowEmptyString = true
+     * )
      */
     private $rok_akademicki;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\Length(
+     *     min = 1,
+     *     max = 255,
+     *     allowEmptyString = true
+     * )
      */
     private $forma_studiow;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\Length(
+     *     min = 1,
+     *     max = 255,
+     *     allowEmptyString = true
+     * )
      */
     private $poziom_studiow;
 
