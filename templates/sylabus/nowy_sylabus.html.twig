@@ -13,19 +13,19 @@
                 {{ przedmiot.nazwaPolska }} dla rocznika: {{ dane[loop.index-1].rok_akademicki  }}, formy studiów: {{ dane[loop.index-1].forma_studiow  }} poziom: {{ dane[loop.index-1].poziom_studiow  }}
                 <input type="hidden" value={{ przedmiot.id }} name="przedmiot_id">
                 <input type="hidden" value={{ program_id }} name="program_id">
-                <button type=submit">Utworz ten przedmiot duplikujac dane z programu. </button>
+                <button type="submit" name="with_duplication">Utworz ten przedmiot duplikujac dane z programu. </button>
             </form>
         {% endfor %}
         <form action="{{url('make_sylabus')}}" method="post">
             <input type="hidden" value="{{ nazwa }}" name="nazwa">
-            <input type="hidden" value={{ program_id }} name="program_id">
-            <button type="submit" class="btn btn-outline-success">Utwórz sylabus o tej nazwie bez duplikacji żadnych danych</button>
+            <input type="hidden" value="{{ program_id }}" name="program_id">
+            <button type="submit" name="without_duplication" class="btn btn-outline-success">Utwórz sylabus o tej nazwie bez duplikacji żadnych danych</button>
         </form>
     {% elseif nazwa is defined and program_id is defined %}
         <form action="{{url('make_sylabus')}}" method="post">
             <input type="hidden" value="{{ nazwa }}" name="nazwa">
-            <input type="hidden" value={{ program_id }} name="program_id">
-            <button type="submit" class="btn btn-outline-success">Nie znaleziono żadnych sylabusów o podobnej nazwie. Utwórz nowy.</button>
+            <input type="hidden" value="{{ program_id }}" name="program_id">
+            <button type="submit"  name="new" class="btn btn-outline-success">Nie znaleziono żadnych sylabusów o podobnej nazwie. Utwórz nowy.</button>
         </form>
     {% endif %}
 {% endblock %}

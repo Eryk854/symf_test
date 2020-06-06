@@ -248,7 +248,7 @@ class SylabusController extends AbstractController
     }
 
     /**
-     * @Route("/sylabus/make", name="make_sylabus")
+     * @Route("/sylabus/make/", name="make_sylabus")
      */
     public function make(Request $request)
     {
