@@ -142,7 +142,7 @@ class ProgramService
                 return $sylabus->getZajecia()->getStatus2() === 'O';
             },
             function ($sylabus) {
-                return $sylabus->getZajecia()->getStatus1() === 'F';
+                return $sylabus->getZajecia()->getStatus2() === 'F';
             },
             function ($sylabus) {
                 return $sylabus->getZajecia()->getStatus3() === 'N';
