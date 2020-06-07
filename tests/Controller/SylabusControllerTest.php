@@ -150,7 +150,8 @@ class SylabusControllerTest extends WebTestCase
         $this->assertEquals('Ćwiczenia i kolokwium pisemne 40%, egzamin pisemny 60%.',$kryteria);
 
         //Sprawdzamy czy wartości niezbędne do wyświetlenia podglądu sylabusa zostały poprawnie zapisane
-        $nr = substr($crawler->getUri(),-3);
+        $words = explode('/',$crawler->getUri());
+        $nr =end($words);
         $client->request('GET', '/sylabus/'.$nr);
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
     }
@@ -173,10 +174,12 @@ class SylabusControllerTest extends WebTestCase
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
         $this->assertStringContainsString('Programowanie komponentowe',$crawler->filter('h2')->eq(0)->text());
         $this->assertEquals('0',$godziny_wyk);
+        $this->assertEquals('',$godziny_proj);
         $this->assertEquals('',$kryteria);
 
         //Testujemy czy wartości inicjalizujące zostały dobrze ustawione i czy podgląd sylabusa poprawnie się wyświetla
-        $nr = substr($crawler->getUri(),-3);
+        $words = explode('/',$crawler->getUri());
+        $nr =end($words);
         $client->request('GET', '/sylabus/'.$nr);
         $this->assertEquals(200, $client->getResponse()->getStatusCode());
     }

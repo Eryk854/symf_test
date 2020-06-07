@@ -141,11 +141,7 @@ class SylabusController extends AbstractController
         $this->denyAccessUnlessGranted(EditSylabusVoter::SYLABUS_EDIT, $sylabus);
 
         $nazwa_zajec_polska = $this->getDoctrine()->getRepository(Zajecia::class)->find($sylabus->getZajecia()->getId())->getNazwaPolska();
-        $program_id = $sylabus->getProgram()->getId();
-
-        $rok_akademicki = $this->getDoctrine()->getRepository(Program::class)->find($program_id)->getRokAkademicki();
-        $forma_studiow = $this->getDoctrine()->getRepository(Program::class)->find($program_id)->getFormaStudiow();
-        $poziom_studiow = $this->getDoctrine()->getRepository(Program::class)->find($program_id)->getPoziomStudiow();
+        $program = $sylabus->getProgram();
 
         $form = $this->createForm(SylabusType::class, $sylabus);
         $form->handleRequest($request);
@@ -193,9 +189,9 @@ class SylabusController extends AbstractController
         return $this->render('sylabus/sylabus.html.twig', [
             'form' => $form->createView(),
             'nazwa' => $nazwa_zajec_polska,
-            'rok_akademicki' => $rok_akademicki,
-            'poziom_studiow' => $poziom_studiow,
-            'forma_studiow' => $forma_studiow,
+            'rok_akademicki' => $program->getRokAkademicki(),
+            'poziom_studiow' => $program->getPoziomStudiow(),
+            'forma_studiow' => $program->getFormaStudiow(),
         ]);
     }
 
@@ -205,11 +201,7 @@ class SylabusController extends AbstractController
     public function new(Request $request, $program_id)
     {
         $entityManager = $this->getDoctrine()->getManager(); # polaczenie do bazy
-
-        $rok_akademicki = $this->getDoctrine()->getRepository(Program::class)->find($program_id)->getRokAkademicki();
-        $forma_studiow = $this->getDoctrine()->getRepository(Program::class)->find($program_id)->getFormaStudiow();
-        $poziom_studiow = $this->getDoctrine()->getRepository(Program::class)->find($program_id)->getPoziomStudiow();
-        $opis_programu = $this->getDoctrine()->getRepository(Program::class)->find($program_id)->getOpis();
+        $program = $this->getDoctrine()->getRepository(Program::class)->find($program_id);
 
         $form = $this->createForm(NowySylabusType::class);
         $form->handleRequest($request);
@@ -229,12 +221,12 @@ class SylabusController extends AbstractController
             }
             return $this->render('sylabus/nowy_sylabus.html.twig', [
                 'form' => $form->createView(),
-                'rok_akademicki' => $rok_akademicki,
-                'poziom_studiow' => $poziom_studiow,
-                'forma_studiow' => $forma_studiow,
+                'rok_akademicki' => $program->getRokAkademicki(),
+                'poziom_studiow' => $program->getPoziomStudiow(),
+                'forma_studiow' => $program->getFormaStudiow(),
                 'przedmioty' => $podobne_przedmioty,
                 'program_id' => $program_id,
-                'opis_programu' => $opis_programu,
+                'opis_programu' => $program->getOpis(),
                 'dane' => $dane,
                 'nazwa' => $sylabus['nazwa']
             ]);
@@ -242,10 +234,10 @@ class SylabusController extends AbstractController
 
         return $this->render('sylabus/nowy_sylabus.html.twig', [
             'form' => $form->createView(),
-            'rok_akademicki' => $rok_akademicki,
-            'opis_programu' => $opis_programu,
-            'poziom_studiow' => $poziom_studiow,
-            'forma_studiow' => $forma_studiow,
+            'rok_akademicki' => $program->getRokAkademicki(),
+            'poziom_studiow' => $program->getPoziomStudiow(),
+            'forma_studiow' => $program->getFormaStudiow(),
+            'opis_programu' => $program->getOpis(),
         ]);
     }
 
@@ -274,6 +266,7 @@ class SylabusController extends AbstractController
             $entityManager->flush();
             $semestr = $this->getDoctrine()->getRepository(Semestr::class)->findAll();
             $instytucja = $this->getDoctrine()->getRepository(Instytucja::class)->findAll();
+            
             // stworzenie sylabusa odwołującego się do tych zajęć w danym programie studiów
             $sylabus = new Sylabus();
             $sylabus->setZajecia($przedmiot);
