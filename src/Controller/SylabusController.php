@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 #use http\Env\Request;
+use App\Entity\EfektyUczenia;
 use App\Entity\Godziny;
 use App\Entity\Instytucja;
 use App\Entity\Program;
@@ -11,6 +12,7 @@ use App\Entity\Sylabus;
 use App\Entity\Uzytkownik;
 use App\Entity\Zajecia;
 
+use App\Forms\Type\EfektyUczeniaType;
 use App\Forms\Type\HourType;
 use App\Forms\Type\NowySylabusType;
 use App\Forms\Type\ZajeciaType;
@@ -270,12 +272,17 @@ class SylabusController extends AbstractController
             $entityManager->detach($przedmiot);
             $entityManager->persist($przedmiot);
             $entityManager->flush();
-
+            $semestr = $this->getDoctrine()->getRepository(Semestr::class)->findAll();
+            $instytucja = $this->getDoctrine()->getRepository(Instytucja::class)->findAll();
             // stworzenie sylabusa odwołującego się do tych zajęć w danym programie studiów
             $sylabus = new Sylabus();
             $sylabus->setZajecia($przedmiot);
             $sylabus->setProgram($program);
             $sylabus->setKoordynatorZajec($user);
+            $sylabus->setZatwierdzony(0);
+            $sylabus->setSemestr($semestr[0]);
+            $sylabus->setJednostkaRealizujaca($instytucja[0]);
+            $sylabus->setJednostkaZlecajaca($instytucja[0]);
             $entityManager->persist($sylabus);
             $entityManager->flush();
 
@@ -290,12 +297,19 @@ class SylabusController extends AbstractController
             $godziny->setGodzinyCwiczeniowe(0);
             $godziny->setGodzinyWykladowe(0);
 
+            $efekty_uczenia = new EfektyUczenia();
+            $efekty_uczenia->setWiedza('');
+            $efekty_uczenia->setKompetencje('');
+            $efekty_uczenia->setUmiejetnosci('');
 
             $zajecia = new Zajecia();
             $zajecia->setNazwaPolska($nazwa);
             $entityManager->persist($zajecia);
             $zajecia->setGodziny($godziny);
             $zajecia->setKryteriaOceniania('');
+            $zajecia->setEfektyUczenia($efekty_uczenia);
+
+
             $entityManager->flush();
 
             $instytucja = $this->getDoctrine()->getRepository(Instytucja::class)->findAll();
@@ -304,8 +318,8 @@ class SylabusController extends AbstractController
             $sylabus->setProgram($program);
             $sylabus->setJednostkaRealizujaca($instytucja[0]);
             $sylabus->setJednostkaZlecajaca($instytucja[0]);
+            $sylabus->setZatwierdzony(0);
             $semestr = $this->getDoctrine()->getRepository(Semestr::class)->findAll();
-            dump($semestr);
 
             $sylabus->setSemestr($semestr[0]);
             $sylabus->setKoordynatorZajec($user);
